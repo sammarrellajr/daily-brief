@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, Arial, sans-serif; font-size: 14px; color: #1a1a1a; background: #ffffff; max-width: 700px; margin: 0 auto; padding: 24px 20px; line-height: 1.55; }
+  .brief-title { font-size: 24px; font-weight: 700; color: #111; margin-bottom: 4px; }
+  .brief-meta { font-size: 12px; color: #888; margin-bottom: 28px; border-bottom: 1px solid #e0e0e0; padding-bottom: 14px; }
+  .brief-meta span { margin-right: 14px; }
+  .section-header { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #444; margin: 32px 0 12px 0; border-bottom: 1px solid #e8e8e8; padding-bottom: 6px; }
+  .section-icon { font-size: 14px; }
+  .callout-red { background: #fff5f4; border-left: 3px solid #d94c3d; padding: 14px 16px; border-radius: 3px; margin-bottom: 12px; font-size: 14px; }
+  .callout-red .lead { font-weight: 700; color: #c0392b; display: block; margin-bottom: 8px; }
+  .callout-yellow { background: #fffbea; border-left: 3px solid #e8a800; padding: 14px 16px; border-radius: 3px; margin-bottom: 12px; font-size: 14px; }
+  .callout-yellow .lead { font-weight: 700; display: block; margin-bottom: 6px; }
+  ul { padding-left: 18px; margin: 6px 0 10px 0; }
+  ul li { margin-bottom: 5px; }
+  ul li ul { margin-top: 4px; margin-bottom: 2px; }
+  ul li ul li { margin-bottom: 3px; font-size: 13px; color: #333; }
+  .ticker-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 12px; }
+  .ticker-table thead tr { background: #f4f4f4; }
+  .ticker-table thead th { padding: 8px 10px; text-align: left; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #666; font-weight: 600; border-bottom: 1px solid #e0e0e0; }
+  .ticker-table thead th:not(:first-child) { text-align: right; }
+  .ticker-table tbody tr { border-bottom: 1px solid #f0f0f0; }
+  .ticker-table td { padding: 10px 10px 6px 10px; vertical-align: top; }
+  .ticker-table td:not(:first-child) { text-align: right; vertical-align: middle; font-weight: 600; font-size: 13px; }
+  .ticker-name { font-weight: 700; font-size: 14px; display: block; }
+  .ticker-desc { font-size: 10px; color: #666; letter-spacing: 0.3px; text-transform: uppercase; line-height: 1.5; display: block; margin-top: 2px; }
+  .up { color: #1a7d3f; }
+  .down { color: #c0392b; }
+  .neutral { color: #555; }
+  .watchlist-read { font-size: 13px; line-height: 1.65; margin-bottom: 14px; color: #1a1a1a; border-top: 1px solid #efefef; padding-top: 11px; }
+  .insight-block { font-size: 13px; line-height: 1.65; margin-bottom: 12px; color: #1a1a1a; }
+  .insight-block .label { font-weight: 700; color: #111; }
+  .macro-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+  .macro-tile { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 4px; padding: 12px 14px; flex: 1 1 140px; min-width: 130px; }
+  .macro-label { font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #888; margin-bottom: 4px; }
+  .macro-value { font-size: 22px; font-weight: 700; color: #c0392b; line-height: 1.1; margin-bottom: 6px; }
+  .macro-context { font-size: 11px; color: #555; line-height: 1.5; }
+  .macro-context p { margin-bottom: 2px; }
+  .team-badge { display: inline-block; font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
+  .badge-eagles { background: #004C54; color: #A5ACAF; }
+  .badge-phillies { background: #E81828; color: #ffffff; }
+  .badge-flyers { background: #F74902; color: #ffffff; }
+  .badge-sixers { background: #006BB6; color: #ffffff; }
+  .badge-pga { background: #1a3a1a; color: #c8a84b; }
+  .team-section { margin-bottom: 14px; }
+  .team-header { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 6px; display: flex; align-items: center; }
+  .email-sub { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #555; margin: 14px 0 5px 0; }
+  .summary-bar { background: #f4f4f4; padding: 10px 12px; border-radius: 3px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: #555; margin-bottom: 10px; }
+  .article-card { border: 1px solid #e8e8e8; border-radius: 4px; padding: 13px 15px; margin-bottom: 10px; background: #fafafa; }
+  .article-headline { font-size: 13.5px; font-weight: 700; color: #111; margin-bottom: 3px; }
+  .article-meta { font-size: 10.5px; color: #888; margin-bottom: 7px; }
+  .article-summary { font-size: 12.5px; color: #333; line-height: 1.6; margin-bottom: 7px; }
+  .article-link { font-size: 11px; color: #1a6fc4; text-decoration: none; }
+  .bottom-line { background: #111; color: #fff; padding: 16px 18px; border-radius: 4px; margin-top: 24px; }
+  .bottom-line .bl-header { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #aaa; margin-bottom: 10px; }
+  .bottom-line ul { padding-left: 16px; }
+  .bottom-line ul li { color: #f0f0f0; font-size: 13px; margin-bottom: 6px; }
+  .brief-footer { margin-top: 28px; font-size: 10px; color: #aaa; border-top: 1px solid #e8e8e8; padding-top: 10px; }
+</style>
+</head>
+<body>
+
+<div class="brief-title">Morning Brief — Sam</div>
+<div class="brief-meta">
+  <span>SUNDAY, MAY 31, 2026</span><span>·</span><span>Updated ~5:00 AM ET</span><span>·</span><span>MARKETS CLOSED (Weekend)</span><span>·</span><span>Prices = May 29, 2026 Close</span>
+</div>
+
+<div class="section-header"><span class="section-icon">👁</span> WATCH TODAY</div>
+<div class="callout-red">
+  <span class="lead">Trump's "final determination" on the US-Iran ceasefire deal is the single most important catalyst heading into Monday's open.</span>
+  <ul>
+    <li><strong>Why it matters:</strong> A confirmed peace deal ends Operation Epic Fury (Feb–May 5), fully reopens the Strait of Hormuz, and removes the largest remaining inflation wildcard in the market.
+      <ul><li>WTI already fell 16.2% in May on deal optimism; Brent is ~$92. A confirmed deal could push WTI toward $80 or below.</li></ul>
+    </li>
+    <li><strong>If deal is confirmed over the weekend</strong> → Energy stocks gap down Monday, airlines/consumer stocks surge, inflation expectations fall, Fed cut probability moves up, markets open +0.5 to +1%.</li>
+    <li><strong>If deal falls apart or Trump rejects the terms</strong> → WTI spikes back toward $95-100, Strait of Hormuz risk re-emerges, tech rally stalls, market opens flat to down.</li>
+    <li><strong>Monitor:</strong> Trump Truth Social posts, Reuters/AP wires, White House press releases — watch Sunday night before futures open at 6 PM ET.</li>
+  </ul>
+</div>
+
+<div class="section-header"><span class="section-icon">📬</span> EMAILS &amp; CALENDAR</div>
+<div class="email-sub">Important / Needs Attention</div>
+<ul>
+  <li>No critical emails requiring action. Inbox is clear.</li>
+</ul>
+<div class="email-sub">Informational</div>
+<ul>
+  <li>Your Daily Morning Brief for Saturday, May 30, 2026 was delivered and confirmed in sent mail — no gaps in the briefing schedule.</li>
+</ul>
+<div class="email-sub">Possible Unsubscribe</div>
+<ul>
+  <li>None flagged this cycle.</li>
+</ul>
+<div class="email-sub">Calendar</div>
+<ul>
+  <li><strong>Today — May 31:</strong> Matt Manfredi's Birthday — if you want to reach out, today's the day.</li>
+  <li><strong>June 18–19:</strong> Pig Roast Member Guest 2026 · LedgeRock Golf Club (Men's Event)
+    <ul>
+      <li>Confirm guest details and tee times if not already locked in — 18 days out.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="section-header"><span class="section-icon">🌤</span> MORNING BRIEF</div>
+<ul>
+  <li><strong>Sunday, May 31, 2026</strong> · Reading, PA</li>
+  <li><strong>Weather:</strong> High 78°F / Low 55°F · Mainly sunny, few afternoon clouds · WNW winds 5–10 mph · No significant weather risk · Good day for your 11 AM workout.</li>
+</ul>
+
+<div class="section-header"><span class="section-icon">📊</span> MARKETS SNAPSHOT</div>
+<div class="summary-bar">MAY 29, 2026 CLOSE &nbsp;·&nbsp; S&amp;P +0.2% · DOW +363 PTS RECORD · AI EARNINGS + IRAN DEAL OPTIMISM</div>
+<table class="ticker-table">
+  <thead><tr><th>Ticker</th><th>Price</th><th>YTD</th><th>1Y</th></tr></thead>
+  <tbody>
+    <tr><td><span class="ticker-name">S&amp;P 500</span><span class="ticker-desc">SPX · 7,580.08 · +0.2% Fri · 9TH STRAIGHT WEEKLY GAIN · RECORD HIGH · AI + IRAN OPTIMISM DRIVING RALLY</span></td><td class="up">7,580</td><td class="up">+7.6%</td><td class="up">+25%est</td></tr>
+    <tr><td><span class="ticker-name">Dow</span><span class="ticker-desc">DJIA · 51,032 · +363 PTS · FIRST-EVER CLOSE ABOVE 51,000 · BROAD MARKET STRENGTH</span></td><td class="up">51,032</td><td class="up">+8.5%est</td><td class="up">+22%est</td></tr>
+    <tr><td><span class="ticker-name">AVXL</span><span class="ticker-desc">ANAVEX · $2.91 · NEAR 52WK LOW $2.61 · INTERIM CEO SINCE MAY 6 · DELAYED FILING RED FLAG · THESIS UNDER PRESSURE</span></td><td class="down">$2.91</td><td class="down">-55%est</td><td class="down">-79%est</td></tr>
+    <tr><td><span class="ticker-name">TE</span><span class="ticker-desc">T1 ENERGY · $10.39 · NEAR 52WK HIGH $11.43 · MASSIVE RUNNER FROM $1.03 LOW · ANALYST TARGET $9.10 (BELOW PRICE) · WATCH FOR FADE</span></td><td class="up">$10.39</td><td class="up">+200%est</td><td class="up">+900%est</td></tr>
+    <tr><td><span class="ticker-name">PCT</span><span class="ticker-desc">PURECYCLE · $12.28 · 52WK RANGE $4.93–$17.37 · ISO 9001 CERT AT IRONTON · BUY CONSENSUS · $15.50 ANALYST TARGET · THESIS INTACT</span></td><td class="up">$12.28</td><td class="up">+50%est</td><td class="up">+75%est</td></tr>
+    <tr><td><span class="ticker-name">GEV</span><span class="ticker-desc">GE VERNOVA · $968.32 · DOWN 3.5% FRI (MARKET UP) · EX-DIV JUN 16 ($0.50) · 52WK: $458–$1,182 · OFF HIGH · POWER/AI INFRA PLAY</span></td><td class="down">$968</td><td class="up">+40%est</td><td class="up">+65%est</td></tr>
+    <tr><td><span class="ticker-name">MMTIF</span><span class="ticker-desc">MICROMEM · $0.0165 OTC/PINK SHEET · MKTCAP $11M · ILLIQUID · AI NANOWIRE SENSOR PLAY · HIGH RISK · MONITOR ONLY</span></td><td class="neutral">$0.0165</td><td class="neutral">—</td><td class="neutral">—</td></tr>
+    <tr><td><span class="ticker-name">BTC</span><span class="ticker-desc">BITCOIN · $73,382 · -1.1% FRI ON IRAN DEAL EASING FEAR · $70K IS KEY FLOOR TO HOLD · WEEKEND TRADING ACTIVE · RISK-OFF PRESSURE</span></td><td class="down">$73,382</td><td class="down">-22%est</td><td class="down">-15%est</td></tr>
+    <tr><td><span class="ticker-name">ETH</span><span class="ticker-desc">ETHEREUM · $2,004 · -0.7% FRI · $2,000 PSYCHOLOGICAL FLOOR · UNDER PRESSURE VS BTC · WATCH FOR BREAK BELOW $1,950</span></td><td class="down">$2,004</td><td class="down">-39%est</td><td class="down">-30%est</td></tr>
+    <tr><td><span class="ticker-name">10YR Treasury</span><span class="ticker-desc">US10Y · 4.45% · STABLE · IRAN DEAL EASING INFLATION FEAR · WATCH 4.50% CEILING · FED HOLD KEEPS FLOOR ELEVATED</span></td><td class="neutral">4.45%</td><td class="neutral">—</td><td class="neutral">—</td></tr>
+  </tbody>
+</table>
+<div class="watchlist-read"><b>Watchlist read:</b> <b>AVXL</b> is in serious trouble — interim CEO Kellmeyer installed May 6, quarterly filing delayed May 11, stock trading near its 52wk low of $2.61. Thesis is effectively broken until new permanent leadership and a clean filing emerge. Don't add. Watch $2.61 as the final floor. <b>TE</b> has been a massive winner ($1.03 → $10.39) but is now trading above analyst consensus target of $9.10 — the stock has outrun the thesis. Consider trimming into strength near the $11.43 52wk high; if it breaks above, the run may continue, but risk/reward is getting uncomfortable. <b>PCT</b> is in a solid spot — ISO 9001 certification at Ironton validates operations, analyst target is $15.50 vs. current $12.28, plenty of room. Hold and watch $14 as next resistance. <b>GEV</b> dropped 3.5% Friday when the broader market was up — that's a yellow flag. The ex-div date is June 16 ($0.50) so don't sell before then. Watch $950 as support; if it breaks, reassess. <b>MMTIF</b> at $0.0165 is essentially unmovable — monitor only. <b>BTC</b> at $73,382 is sitting above the $70K floor; Iran deal news is the primary near-term catalyst — confirmed deal removes oil fear, may boost risk appetite and lift BTC. <b>ETH</b> at $2,004 is holding the psychological $2,000 line by a thread — watch Monday's open; a break below $1,950 on any bad geopolitical news is the risk.</div>
+
+<div class="section-header"><span class="section-icon">📉</span> MACRO</div>
+<div class="macro-grid">
+  <div class="macro-tile"><div class="macro-label">10Y Treasury</div><div class="macro-value">4.45%</div><div class="macro-context"><p>Stable · Iran deal easing inflation pressure</p><p>Watch 4.50% ceiling — breaks above signal re-rating risk</p><p>1 cut priced for late 2026 by market</p></div></div>
+  <div class="macro-tile"><div class="macro-label">30Y Mortgage</div><div class="macro-value">6.56%</div><div class="macro-context"><p>Freddie Mac: 6.53% (+0.02 wk) · Holding elevated</p><p>Real estate affordability remains stretched in Berks</p><p>Rate cuts needed to move this below 6.0%</p></div></div>
+  <div class="macro-tile"><div class="macro-label">Brent</div><div class="macro-value">$92.47</div><div class="macro-context"><p>-1.3% Fri · Iran deal optimism driving lower</p><p>Confirmed deal → Brent tests $85–88</p><p>Deal collapse → spikes back to $100+</p></div></div>
+  <div class="macro-tile"><div class="macro-label">WTI</div><div class="macro-value">$87.36</div><div class="macro-context"><p>-1.1% Fri · Down 16.2% in May — massive month</p><p>Confirmed deal → tests $80</p><p>Tracks Brent closely; Hormuz is the key variable</p></div></div>
+  <div class="macro-tile"><div class="macro-label">Gold</div><div class="macro-value">$4,539</div><div class="macro-context"><p>+0.97% Fri · Flight-to-safety + dollar weakness</p><p>DXY near 99 keeping gold bid</p><p>Up ~30%+ on the year; war premium remains elevated</p></div></div>
+  <div class="macro-tile"><div class="macro-label">Silver</div><div class="macro-value">$75.28</div><div class="macro-context"><p>-0.51% Fri · Dollar strength pullback</p><p>Gold/silver ratio remains wide — silver lagging</p><p>Industrial demand watch as Hormuz reopens</p></div></div>
+  <div class="macro-tile"><div class="macro-label">DXY</div><div class="macro-value">~99.2</div><div class="macro-context"><p>-0.3% Fri · Weakening on Iran peace deal</p><p>Risk-on signal: dollar down, equities up</p><p>Weaker dollar boosts EM assets and commodities ex-oil</p></div></div>
+</div>
+
+<div class="section-header"><span class="section-icon">💼</span> APELLA READ</div>
+<div class="insight-block"><span class="label">Client talking points:</span> The S&amp;P 500 just closed at 7,580 — a record high — and posted its ninth consecutive week of gains, the longest winning streak since 2023. The story is AI earnings translating into real revenue. Dell surged 30% after earnings, HPE was up 16%, and NetApp rose 17.6% — these are enterprise companies validating that AI infrastructure spending is a real cycle, not a trade. The Dow crossed 51,000 for the first time in history. For clients asking whether it's too late to be in, the honest answer is: breadth is still healthy, but we're watching for signs of narrowing. The other tailwind is oil — WTI fell 16% in May alone on US-Iran ceasefire optimism, which directly lowers inflation pressure and keeps the Fed from having to hike. If the deal closes this weekend, expect gasoline prices to come down meaningfully over the next 30–60 days — which is the most direct economic benefit your clients will feel personally. On the rate side, the Fed is on hold at 3.50–3.75% and the 10-year Treasury is at 4.45% — mortgage clients should know that a confirmed Iran deal could nudge the 30-year mortgage rate (currently 6.56%) modestly lower heading into summer. Not a big move, but direction matters for the real estate clients watching the market.</div>
+
+<div class="section-header"><span class="section-icon">📈</span> YOUR STOCKS</div>
+<div class="insight-block"><b>AVXL</b> at $2.91 is near the 52-week low of $2.61 — thesis is broken until you see a permanent CEO named and a clean quarterly filing. Don't touch it. <b>TE</b> at $10.39 has run past all five analysts' average target of $9.10. The stock is a massive winner but it's now above where the Street thinks it should trade. Trim some near $11 — that's your 52-week high zone ($11.43) and a natural exit point. <b>PCT</b> at $12.28 has room to the analyst target of $15.50 (+26%). The ISO 9001 cert is a legitimate operational milestone. Hold. Watch $14 as the next level to crack. <b>GEV</b> at $968 was down 3.5% Friday while the market was up — watch this closely. No obvious catalyst found, may be profit-taking after the big run from $458. Ex-dividend June 16 at $0.50 — don't sell before then. Support is $950; if it breaks, reassess position sizing. <b>MMTIF</b> at $0.0165 on the OTC markets — illiquid, no actionable level. <b>BTC</b> at $73,382: key floor is $70,000. A confirmed Iran deal this weekend could be a mild catalyst for crypto. Hold. If it breaks $70K on bad macro news, that's the stop level. <b>ETH</b> at $2,004 is holding by a thread above $2,000 psychological support. A confirmed Iran deal helps; a breakdown of talks is the risk. Watch $1,950 as the line in the sand.</div>
+
+<div class="section-header"><span class="section-icon">⚡</span> ENERGY MARKET</div>
+<ul>
+  <li><strong>WTI:</strong> $87.36/bbl · Down 1.1% Friday, down 16.2% for May — largest monthly drop since early 2020</li>
+  <li><strong>Brent:</strong> $92.47/bbl · Down 1.3% Friday · Tracking US-Iran ceasefire talks closely</li>
+  <li><strong>Natural Gas:</strong> $3.29/MMBtu · +0.15% · Near highest level since early February
+    <ul><li>EIA showed smaller-than-expected storage build last week, pushing futures higher</li></ul>
+  </li>
+  <li><strong>Primary driver:</strong> US-Iran ceasefire extending and Strait of Hormuz restrictions easing — oil markets pricing in full reopening of the waterway; any reversal would be immediate and sharp.</li>
+  <li><strong>OPEC context:</strong> UAE departed OPEC effective May 1, 2026 — cartel's coordination capacity is reduced, which limits any supply-cut response to a price drop.</li>
+</ul>
+
+<div class="section-header"><span class="section-icon">🏦</span> FED / MACRO</div>
+<ul>
+  <li><strong>Fed Funds Rate:</strong> 3.50%–3.75% — held unchanged at the April 28–29, 2026 FOMC meeting</li>
+  <li><strong>Vote:</strong> Unanimous hold · Data-dependent stance, no urgency to cut</li>
+  <li><strong>Tone:</strong> Fed reiterated "higher for longer" with inflation still elevated in part due to Iran war energy disruption. Policy will respond to data, not calendar.</li>
+  <li><strong>Fed Chair Transition:</strong> Jerome Powell's term ended May 15, 2026 — new Fed chair era begins; watch for any shift in communication style or policy framing at the June meeting.</li>
+  <li><strong>Market expectations:</strong> 1 cut priced for late 2026; Iran deal + lower oil could pull that forward to Q3 if energy-driven inflation eases materially</li>
+  <li><strong>Next FOMC:</strong> June 16–17, 2026</li>
+  <li><strong>Macro watch:</strong> Gasoline at $4.49/gallon nationally — the most direct inflation pain point for clients. Lower oil prices in May should begin flowing through to the pump in 2–4 weeks.</li>
+</ul>
+
+<div class="section-header"><span class="section-icon">📅</span> ECONOMIC CALENDAR</div>
+<ul>
+  <li><strong>Today (May 31):</strong> No releases — Sunday</li>
+  <li><strong>June 5</strong> — Nonfarm Payrolls (Jobs Report) — key for rate cut expectations</li>
+  <li><strong>June 10</strong> — CPI — first post-oil-drop inflation read; could be the most important data point of the month</li>
+  <li><strong>June 16–17</strong> — FOMC Meeting — first under new leadership; market watching for any tone shift</li>
+  <li><strong>June 25</strong> — PCE — Fed's preferred inflation measure; will follow CPI signal</li>
+</ul>
+
+<div class="section-header"><span class="section-icon">🌍</span> GEOPOLITICAL</div>
+<ul>
+  <li><strong>US-Iran / Strait of Hormuz:</strong> Operation Epic Fury (Feb 28 – May 5) concluded; ceasefire extended. Trump says deal is "largely negotiated" but has not given final approval. Pakistan's Army Chief Asim Munir is the key mediator.
+    <ul>
+      <li>Confirmed deal → oil -5 to -10%, inflation expectations fall, market rally extends, dollar weakens further</li>
+      <li>Deal collapse → Strait of Hormuz risk re-emerges, oil spikes $10-15/bbl, inflation premium returns, Fed cut odds fall</li>
+    </ul>
+  </li>
+  <li><strong>OPEC fracturing:</strong> UAE's departure from OPEC effective May 1 reduces cartel's ability to coordinate production cuts. Less pricing power for OPEC at the margin.
+    <ul>
+      <li>Downside for oil producers; upside for consumers and anti-inflation forces</li>
+    </ul>
+  </li>
+  <li><strong>Middle East shipping:</strong> Global LNG prices remain elevated with wide spread between US domestic gas and international markets due to prior Hormuz disruption. Full normalization takes weeks even after deal signs.
+  </li>
+</ul>
+
+<div class="section-header"><span class="section-icon">🏆</span> PHILLY SPORTS</div>
+
+<div class="team-section">
+  <div class="team-header"><span class="team-badge badge-phillies">PHILLIES</span> W 4–3 vs Dodgers · 29–27 · 2nd NL East (8.5 GB)</div>
+  <ul>
+    <li>Phillies rallied to beat the Dodgers 4–3 Saturday night, ending LA's 6-game winning streak
+      <ul>
+        <li>Edmundo Sosa capped a three-run eighth inning with a 2-run home run — the go-ahead blow</li>
+        <li>Game was 1–3 heading into the 8th; the comeback was all in that single inning</li>
+      </ul>
+    </li>
+    <li>At 29–27, Phillies are a game over .500 but 8.5 back in the NL East — solid mid-season situation</li>
+  </ul>
+</div>
+
+<div class="team-section">
+  <div class="team-header"><span class="team-badge badge-eagles">EAGLES</span> 2026 Schedule Released · Open vs Commanders</div>
+  <ul>
+    <li>2026 NFL schedule announced: Eagles open at home vs Washington Commanders</li>
+    <li>Key schedule highlights:
+      <ul>
+        <li>Week 5: London vs. Jaguars (international game)</li>
+        <li>Week 7: Monday Night Football vs. Cowboys</li>
+        <li>Week 8: Sunday Night Football vs. Commanders</li>
+        <li>Week 9: Hosts new Giants HC John Harbaugh at the Linc</li>
+        <li>Week 10: Bye week</li>
+      </ul>
+    </li>
+    <li>Easiest first-place schedule in the NFL despite playing a first-place schedule; new OC Sean Mannion (5th consecutive year with new OC)</li>
+  </ul>
+</div>
+
+<div class="team-section">
+  <div class="team-header"><span class="team-badge badge-sixers">SIXERS</span> Offseason · Swept by Knicks in 2nd Round</div>
+  <ul>
+    <li>Swept by New York Knicks in Eastern Conference Semifinals — one of the worst exits of the Embiid era
+      <ul>
+        <li>Lost Game 4 by 30 points; injuries and depth issues again the story</li>
+      </ul>
+    </li>
+    <li>No president of basketball operations — biggest decision before any roster move
+      <ul>
+        <li>Down to four candidates; resolution expected in next few weeks</li>
+      </ul>
+    </li>
+    <li>Embiid health, Kelly Oubre Jr. and Quentin Grimes in free agency, No. 22 pick in upcoming draft — big summer ahead</li>
+  </ul>
+</div>
+
+<div class="team-section">
+  <div class="team-header"><span class="team-badge badge-flyers">FLYERS</span> Offseason · First 2nd Round Appearance Since 2020</div>
+  <ul>
+    <li>Season over, but legitimate momentum — 2nd round for first time since 2020, first time fans have been in the seats for a 2nd round run since 2012</li>
+    <li>13 RFAs this summer including Trevor Zegras and Jamie Drysdale; $38.4M in projected cap space under the new $104M cap
+      <ul>
+        <li>GM Daniel Brière open to improving now if the right deal comes — not fully in rebuild mode</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="team-section">
+  <div class="team-header"><span class="team-badge badge-pga">PGA</span> Memorial Tournament — Muirfield Village · Starts June 1</div>
+  <ul>
+    <li>The Memorial Tournament presented by Workday begins Monday, June 1 at Muirfield Village Golf Club, Dublin, OH
+      <ul>
+        <li>$20M purse, limited no-cut Signature Event field, 700 FedExCup points for winner</li>
+      </ul>
+    </li>
+    <li>Scottie Scheffler defending — attempting to become just the third player (after Tiger Woods, 1999–2001) to win Memorial three consecutive times</li>
+    <li>TV: Golf Channel covers Thu–Fri; CBS takes Championship Weekend (Sat–Sun June 6–7)</li>
+  </ul>
+</div>
+
+<div class="section-header"><span class="section-icon">🏙</span> READING / BERKS COUNTY</div>
+<div class="callout-yellow">
+  <span class="lead">Berks County is committing $12M to the Colebrookdale Rail Line — the biggest infrastructure signal in years for regional connectivity and potential economic development along the corridor.</span>
+  County commissioners authorized a funding agreement with the Redevelopment Authority for improvements and upgrades. Watch this for real estate and local business development implications along that route.
+</div>
+<ul>
+  <li>Reading City Council voted to ease zoning for residential development — a direct response to housing affordability pressure
+    <ul>
+      <li>If you have real estate clients or prospects in Berks, this is a relevant talking point on development trajectory</li>
+    </ul>
+  </li>
+  <li>Habitat for Humanity of Berks County NPP tax credit program approved via PA DCED — blight remediation focus in Reading proper</li>
+  <li>Local unemployment holding at 4.2% (up 0.1% from reduced seasonal hiring); average hourly wages dipped slightly as higher earners retired</li>
+  <li>Berks County inflation tracking at 2.7% YoY — driven by housing and services, consistent with national pattern</li>
+</ul>
+
+<div class="section-header"><span class="section-icon">🤖</span> AI / ANTHROPIC / TECH</div>
+<ul>
+  <li><strong>Anthropic launched Claude Opus 4.8</strong> — 2.5x speed in Fast Mode, 3x cheaper than prior models; Code with Claude adds "dynamic workflows" for large-scale agentic tasks.
+    <ul>
+      <li><em>For Level:</em> Faster, cheaper Claude means your AI consulting pitch gets more affordable for small businesses — lower barrier to entry for automation use cases.</li>
+      <li><em>For Apella:</em> Anthropic's KPMG deal (276,000+ employees), PwC expansion, and SAP partnership signal that enterprise AI is moving from pilot to standard infrastructure. This is the direction wealth management is heading.</li>
+    </ul>
+  </li>
+  <li><strong>Anthropic + Blackstone, Goldman Sachs &amp; Hellman &amp; Friedman formed a new AI services company</strong> targeting mid-sized enterprises — the exact Level market, institutionalized.
+    <ul>
+      <li><em>For Level:</em> The big firms are coming for your lane. Your advantage is local relationships and speed — move now while the enterprise players are still figuring out their model.</li>
+    </ul>
+  </li>
+  <li><strong>Google I/O went all-in on AI</strong> — Gemini 3.5 Flash launched (faster, cheaper), Search now handles full chatbot-style queries, "Ask YouTube" feature shipping.
+    <ul>
+      <li><em>For Apella:</em> Clients will increasingly expect AI-native tools in their financial services experience — set expectations now that your practice is actively evaluating this.</li>
+    </ul>
+  </li>
+  <li><strong>Dell +30%, HPE +16%, NetApp +17.6%</strong> after earnings — AI infrastructure spending is hitting real hardware revenue, not just AI hype. Validates the broader thesis.</li>
+  <li><strong>Government AI model reviews formalized</strong> — Google, Microsoft, xAI, OpenAI, Anthropic all now providing pre-release access to the US Commerce Department's Center for AI Standards and Innovation. Regulatory groundwork is being laid.</li>
+</ul>
+
+<div class="section-header"><span class="section-icon">📰</span> ARTICLES</div>
+
+<div class="article-card">
+  <div class="article-headline">AI Trends Reshaping Wealth Management in 2026</div>
+  <div class="article-meta">Wealth Management Magazine &nbsp;·&nbsp; May 2026</div>
+  <div class="article-summary">AI is no longer a back-office efficiency play — it's moving client-facing, and firms that integrate portfolio intelligence tools are seeing measurable improvements in advisor productivity and client retention. The key differentiator in 2026 is not the AI itself but the trust frameworks built around it: advisors who can explain what AI is doing and why are winning the conversations that matter.</div>
+  <a class="article-link" href="https://www.wealthmanagement.com/artificial-intelligence/ai-trends-reshaping-wealth-management-in-2026">Read →</a>
+</div>
+
+<div class="article-card">
+  <div class="article-headline">Stock Market Outlook: Oil Plunge Masks AI Cooldown</div>
+  <div class="article-meta">Market Scholars &nbsp;·&nbsp; May 27, 2026</div>
+  <div class="article-summary">Beneath the headline record highs, market breadth is narrowing: software and small-cap are lagging while mega-cap AI names carry the index. The oil plunge is providing a macro tailwind (lower inflation = dovish tilt) that's masking softer internals — client portfolios that are concentrated in headline indices may be less diversified than they appear.</div>
+  <a class="article-link" href="https://www.marketscholars.com/market-outlook-may-27-2026/">Read →</a>
+</div>
+
+<div class="article-card">
+  <div class="article-headline">Monthly Market Update — May 2026</div>
+  <div class="article-meta">Madison Investments &nbsp;·&nbsp; May 2026</div>
+  <div class="article-summary">The S&amp;P 500 rose 10.5% in May, reversing March's war-driven losses and pushing YTD returns to positive territory — but gasoline at $4.49/gallon nationally remains the most tangible inflation risk for client portfolios. The report recommends that advisors frame this as a "win back" rally and set realistic expectations: the Iran-driven oil premium hasn't fully unwound yet, and the next month of data will determine whether the Fed can pivot.</div>
+  <a class="article-link" href="https://madisoninvestments.com/monthly-market-update-may-2026/">Read →</a>
+</div>
+
+<div class="bottom-line">
+  <div class="bl-header">⬛ Bottom Line</div>
+  <ul>
+    <li>The Iran deal is the only thing that matters this weekend — Trump's final call moves oil, inflation expectations, and Monday's open in one direction or the other. Check the wires Sunday night before futures open.</li>
+    <li>Markets closed at all-time highs (S&amp;P 7,580, Dow 51K+ for first time ever) on 9 straight weeks of gains. The AI earnings cycle is real. Stay long equities.</li>
+    <li>AVXL is effectively broken — interim CEO, delayed filing, near 52wk low. Don't add more. Wait for leadership clarity before any decision.</li>
+    <li>TE has outrun the analyst consensus — near its 52wk high with a price target below current price. If it gets to $11–11.43, consider trimming.</li>
+    <li>June is loaded: NFP June 5, CPI June 10, FOMC June 16–17 (first under new Fed chair), PCE June 25 — every week has a potential market-moving print.</li>
+  </ul>
+</div>
+
+<div class="brief-footer">Generated from live web data · Daily at 5:00 AM ET via scheduled task · sam.marrella@gmail.com</div>
+
+</body>
+</html>
