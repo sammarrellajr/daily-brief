@@ -69,13 +69,13 @@
   .econ-date { font-size: 10px; font-weight: 700; color: #4a6fa5; min-width: 78px; padding-top: 1px; }
   .econ-event { font-size: 12.5px; color: #333; }
   .ws-ticker-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
-  .ws-ticker-card { flex: 1 1 160px; min-width: 148px; background: #0f1117; border: 1px solid #1e2030; border-radius: 7px; padding: 12px 14px; }
+  .ws-ticker-card { flex: 1 1 160px; min-width: 148px; max-width: 100%; background: #0f1117; border: 1px solid #1e2030; border-radius: 7px; padding: 12px 14px; overflow: hidden; }
   .ws-sym { font-size: 13px; font-weight: 800; color: #ffffff; }
   .ws-name { font-size: 10px; color: #505060; margin-bottom: 8px; }
-  .ws-price { font-size: 21px; font-weight: 700; color: #ffffff; margin-bottom: 6px; line-height: 1; }
-  .ws-stats { display: flex; gap: 10px; }
+  .ws-price { font-size: 19px; font-weight: 700; color: #ffffff; margin-bottom: 6px; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ws-stats { display: flex; gap: 6px; flex-wrap: nowrap; }
   .ws-stat-block .ws-lbl { font-size: 8px; color: #444; text-transform: uppercase; display: block; margin-bottom: 1px; }
-  .ws-stat-block .ws-val { font-size: 11px; font-weight: 700; }
+  .ws-stat-block .ws-val { font-size: 10px; font-weight: 700; white-space: nowrap; }
   .ws-val-up { color: #4ade80; }
   .ws-val-down { color: #f87171; }
   .ws-val-neutral { color: #555; }
