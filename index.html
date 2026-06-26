@@ -31,30 +31,28 @@
   .down { color: #c0392b; }
   .neutral { color: #555; }
   .watchlist-read { font-size: 13px; line-height: 1.65; margin-bottom: 14px; color: #1a1a1a; border-top: 1px solid #efefef; padding-top: 11px; }
-  .insight-block { font-size: 13px; line-height: 1.65; margin-bottom: 12px; color: #1a1a1a; }
-  .insight-block .label { font-weight: 700; color: #111; }
   .macro-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
   .macro-tile { background: #f9f9f9; border: 1px solid #e8e8e8; border-radius: 4px; padding: 12px 14px; flex: 1 1 140px; min-width: 130px; }
   .macro-label { font-size: 9px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #888; margin-bottom: 4px; }
   .macro-value { font-size: 22px; font-weight: 700; color: #c0392b; line-height: 1.1; margin-bottom: 6px; }
+  .macro-value.up-val { color: #1a7d3f; }
+  .macro-value.neutral-val { color: #333; }
   .macro-context { font-size: 11px; color: #555; line-height: 1.5; }
   .macro-context p { margin-bottom: 2px; }
+  .team-section { margin-bottom: 18px; }
+  .team-header { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 8px; display: flex; align-items: center; }
   .team-badge { display: inline-block; font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-right: 8px; vertical-align: middle; }
-  .badge-eagles { background: #004C54; color: #A5ACAF; }
   .badge-phillies { background: #E81828; color: #ffffff; }
-  .badge-flyers { background: #F74902; color: #ffffff; }
-  .badge-sixers { background: #006BB6; color: #ffffff; }
   .badge-pga { background: #1a3a1a; color: #c8a84b; }
-  .team-section { margin-bottom: 14px; }
-  .team-header { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 6px; display: flex; align-items: center; }
-  .score-bug { display: flex; align-items: stretch; border-radius: 4px; overflow: hidden; margin: 4px 0 10px 0; font-size: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.06); border: 1px solid #e0e0e0; }
-  .score-bug .team { flex: 1; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; background: #fff; }
-  .score-bug .team .nm { font-weight: 700; font-size: 11px; letter-spacing: 0.5px; color: #333; }
-  .score-bug .team .sc { font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums; color: #555; }
-  .score-bug .team.win .sc { color: #1a7d3f; }
-  .score-bug .team.loss .sc { color: #c0392b; }
-  .score-bug .vs { width: 6px; background: #e0e0e0; }
-  .score-bug .meta { background: #111; color: #fff; font-size: 9px; font-weight: 700; letter-spacing: 1px; padding: 4px 10px; display: flex; align-items: center; }
+  .scorebug { display: flex; align-items: center; background: #1a1a1a; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; gap: 14px; }
+  .scorebug-team { display: flex; flex-direction: column; align-items: center; min-width: 70px; }
+  .scorebug-name { font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #888; margin-bottom: 4px; }
+  .scorebug-score { font-size: 32px; font-weight: 900; color: #ccc; line-height: 1; }
+  .scorebug-winner { color: #4ade80; }
+  .scorebug-divider { font-size: 18px; color: #444; font-weight: 700; flex-shrink: 0; }
+  .scorebug-meta { display: flex; flex-direction: column; margin-left: auto; text-align: right; }
+  .scorebug-status { font-size: 10px; font-weight: 800; letter-spacing: 1px; color: #888; text-transform: uppercase; }
+  .scorebug-detail { font-size: 11px; color: #555; margin-top: 3px; }
   .email-sub { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #555; margin: 14px 0 5px 0; }
   .summary-bar { background: #f4f4f4; padding: 10px 12px; border-radius: 3px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: #555; margin-bottom: 10px; }
   .article-card { border: 1px solid #e8e8e8; border-radius: 4px; padding: 13px 15px; margin-bottom: 10px; background: #fafafa; }
@@ -73,388 +71,485 @@
 
 <div class="brief-title">Morning Brief — Sam</div>
 <div class="brief-meta">
-  <span>WEDNESDAY, JUNE 24, 2026</span><span>·</span><span>Updated ~5:00 AM ET</span><span>·</span><span>Markets Pre-Open</span><span>·</span><span>Prices = June 23 Close</span>
+  <span>Friday, June 26, 2026</span><span>·</span><span>Updated ~4:37 AM ET</span><span>·</span><span>Pre-Market</span><span>·</span><span>Prices = June 25, 2026 Close</span>
 </div>
 
+<!-- WATCH TODAY -->
 <div class="section-header"><span class="section-icon">👁</span> WATCH TODAY</div>
 <div class="callout-red">
-  <span class="lead">Thursday's PCE report is the most important data print of the week — and it could seal the case for a Fed rate hike in October.</span>
+  <span class="lead">FOMC is split — 9 members lean hike vs. 8 lean hold, and surging oil could tip the vote at July 28-29.</span>
   <ul>
-    <li><strong>Why it matters:</strong> The Fed's June dot plot already shifted to signaling one more hike in 2026. A hot PCE confirms that path and pressures risk assets further.
-      <ul><li>Wells Fargo forecasts PCE at 4.1% YoY (headline) and 3.4% core — both well above the Fed's 2% target</li></ul>
+    <li><strong>Why it matters:</strong> Warsh's first FOMC held rates at 3.50–3.75%, but the committee is not unified — and the next meeting is 32 days away.
+      <ul>
+        <li>WTI is up +2.25% today and +25.5% YTD. Iran/Strait of Hormuz tension is the primary driver. Sustained oil above $75 feeds directly into CPI.</li>
+      </ul>
     </li>
-    <li><strong>If PCE comes in at or above 4.1%</strong> → October rate hike becomes consensus; tech/growth under sustained pressure; 30Y mortgage rates stay elevated or rise further</li>
-    <li><strong>If PCE surprises to the downside (below 3.5%)</strong> → Rate hike fears ease temporarily; tech could bounce; dollar softens; gives Fed room to hold at August meeting</li>
-    <li><strong>Monitor:</strong> PCE drops Thursday June 25 at 8:30 AM ET. Watch the 10Y yield reaction — if it spikes past 4.65%, that's a red flag for equities</li>
+    <li><strong>If oil keeps climbing through July</strong> → inflation expectations re-accelerate, the hike faction gains ground, July 28-29 becomes live for a 25bps hike, and 30Y mortgages push toward 7%.</li>
+    <li><strong>If oil retreats</strong> → hold camp prevails, mortgage rates stay in the 6.25–6.55% range, and equities re-rate higher.</li>
+    <li><strong>Monitor:</strong> WTI daily, CME FedWatch for July hike probability, and 10Y Treasury (currently 4.451%).</li>
   </ul>
 </div>
 
+<!-- EMAILS & CALENDAR -->
 <div class="section-header"><span class="section-icon">📬</span> EMAILS &amp; CALENDAR</div>
+
 <div class="email-sub">Important / Needs Attention</div>
 <ul>
-  <li><strong>Google Security Alert</strong> — Two emails flagged a new sign-in to sam.marrella@gmail.com on June 23 (~10 AM). Verify this was you (likely the daily brief Cowork session or a new device login). If unrecognized, go to myaccount.google.com and secure the account immediately.</li>
-  <li><strong>Capital One — Credit Card Payment Due</strong> — Payment reminder landed June 23 at 4:20 PM. Check the due date and schedule payment if not already set up on autopay.</li>
-  <li><strong>CFFP — Order #35427926 Confirmed</strong> (June 23) — Three emails: order confirmation, payment receipt, and online course access. College for Financial Planning courses are now live in your account. Worth checking what you enrolled in and scheduling study time.
-    <ul><li>Order placed and paid June 23, Fort Lauderdale / Wisconsin-based institution</li></ul>
+  <li><strong>⚠️ Security — Kaplan Community (kaplancommunity.support@kaplan.com):</strong> A Kaplan account was created for you (SMarrella10) and your password was sent in plaintext in the welcome email.
+    <ul>
+      <li>Action: Log in and change this password immediately. Confirm you are not reusing it elsewhere.</li>
+      <li>Appears to be a Kaplan CE/training account — possibly created by Apella. If you did not request it, flag to your compliance or admin team.</li>
+    </ul>
   </li>
-  <li><strong>Ledge Rock Golf — Peter Millar Logo Order Still Pending</strong> — Hunter last replied June 18 that there's no restock date listed but he'd reach out to the rep. You replied June 22 "Great, thanks!" — no update from Hunter yet. Follow up if you want a status by end of week.</li>
+  <li><strong>Ledge Rock Logo Order — Peter Millar item still OOS:</strong> Hunter at Ledge Rock is following up with their rep on restock timing. Holderness &amp; Bourne order is placed and confirmed.
+    <ul>
+      <li>No action needed today — waiting on Hunter to respond.</li>
+    </ul>
+  </li>
 </ul>
 
 <div class="email-sub">Informational</div>
 <ul>
-  <li><strong>Monarch Money (2 digests):</strong>
+  <li><strong>Monarch Money:</strong> 5 transactions pending review — Vagaro $25.00 (Personal/June 24), Target $3.95 (Shopping/June 24), Giant Food (Groceries), and a $120 Venmo transfer from June 24.
     <ul>
-      <li>New expense flagged: "Purchase Into Core Account"</li>
-      <li>Medical budget exceeded — check the Monarch dashboard for category details</li>
+      <li>Quick review in Monarch when you get a moment today.</li>
     </ul>
   </li>
-  <li><strong>Wayfair (3 emails):</strong> Appears you recently initiated a return — Wayfair sent a "We're sorry: 10% OFF" offer, a satisfaction survey, and a new device sign-in alert (likely triggered by logging in to submit the return). No action needed.
-  </li>
-  <li><strong>USPS Informed Delivery:</strong> 1 mailpiece expected Tuesday June 23. Nothing flagged.</li>
-  <li><strong>LinkedIn — Wealth Management Advisor Insights:</strong> $100K+/yr salary range, 1.3K job openings in the field. Informational, no action needed.</li>
+  <li><strong>GREATS Order #5500502446 confirmed</strong> — shoes ordered, shipment pending. Seel Worry-Free Delivery return protection applied automatically.</li>
+  <li><strong>Ed Slott Charts</strong> — emailed to yourself on June 25. Reference material for later use.</li>
 </ul>
 
 <div class="email-sub">Possible Unsubscribe</div>
 <ul>
-  <li><strong>Ring (3 emails):</strong> Prime Day sale, free subscription trial push, and alarm monitoring upsell. You already have Ring — these are low-value marketing triggers. Consider unsubscribing from promotional Ring emails while keeping transactional/security ones.</li>
-  <li><strong>LinkedIn (2 emails):</strong> Birthday notifications ("Celebrate your connection's birthday") and a "Puzzle Solving skill" challenge. Generic engagement bait. Consider setting LinkedIn email preferences to weekly digest only.</li>
-  <li><strong>CHOP (Children's Hospital of Philadelphia):</strong> Donation match appeal (upgraded to 3X). Worthy cause but recurring donation marketing. Unsubscribe if you prefer to give on your own terms.</li>
+  <li><strong>LinkedIn (messages-noreply@linkedin.com)</strong> — "You vs. 22 coworkers. Puzzle solving skill" gamification email. No professional value. Unsubscribe from LinkedIn notification emails.</li>
 </ul>
 
 <div class="email-sub">Calendar</div>
 <ul>
-  <li><strong>June 27 (Sat):</strong> Pay Credit Cards reminder — plan to do this with your coffee before the golf event.
-    <ul><li>Capital One bill just flagged as due — confirm this aligns with your June 27 reminder</li></ul>
-  </li>
-  <li><strong>June 27–28 (Sat–Sun):</strong> Founder's Cup 2026 at LedgeRock Golf Club — Men's Event. Check tee times if not already confirmed.</li>
-  <li><strong>July 6–7 (Mon–Tue):</strong> Senior Member Guest 2026 at LedgeRock. Plan your guest invite if you haven't already.</li>
-  <li><strong>July 11–12 (Sat–Sun):</strong> Men's Club Championship 2026 at LedgeRock. Three golf events in three consecutive weekends — heavy golf stretch ahead.</li>
+  <li><strong>Tomorrow — June 27:</strong> Pay Credit Cards 💳 — reminders at 12:00 PM and 3:00 PM. Handle before end of day.</li>
+  <li><strong>June 27–28:</strong> Founder's Cup 2026 at LedgeRock Golf Club — Men's Event</li>
+  <li><strong>July 6–7:</strong> Senior Member Guest 2026 at LedgeRock</li>
+  <li><strong>July 11–13:</strong> Men's Club Championship 2026 at LedgeRock</li>
+  <li><strong>July 16–17:</strong> Seafood Member Guest 2026 at LedgeRock</li>
 </ul>
 
+<!-- MORNING BRIEF -->
 <div class="section-header"><span class="section-icon">🌤</span> MORNING BRIEF</div>
 <ul>
-  <li><strong>Wednesday, June 24, 2026</strong> · Reading, PA</li>
-  <li><strong>Weather:</strong> High 74°F / Low 57°F · Showers and possible thunderstorm before 3 PM — 90% chance of precipitation. Clears overnight. North wind 5–15 mph, gusts to 20 mph.
-    <ul><li>Outdoor activity not recommended this morning. Evening clears.</li></ul>
-  </li>
+  <li><strong>Friday, June 26, 2026</strong> · Reading, PA</li>
+  <li><strong>Weather:</strong> High 85°F / Low 66°F · Cloudy · 24% chance of rain · Winds W 5–10 mph · No significant weather risk</li>
 </ul>
 
+<!-- MARKETS SNAPSHOT -->
 <div class="section-header"><span class="section-icon">📊</span> MARKETS SNAPSHOT</div>
-<div class="summary-bar">JUNE 23 CLOSE &nbsp;·&nbsp; S&amp;P -1.44% &nbsp;·&nbsp; DOW -0.09% &nbsp;·&nbsp; NASDAQ -2.21% &nbsp;·&nbsp; TECH SELLOFF / BOFA RATE HIKE NOTE / SEMIS CRUSHED</div>
+<div class="summary-bar">June 25 Close &nbsp;·&nbsp; S&amp;P 7,357 (-0.01%) &nbsp;·&nbsp; DOW 51,921 (+0.14%) &nbsp;·&nbsp; NASDAQ 25,359 (-0.46%) &nbsp;·&nbsp; DOW Hits New All-Time Intraday High</div>
+<ul>
+  <li><strong>June 25 Recap:</strong> Markets split — Dow hit a new all-time intraday high while the Nasdaq fell for a fourth consecutive session.
+    <ul>
+      <li>Micron surged ~17% on EPS of $25.11 vs. $20.78 expected — blowout AI infrastructure demand signal from memory chip market.</li>
+      <li>Apple fell ~6% after announcing price increases on MacBook and iPad lines, dragging Nasdaq and Mag7 lower.</li>
+      <li>Caterpillar +6%, J&amp;J +1% — industrials and healthcare provided the Dow's fuel.</li>
+      <li>Rotation from large-cap tech into value/cyclicals continues; this is the dominant market theme right now.</li>
+    </ul>
+  </li>
+  <li><strong>S&amp;P 500:</strong> 7,357.49 &nbsp;·&nbsp; YTD +7.28% &nbsp;·&nbsp; 1Y +20.77%</li>
+  <li><strong>Dow Jones:</strong> 51,920.62 &nbsp;·&nbsp; YTD +7.31% &nbsp;·&nbsp; 1Y +20.79%</li>
+  <li><strong>SPY:</strong> $734.30 &nbsp;·&nbsp; YTD +8.06% &nbsp;·&nbsp; 1Y +22.29%</li>
+  <li><strong>QQQ:</strong> $716.38 &nbsp;·&nbsp; YTD +17.12% &nbsp;·&nbsp; 1Y +33.02%</li>
+  <li><strong>Gold:</strong> $4,030.50 (+1.01%) — safe haven bid on Middle East tension</li>
+  <li><strong>10Y Treasury:</strong> 4.451% (-0.27%) — slight rally; watch for reversal if oil sustains gains</li>
+  <li><strong>30Y Mortgage:</strong> 6.49% (Freddie Mac weekly avg as of June 25) — range 6.25–6.56% across lenders</li>
+</ul>
+
+<!-- TICKERS -->
+<div class="section-header"><span class="section-icon">📈</span> TICKERS</div>
 <table class="ticker-table">
-  <thead><tr><th>Ticker</th><th>Price</th><th>YTD</th><th>1Y</th></tr></thead>
+  <thead>
+    <tr>
+      <th>Ticker</th>
+      <th>Price</th>
+      <th>Day</th>
+      <th>YTD</th>
+      <th>1Y</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td><span class="ticker-name">S&amp;P 500</span><span class="ticker-desc">SPX · ~7,365 · -1.44% DAY · TECH SELLOFF, AI SEMIS LED DECLINE · PRIOR CLOSE 7,472</span></td>
-      <td class="down">~7,365</td>
-      <td class="up">~+25%</td>
-      <td class="up">est.+</td>
+      <td>
+        <span class="ticker-name">SPX</span>
+        <span class="ticker-desc">S&amp;P 500 — Flat day; Dow hit all-time intraday high while tech dragged index; 7,300 is next support; broad market health still positive</span>
+      </td>
+      <td>7,357.49</td>
+      <td class="down">-0.01%</td>
+      <td class="up">+7.28%</td>
+      <td class="up">+20.77%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">Dow</span><span class="ticker-desc">DJIA · MINIMAL DECLINE -0.09% · HELD UP WHILE TECH SOLD OFF · ROTATION SIGNAL</span></td>
-      <td class="neutral">~44,350</td>
-      <td class="up">~+12%</td>
-      <td class="up">est.+</td>
+      <td>
+        <span class="ticker-name">DJIA</span>
+        <span class="ticker-desc">Dow Jones — All-time intraday high June 25; industrials/healthcare leading; rotation out of big tech into value intact; 52,000 is next resistance</span>
+      </td>
+      <td>51,920.62</td>
+      <td class="up">+0.14%</td>
+      <td class="up">+7.31%</td>
+      <td class="up">+20.79%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">AVXL</span><span class="ticker-desc">ANAVEX · ~$2.80-3.07 RANGE JUNE · 52-WK LOW $2.56 (JUN 4) · 52-WK HIGH $3.07 · SMALL CAP BIOTECH UNDER RATE PRESSURE</span></td>
-      <td class="neutral">~$2.85</td>
-      <td class="neutral">—</td>
-      <td class="neutral">—</td>
+      <td>
+        <span class="ticker-name">AVXL</span>
+        <span class="ticker-desc">Anavex Life Sciences — Deep in thesis-break territory; down 73.8% in 1Y; clinical data is the only catalyst; define your exit level</span>
+      </td>
+      <td>$2.46</td>
+      <td class="down">-3.71%</td>
+      <td class="down">-33.02%</td>
+      <td class="down">-73.80%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">TE</span><span class="ticker-desc">T1 ENERGY · $9.30 · RANGE $9.13–$10.17 JUN 23 · 52-WK LOW $1.15 / HIGH $12.49 · SOLAR MODULE MANUFACTURER · MASSIVE YTD RUNNER</span></td>
-      <td class="down">$9.30</td>
-      <td class="up">est. +600%+</td>
-      <td class="up">+700%+</td>
+      <td>
+        <span class="ticker-name">TE</span>
+        <span class="ticker-desc">Tronox Holdings — Holding YTD gains after massive 1Y run; $7.50 is support level to watch; energy transition theme intact; no action needed today</span>
+      </td>
+      <td>$8.50</td>
+      <td class="down">-0.35%</td>
+      <td class="up">+8.42%</td>
+      <td class="up">+569.29%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">PCT</span><span class="ticker-desc">PURECYCLE · $8.34 · $395M OFFERING CLOSED JUN 15 · ALEMBIC: OVERWEIGHT, PT $16 (CUT FROM $18) · DILUTION OVERHANG POST-RAISE</span></td>
-      <td class="neutral">~$8.34</td>
-      <td class="neutral">—</td>
-      <td class="neutral">—</td>
+      <td>
+        <span class="ticker-name">PCT</span>
+        <span class="ticker-desc">PureCycle Technologies — Down 43% in 1Y; $7.50 is critical support; thesis requires offtake deal news; no catalyst confirmed near-term</span>
+      </td>
+      <td>$7.90</td>
+      <td class="down">-1.25%</td>
+      <td class="down">-11.73%</td>
+      <td class="down">-43.04%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">GEV</span><span class="ticker-desc">GE VERNOVA · $1,127.32 CLOSE JUN 23 · DOWN ~7% JUN 24 PRE-MARKET · 52-WK RANGE $479-$1,182 · YTD +72.5% · POWER / GRID INFRASTRUCTURE THESIS INTACT</span></td>
-      <td class="down">$1,127</td>
-      <td class="up">+72.5%</td>
-      <td class="up">+135%+</td>
+      <td>
+        <span class="ticker-name">GEV</span>
+        <span class="ticker-desc">GE Vernova — Best performer in portfolio; AI data center power demand driving energy infrastructure thesis; $1,085 is current level; let it run</span>
+      </td>
+      <td>$1,085.47</td>
+      <td class="up">+2.63%</td>
+      <td class="up">+60.03%</td>
+      <td class="up">+116.53%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">MMTIF</span><span class="ticker-desc">MICROMEM · OTC/PINK SHEET — REAL-TIME PRICE DATA UNAVAILABLE · THINLY TRADED</span></td>
+      <td>
+        <span class="ticker-name">MMTIF</span>
+        <span class="ticker-desc">Mineworx Technologies — OTC/Pink Sheet; no automated quote available; check OTC Markets directly for last trade and any press releases</span>
+      </td>
       <td class="neutral">N/A</td>
-      <td class="neutral">—</td>
-      <td class="neutral">—</td>
+      <td class="neutral">N/A</td>
+      <td class="neutral">N/A</td>
+      <td class="neutral">N/A</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">BTC</span><span class="ticker-desc">BITCOIN · $62,249 · DOWN FROM ~$97K+ JAN 1 2026 · RATE HIKE FEARS POST-FED MEETING · $60K KEY FLOOR TO WATCH</span></td>
-      <td class="down">~$62,249</td>
-      <td class="down">~-35%</td>
-      <td class="neutral">—</td>
+      <td>
+        <span class="ticker-name">BTC</span>
+        <span class="ticker-desc">Bitcoin — Testing $60K psychological support; -32.7% YTD; two consecutive down days; break below $58K signals next leg lower; watch volume</span>
+      </td>
+      <td>$59,721.68</td>
+      <td class="down">-2.09%</td>
+      <td class="down">-32.69%</td>
+      <td class="down">-44.37%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">ETH</span><span class="ticker-desc">ETHEREUM · $1,726 · UP +1.3% JUN 23 OPEN · WELL OFF 2026 HIGHS · TRACKING BTC SENTIMENT · RATE SENSITIVE</span></td>
-      <td class="down">$1,726</td>
-      <td class="down">~-50%</td>
-      <td class="neutral">—</td>
+      <td>
+        <span class="ticker-name">ETH</span>
+        <span class="ticker-desc">Ethereum — Significantly underperforming BTC; -47.9% YTD; $1,500 is key support; break below targets $1,200; high risk, evaluate position size</span>
+      </td>
+      <td>$1,564.82</td>
+      <td class="down">-3.40%</td>
+      <td class="down">-47.85%</td>
+      <td class="down">-35.32%</td>
     </tr>
     <tr>
-      <td><span class="ticker-name">10YR Treasury</span><span class="ticker-desc">US10Y · 4.49% · EASED SLIGHTLY · RATE HIKE EXPECTATIONS CAPPING LONG END · WATCH 4.65% LEVEL</span></td>
-      <td class="neutral">4.49%</td>
-      <td class="neutral">—</td>
-      <td class="neutral">—</td>
+      <td>
+        <span class="ticker-name">10YR</span>
+        <span class="ticker-desc">10Y Treasury — Slight relief rally to 4.451%; Fed hike risk keeps floor elevated; watch for reversal if oil sustains above $75; July FOMC is the catalyst</span>
+      </td>
+      <td>4.451%</td>
+      <td class="down">-0.27%</td>
+      <td class="up">+6.31%</td>
+      <td class="up">+3.68%</td>
     </tr>
   </tbody>
 </table>
-<div class="watchlist-read"><b>Watchlist read:</b> <b>GEV</b> is the urgent watch — closed $1,127 but is trading down ~7% today ($1,069 pre-market) after a strong YTD run (+72.5%). The selloff appears tied to the broader tech/growth rout, not a company-specific event. Key level: $1,035 is the intraday low today; if it holds, this could be a buy-the-dip setup. Thesis break would be a confirmed macro shift away from grid/power infrastructure capex. <b>TE</b> at $9.30 is consolidating after a massive run ($1.15 → $12.49 peak). Range $9.13–$10.17 shows indecision — hold but don't add until it clears $10.50 on volume. <b>PCT</b> at $8.34 is weighed down by the $395M equity raise (dilution overhang). Analyst PT of $16 is 92% upside but conviction requires seeing how the capital raise gets deployed. <b>AVXL</b> near its recent low ($2.56 June 4); if you believe the thesis, the $2.56-$2.85 range is accumulation territory, but biotech is getting hammered in this rate environment. <b>BTC</b> holding above $60K floor for now — rate hike fears are the dominant headwind. Watch that floor closely; a break below $60K would likely take ETH toward $1,500. <b>MMTIF</b> — no actionable data today.</div>
 
-<div class="section-header"><span class="section-icon">📉</span> MACRO</div>
+<div class="watchlist-read">
+  <strong>WATCHLIST READ</strong>
+  <ul>
+    <li><strong>SPX:</strong> 7,357 — flat, riding the Dow's coattails. Watch 7,300 as next support if tech rotation accelerates. Bull case intact above 7,300.</li>
+    <li><strong>DJIA:</strong> All-time intraday high at 51,920. Rotation to industrials/healthcare is the story. Closing above 52,000 confirms the breakout.</li>
+    <li><strong>AVXL:</strong> $2.46 — well below the $3 thesis-break level. Clinical data is the only thing that saves this. Define your max loss and hold to it. No action today, but this needs a plan.</li>
+    <li><strong>TE:</strong> $8.50 — holding. $7.50 is your stop-watch level. Energy transition names will be volatile with oil swings. No action today.</li>
+    <li><strong>PCT:</strong> $7.90 — $7.50 is the line. No catalyst until an offtake deal is announced. Set a hard stop at $7.25 if you do not have one.</li>
+    <li><strong>GEV:</strong> $1,085 — let it run. Power demand from AI data centers is a multi-year structural trade. Consider a trailing stop to protect the +60% YTD gain.</li>
+    <li><strong>MMTIF:</strong> No quote — check OTC Markets directly for last trade and any filings or press releases.</li>
+    <li><strong>BTC:</strong> $59,721 — sitting right at $60K psychological support. A close below $58K on volume signals the next leg down. Watch closely.</li>
+    <li><strong>ETH:</strong> $1,564 — underperforming BTC significantly. $1,500 is the support line. Break below targets $1,200. High risk — evaluate your sizing.</li>
+    <li><strong>10YR:</strong> 4.451% — modest relief but elevated. Fed hike risk keeps a floor here. Any oil spike or hot inflation print sends this back above 4.6%. Watch July FOMC positioning.</li>
+  </ul>
+</div>
+
+<!-- MACRO STAT TILES -->
+<div class="section-header"><span class="section-icon">🧮</span> MACRO STAT TILES</div>
 <div class="macro-grid">
   <div class="macro-tile">
     <div class="macro-label">10Y Treasury</div>
-    <div class="macro-value">4.49%</div>
+    <div class="macro-value neutral-val">4.451%</div>
     <div class="macro-context">
-      <p>Eased slightly · Rate hike signal priced in</p>
-      <p>Watch 4.65% — breach would pressure equities</p>
-      <p>PCE Thursday could spike yields again</p>
+      <p>↓ -0.27% day</p>
+      <p>Safe haven bid; Fed hike risk sets floor; watch July FOMC</p>
     </div>
   </div>
   <div class="macro-tile">
     <div class="macro-label">30Y Mortgage</div>
-    <div class="macro-value">6.61%</div>
+    <div class="macro-value">6.49%</div>
     <div class="macro-context">
-      <p>Freddie Mac avg as of June 23</p>
-      <p>Not coming down before Oct FOMC at earliest</p>
-      <p>Hot PCE could push toward 7%</p>
+      <p>Freddie Mac weekly avg</p>
+      <p>Range 6.25–6.56%; Fed hike = 7% ceiling risk</p>
     </div>
   </div>
   <div class="macro-tile">
-    <div class="macro-label">Brent</div>
-    <div class="macro-value">$77.20</div>
+    <div class="macro-label">Brent Crude</div>
+    <div class="macro-value">$75.26</div>
     <div class="macro-context">
-      <p>-1.5% · Iran-US 60-day roadmap easing supply fears</p>
-      <p>Strait of Hormuz remains open per deal</p>
-      <p>Deal collapses → Brent spikes back toward $90</p>
+      <p>↑ +2.06% | YTD +23.88%</p>
+      <p>Iran/Strait of Hormuz driving; watch $80 resistance</p>
     </div>
   </div>
   <div class="macro-tile">
-    <div class="macro-label">WTI</div>
-    <div class="macro-value">$73.40</div>
+    <div class="macro-label">WTI Crude</div>
+    <div class="macro-value">$71.92</div>
     <div class="macro-context">
-      <p>3-month low · Iran peace deal pressure</p>
-      <p>Supply returning to market on ceasefire</p>
-      <p>EIA inventory this week could add volatility</p>
+      <p>↑ +2.25% | YTD +25.47%</p>
+      <p>Middle East supply risk; above $75 sustained = CPI pressure</p>
     </div>
   </div>
   <div class="macro-tile">
     <div class="macro-label">Gold</div>
-    <div class="macro-value">$4,120</div>
+    <div class="macro-value up-val">$4,030.50</div>
     <div class="macro-context">
-      <p>Down from $4,197 · Iran peace easing safe haven bid</p>
-      <p>Rate hike expectations also cap upside</p>
-      <p>Still up massively YTD — long-term bid intact</p>
+      <p>↑ +1.01% | 1Y +21.14%</p>
+      <p>Safe haven bid; geopolitical premium; watch $4,100 resistance</p>
     </div>
   </div>
   <div class="macro-tile">
     <div class="macro-label">Silver</div>
-    <div class="macro-value">$66.42</div>
+    <div class="macro-value up-val">$58.35</div>
     <div class="macro-context">
-      <p>+1.3% Jun 22 · Recovering from dip</p>
-      <p>Gold/silver ratio ~62:1 near historical norm</p>
-      <p>Industrial demand supporting floor</p>
+      <p>↑ +0.51% | 1Y +61.70%</p>
+      <p>Industrial + precious; strong 1Y despite YTD -17.3%</p>
     </div>
   </div>
   <div class="macro-tile">
-    <div class="macro-label">Nat Gas</div>
-    <div class="macro-value">$3.23</div>
+    <div class="macro-label">DXY (Dollar)</div>
+    <div class="macro-value neutral-val">101.43</div>
     <div class="macro-context">
-      <p>-0.82% Jun 23 · Mild summer demand</p>
-      <p>No major supply disruption currently</p>
-      <p>Watch EIA storage report Thursday</p>
+      <p>↓ -0.18% | YTD +3.06%</p>
+      <p>Slight weakness; Fed pivot signals will set direction</p>
     </div>
   </div>
 </div>
 
+<!-- APELLA READ -->
 <div class="section-header"><span class="section-icon">💼</span> APELLA READ</div>
-<div class="insight-block"><span class="label">Client talking points:</span> Yesterday's market selloff was concentrated in technology and semiconductors — the Dow dropped only 0.09% while the S&P fell 1.44%, which tells you this was a sector rotation, not a broad market panic. The catalyst was a Bank of America note raising the possibility of a Fed rate hike, combined with weakness in Asian semiconductor stocks and the knock-on effect in U.S. AI-infrastructure names. Clients holding diversified portfolios with quality non-tech exposure held up well. The core message today: we are now in a "higher for longer — and possibly higher still" rate environment. Fed Chair Kevin Warsh held rates at 3.5–3.75% at the June 17 FOMC meeting but the dot plot explicitly shifted to signal at least one more hike in 2026, likely October. That is a significant change in narrative from where the market was pricing cuts a few months ago. For clients asking about the tech selloff, frame it as the market repricing growth assets in light of a new interest rate reality — not a sign of systemic risk. <b>For mortgage-sensitive clients:</b> 30-year fixed is at 6.61% and Thursday's PCE could push it higher. If clients were waiting for rates to fall before buying or refinancing, that window is not opening in 2026.</div>
-
-<div class="section-header"><span class="section-icon">📈</span> YOUR STOCKS</div>
-<div class="insight-block"><b>GEV</b> is the most urgent watch in the portfolio right now — closed June 23 at $1,127 and is trading down ~7% today (~$1,069). This is the biggest single-day move in recent months but YTD is still +72.5% so you're well in the green. The intraday low of $1,035 is your key level today — if it holds and we close above $1,069, the dip is buyable for adds. If it closes below $1,035 on meaningful volume, that warrants a tighter stop. <b>TE</b> at $9.30 is in a healthy consolidation range after going from $1.15 to a $12.49 high. Not chasing here — wait for a clean break above $10.50 on volume before adding. <b>PCT</b> at $8.34 is under pressure from the recent $395M equity raise; the Alembic Overweight rating with a $16 PT is encouraging but not acting until dilution overhang clears. <b>AVXL</b> in the $2.80–$3.07 range; 52-week low was $2.56 on June 4 so you're near recent lows — thesis break if it goes below $2.50 on volume. <b>MMTIF</b> — OTC, no actionable data. <b>BTC</b> at $62,249 needs to hold $60K — that's the key floor. Rate hike fears are the headwind; if $60K breaks, expect a move toward $55K. <b>ETH</b> at $1,726 is holding above $1,700 which is the near-term support; thesis-break if it cracks $1,500.</div>
-
-<div class="section-header"><span class="section-icon">⚡</span> ENERGY MARKET</div>
 <ul>
-  <li><strong>WTI:</strong> $73.40 · 3-month low, extending declines as Iran-US peace roadmap eases supply fears</li>
-  <li><strong>Brent:</strong> $77.20 · Dropped ~1.5% on ceasefire/peace-roadmap progress; Strait of Hormuz remains commercially open</li>
-  <li><strong>Natural Gas:</strong> $3.23/MMBtu · Down 0.82%, mild summer demand, no supply shocks</li>
-  <li><strong>Inventory:</strong> EIA Weekly Petroleum Status report expected this week; no major surprises previewed</li>
-  <li><strong>Primary driver:</strong> US-Iran 60-day ceasefire roadmap (Islamabad Memorandum signed June 17) is the biggest near-term driver — any collapse in talks would send Brent back toward $85-90 quickly</li>
+  <li><strong>Market narrative (what moved and why):</strong> The Dow hit a new all-time intraday high driven by industrials and healthcare — Caterpillar +6%, J&amp;J +1%. Tech lagged as Apple fell 6% on price hikes. Micron surged 17% on AI infrastructure demand. The rotation from large-cap tech into value/cyclicals is the dominant theme right now, and it is making diversified portfolios look smart.</li>
+  <li><strong>What clients may be asking:</strong> "Apple is down — should I be worried?" and "Is the market peaking if tech is falling?" Frame it as healthy rotation: money moving into industrials and healthcare is a sign of broad market strength, not a market top. The Dow at all-time highs while Nasdaq consolidates is textbook rotation.</li>
+  <li><strong>Core talking point (verbatim-ready):</strong> "The market is showing real breadth right now. The Dow is at all-time highs and it's not just tech carrying it — industrials, healthcare, and financials are all contributing. Clients in diversified portfolios are seeing the benefit of that diversification in real time. We still have the Fed to watch in late July, but the underlying economy is holding up well."</li>
+  <li><strong>Mortgage-sensitive client note:</strong> 30-year fixed is at 6.49% (Freddie Mac). The FOMC is split — 9 members lean hike at the July 28-29 meeting, 8 lean hold. Clients considering a home purchase or refinance should not wait for rates to drop before FOMC; the risk is rates go higher, not lower. Rising oil is the wildcard that tips the hike vote.</li>
 </ul>
 
-<div class="section-header"><span class="section-icon">🏦</span> FED / MACRO</div>
+<!-- YOUR STOCKS -->
+<div class="section-header"><span class="section-icon">🎯</span> YOUR STOCKS</div>
 <ul>
-  <li><strong>Fed Funds Rate:</strong> 3.50%–3.75% — held at June 17 FOMC (Kevin Warsh's first meeting as Chair)</li>
-  <li><strong>Vote:</strong> Unanimous 12-0 · Four consecutive holds</li>
-  <li><strong>Tone:</strong> Notably hawkish. Dot plot median shifted to 3.8% year-end 2026, signaling at least one hike. Warsh cited elevated inflation driven partly by energy supply shocks and strong productivity/capital investment.</li>
-  <li><strong>Market expectations:</strong> Traders pricing October as the earliest potential hike date. Rate cuts are now fully off the table for 2026.</li>
-  <li><strong>Next FOMC:</strong> Late July / early August 2026 (exact date — check Fed calendar)</li>
-  <li><strong>Macro watch:</strong> PCE due Thursday June 25 at 8:30 AM ET. Wells Fargo forecasts PCE at 4.1% YoY headline, 3.4% core. This is the data print that either confirms or delays the October hike narrative.</li>
+  <li><strong>AVXL</strong> — $2.46, -3.71% today. Well below the $3 thesis-break level. Down 73.8% in 1Y. Only catalyst is clinical trial data. Define your max loss level and have a plan. No action today.</li>
+  <li><strong>TE</strong> — $8.50, -0.35% today. Holding above $7.50 support. YTD +8.4% after a monster 1Y run (+569%). Watch $7.50 as stop-watch level. No action today.</li>
+  <li><strong>PCT</strong> — $7.90, -1.25% today. $7.50 is the line. Thesis requires an offtake deal announcement. Set a hard stop at $7.25 if you have not already. No action until a deal or break of $7.50.</li>
+  <li><strong>GEV</strong> — $1,085.47, +2.63% today. Best position in the book. AI power demand thesis is working. +60% YTD, +116% 1Y. Let it run. Consider a trailing stop to protect the gain.</li>
+  <li><strong>MMTIF</strong> — No OTC quote available. Check OTC Markets directly for last trade and any press releases or filings. No data to act on today.</li>
+  <li><strong>BTC</strong> — $59,721, -2.09% today. Sitting just above the $60K psychological support. Two consecutive down days. Break below $58K on volume signals next leg lower. Watch closely.</li>
+  <li><strong>ETH</strong> — $1,564, -3.40% today. Significantly underperforming BTC. Key support is $1,500. Break below targets $1,200. High risk — evaluate your position sizing.</li>
 </ul>
 
+<!-- ENERGY MARKET DETAIL -->
+<div class="section-header"><span class="section-icon">⛽</span> ENERGY MARKET DETAIL</div>
+<ul>
+  <li><strong>WTI Crude:</strong> $71.92 (+2.25% day, +25.47% YTD) — Primary driver is geopolitics. Iran-related Strait of Hormuz concerns are adding a risk premium despite U.S. supply growth.</li>
+  <li><strong>Brent Crude:</strong> $75.26 (+2.06% day, +23.88% YTD) — Tracking WTI. Closed above $75 is a key level. Watch for sustained close above to confirm breakout.</li>
+  <li><strong>Natural Gas (Henry Hub):</strong> $3.34 (+3.79% day) — Warmer weather driving power sector demand. Supply growth from Permian keeping a lid on prices despite demand uptick. YTD -7.6%.</li>
+  <li><strong>EIA Weekly Report</strong> (week ended June 19, released June 24): Total products supplied averaged 20.6 million bbl/day over prior 4-week period, +3.5% year-over-year. Next report: July 1.</li>
+  <li><strong>Key driver context:</strong> This is a geopolitical move, not a fundamentals move. The Middle East risk premium is driving oil higher. If tensions de-escalate, oil retreats fast. If Strait of Hormuz faces any disruption, WTI tests $85–90+, which resets the entire Fed/inflation outlook.</li>
+</ul>
+
+<!-- FED / MACRO CONTEXT -->
+<div class="section-header"><span class="section-icon">🏦</span> FED / MACRO CONTEXT</div>
+<ul>
+  <li><strong>Fed Funds Rate:</strong> 3.50–3.75% — held since late 2025 after three 25bps cuts totaling 75bps of easing.</li>
+  <li><strong>June 16–17 FOMC (Kevin Warsh's first meeting as Chair):</strong> Unanimous 12-0 vote to hold. But dot plot reveals deep internal division:
+    <ul>
+      <li>8 members: expect rates unchanged through end of 2026</li>
+      <li>9 members: expect at least one hike in 2026</li>
+      <li>1 member: expects a cut</li>
+    </ul>
+  </li>
+  <li><strong>Rate projection shift (June SEP):</strong> Year-end 2026 target moved to 3.6%–4.1%, up from prior 3.25%–3.75% — a hawkish revision that markets initially underreacted to.</li>
+  <li><strong>Next FOMC: July 28–29.</strong> This is the most important date on the calendar right now. Oil and CPI data before that meeting will determine the vote.</li>
+  <li><strong>Warsh's tone:</strong> Tighter communication, slower pivot signaling. Market expectations for cuts in 2026 have been repriced dramatically lower since Warsh took over.</li>
+</ul>
+
+<!-- ECONOMIC CALENDAR -->
 <div class="section-header"><span class="section-icon">📅</span> ECONOMIC CALENDAR</div>
 <ul>
-  <li><strong>Today (June 24):</strong> No major releases — relatively quiet ahead of Thursday</li>
-  <li><strong>Thursday June 25:</strong> PCE Price Index &amp; Core PCE (May) — 8:30 AM ET — MARKET MOVING. The week's critical print.</li>
-  <li><strong>Early July:</strong> June Employment Situation (Non-Farm Payrolls) — watch for labor market cooling or resilience to inform hike timing</li>
-  <li><strong>July FOMC:</strong> Next Fed meeting — market watching for any pre-FOMC rate guidance from Fed speakers</li>
-  <li><strong>Mid-July:</strong> CPI for June 2026 — second major inflation data point this month</li>
+  <li><strong>Today (June 26):</strong> 5 economic events scheduled. Key international: Tokyo CPI — core measure expected +1.6% YoY in June (up from +1.3%), driven by higher energy costs from Middle East tension. Watch for any U.S. data releases this morning via Bloomberg/CNBC.</li>
+  <li><strong>EIA Weekly Petroleum Report:</strong> Next release July 1 (covers week ending June 26) — watch for inventory build or draw as a WTI price signal.</li>
+  <li><strong>Next FOMC: July 28–29</strong> — 32 days away. Most important event on the calendar.</li>
+  <li><strong>Upcoming watch:</strong> PCE inflation (next release before July FOMC critical), Jobs Report (early July), Q2 GDP first estimate (late July), Treasury auctions throughout July.</li>
 </ul>
 
+<!-- GEOPOLITICAL -->
 <div class="section-header"><span class="section-icon">🌍</span> GEOPOLITICAL</div>
 <ul>
-  <li><strong>US–Iran (Most Market-Relevant):</strong> The Islamabad Memorandum was signed June 17 — a 60-day ceasefire/road map covering the Strait of Hormuz reopening, IAEA inspectors back in Iran, and a framework for potential sanctions relief and up to $25B in frozen asset releases. Talks ongoing in Switzerland.
+  <li><strong>Middle East / Iran — Strait of Hormuz risk is the #1 global macro threat right now.</strong> Conflict has broadened from regionally contained to a global energy market event.
     <ul>
-      <li>If talks progress → Oil stays soft ($70–75 WTI), energy inflation eases, PCE could undershoot forecasts</li>
-      <li>If Trump threatening rhetoric disrupts talks again (he's already threatened to "hit Iran hard again") → Supply fear premium returns to oil, energy inflation spikes, PCE overshoots</li>
+      <li>Shipping and insurance premiums rising as trade routes face disruption risk.</li>
+      <li>Higher fuel costs flowing through to transport, food, and fertilizer prices — direct CPI feed-through.</li>
+      <li>If Strait of Hormuz disrupted: WTI tests $85–100+, inflation re-accelerates, Fed hike July 28-29 becomes near-certain.</li>
+      <li>If tensions de-escalate: oil drops back to $65–68, hike odds fall, equities rally across the board.</li>
     </ul>
   </li>
-  <li><strong>Middle East:</strong> Lebanon hostilities included in ceasefire framework. Progress described as "encouraging" by Qatar and Pakistan mediators but still fragile — 60-day roadmap only, not a final deal.</li>
-  <li><strong>Nuclear:</strong> VP Vance confirmed Iran agreed to invite IAEA inspectors back — described as "a major milestone." Uranium enrichment status and HEU stockpiles remain unresolved in final-deal negotiations.
-    <ul><li>Implications for oil: key variable in whether energy inflation in the PCE stays elevated or begins to roll over</li></ul>
+  <li><strong>U.S. Equities vs. Geopolitical Backdrop:</strong> Despite elevated geopolitical risk, U.S. equities continue pushing higher on AI earnings and infra spending. S&amp;P has hit eleven all-time closing highs in 2026. The decoupling will not last indefinitely if oil stays elevated.
+    <ul>
+      <li>Caterpillar's +6% move signals infrastructure and defense spending are being priced as durable themes.</li>
+    </ul>
   </li>
+  <li><strong>Global bond yields:</strong> Long-end yields across advanced economies hitting levels not seen in nearly 20 years as investors reprice inflation, fiscal, and central bank risk. Relevant for client fixed income allocations and duration management.</li>
 </ul>
 
-<div class="section-header"><span class="section-icon">🏆</span> PHILLY SPORTS</div>
+<!-- SPORTS -->
+<div class="section-header"><span class="section-icon">🏆</span> SPORTS — LAST NIGHT</div>
 
 <div class="team-section">
-  <div class="team-header"><span class="team-badge badge-phillies">PHILLIES</span> 8-RUN 9TH INNING COMEBACK — WON 14-9 · GAME 3 VS. NATIONALS TONIGHT</div>
-  <div class="score-bug">
-    <div class="team win"><span class="nm">PHI</span><span class="sc">14</span></div>
-    <div class="vs"></div>
-    <div class="team loss"><span class="nm">WAS</span><span class="sc">9</span></div>
-    <div class="meta">FINAL · JUN 23</div>
+  <div class="team-header"><span class="team-badge badge-phillies">PHI</span> Phillies — June 25 at Washington</div>
+  <div class="scorebug">
+    <div class="scorebug-team">
+      <div class="scorebug-name">PHI</div>
+      <div class="scorebug-score scorebug-winner">10</div>
+    </div>
+    <div class="scorebug-divider">–</div>
+    <div class="scorebug-team">
+      <div class="scorebug-name">WAS</div>
+      <div class="scorebug-score">5</div>
+    </div>
+    <div class="scorebug-meta">
+      <div class="scorebug-status">Final</div>
+      <div class="scorebug-detail">June 25, 2026 · Nationals Park, Washington DC</div>
+    </div>
   </div>
   <ul>
-    <li><strong>Tonight:</strong> PHI @ WAS — Game 3 of the series at Nationals Park. Series tied 1-1 (PHI lost June 22, 4-1; won June 23, 14-9). Phillies push for series lead tonight.</li>
-    <li>Last night's game was historic — down entering the 9th, the Phillies scored 8 runs with 2 outs in the inning. Trea Turner kept the rally alive, Brandon Marsh and Bryson Stott both homered in the 9th.
-      <ul><li>Final record: 43-36 on the season post-game</li></ul>
-    </li>
-    <li>Edmundo Sosa and Trea Turner were also key contributors per box score reporting. Phillies offense is alive and dangerous when they get rolling.</li>
+    <li>Phillies trailed 5–0 after the Nationals scored four runs in the first inning — then mounted a full comeback to win 10–5.</li>
+    <li>Brandon Marsh hit a home run in the 6th to cut the deficit to 5–2 and spark the rally. Phillies then poured it on in later innings.</li>
+    <li>Series continues at Washington today — Phillies in strong position in the NL East standings.</li>
   </ul>
 </div>
 
 <div class="team-section">
-  <div class="team-header"><span class="team-badge badge-eagles">EAGLES</span> OFFSEASON — ROSTER BUILDING, NEW OC, SUPER BOWL ASPIRATIONS</div>
+  <div class="team-header"><span class="team-badge badge-pga">PGA</span> Travelers Championship — TPC River Highlights, Cromwell CT (Rounds 1–2)</div>
   <ul>
-    <li><strong>Full 2026 draft class now signed</strong> — Markel Bell was the final unsigned pick, now under contract on a standard four-year rookie deal.</li>
-    <li><strong>New offensive coordinator:</strong> Sean Mannion (34) hired to run a Shanahan-style offense. Big philosophical change on that side of the ball.
-      <ul><li>Mannion is one of the youngest OCs in the league — a bet on scheme innovation over experience</li></ul>
-    </li>
-    <li><strong>CB depth is elite:</strong> Quinyon Mitchell + Cooper DeJean + Riq Woolen (signed 1yr/$12M). Possibly best CB trio in the NFL entering 2026.
-      <ul><li>Nakobe Dean gone — signed 3yr/$36M with the Raiders. Interior LB depth now a question mark</li></ul>
-    </li>
+    <li>Round 1 teed off June 25. Tournament runs June 25–28 at TPC River Highlands in Cromwell, CT.</li>
+    <li>Scottie Scheffler headlining the field. Rory McIlroy not in the field this week.</li>
+    <li>Brian Harman flagged as a "horse for the course" by analysts given his prior success at this venue.</li>
+    <li>Round 2 plays today. Check <a href="https://www.pgatour.com/leaderboard" style="color:#1a6fc4;">pgatour.com/leaderboard</a> for live scores.</li>
   </ul>
 </div>
 
-<div class="team-section">
-  <div class="team-header"><span class="team-badge badge-pga">PGA</span> TRAVELERS CHAMPIONSHIP — STARTS JUNE 25 AT TPC RIVER HIGHLANDS</div>
-  <ul>
-    <li><strong>Starts Thursday:</strong> 2026 Travelers Championship at TPC River Highlands, Cromwell, CT — June 25-28. No scores yet.</li>
-    <li>Brian Harman is the top pick per Golf Digest — known as a "horse for the course" at this venue. Rory McIlroy is skipping to focus on links run.</li>
-    <li>This is the week before the holiday weekend — solid TV coverage, worth tracking if you're watching golf leading into the Founder's Cup at LedgeRock.</li>
-  </ul>
-</div>
-
-<div class="team-section">
-  <div class="team-header"><span class="team-badge badge-sixers">SIXERS</span> OFFSEASON</div>
-  <ul>
-    <li>NBA season concluded. No games or roster news flagged for today.</li>
-  </ul>
-</div>
-
-<div class="team-section">
-  <div class="team-header"><span class="team-badge badge-flyers">FLYERS</span> OFFSEASON</div>
-  <ul>
-    <li>NHL season concluded. No games or roster news flagged for today.</li>
-  </ul>
-</div>
-
-<div class="section-header"><span class="section-icon">🏙</span> READING / BERKS COUNTY</div>
+<!-- READING / BERKS COUNTY -->
+<div class="section-header"><span class="section-icon">📍</span> READING / BERKS COUNTY</div>
 <div class="callout-yellow">
-  <span class="lead">Reading City Council approved a Transit-Oriented Overlay District for downtown — the most significant zoning change in years with real estate implications.</span>
-  This creates a new overlay district allowing higher-density mixed-use development around transit corridors downtown. Could affect property values and development activity in Reading's core, relevant to any real estate conversations with clients in the area.
+  <span class="lead">🏠 Berks County Housing: Median Price $307K — Affordability Gap Widening, Market "Not Cooling At All"</span>
+  Median home price rose from ~$270K in June 2024 to ~$307K today. Median household income is $77K, creating a ~$23K affordability gap driven by rising construction costs and limited supply. Local real estate agents confirm inventory remains extremely tight with no slowdown in sight.
 </div>
 <ul>
-  <li><strong>Mortgage rates context:</strong> At 6.61%, Berks County homebuyers remain under pressure. The Transit-Oriented Overlay District could spur some investor/developer activity even at current rates.</li>
-  <li><strong>Daniel Boone Homestead (Birdsboro) — America's 250th:</strong> Living history daylong event Saturday June 27. Good local outing if you have time between golf events.</li>
-  <li><strong>Berks County workplace fatality:</strong> Erik Reyna-Wright, 31, of Reading, electrocuted while trimming a hedge near a power line. Unrelated to business/finance but flagged as a significant local news item.</li>
-  <li><strong>Power outages:</strong> Met-Ed reporting 217 outages in Richmond Township area from recent severe weather. Check if impacts your area.</li>
+  <li><strong>Local unemployment:</strong> 4.2% — stable, up just 0.1% from fewer seasonal positions. Average hourly wages slightly negative due to higher-earning retirees rolling off payroll.</li>
+  <li><strong>Local inflation:</strong> 2.7% YoY — above the national average, driven by housing and services costs. Residents feeling the squeeze despite steady employment.</li>
+  <li><strong>Berks County FFY2026 funding:</strong> $2.24M in Community Development Block Grant funds, $600K HOME program, $201K Emergency Solutions Grant — housing and community development focus.</li>
+  <li><strong>Gov. Shapiro visit:</strong> Called for reform to protect manufactured home community residents from out-of-state management companies during a recent Berks County appearance. Local housing affordability is getting state-level attention.</li>
+  <li><strong>For Level:</strong> Reading-area small businesses are operating in a high-cost, tight-labor market. AI-driven efficiency tools are a natural sell in this environment — the pitch is cost reduction and margin protection, not headcount replacement.</li>
 </ul>
 
-<div class="section-header"><span class="section-icon">🎬</span> OTHER NEWS</div>
+<!-- AI / TECH -->
+<div class="section-header"><span class="section-icon">🤖</span> AI / ANTHROPIC / TECHNOLOGY</div>
 <ul>
-  <li><strong>Netflix drops two big ones today:</strong> <em>In the Hand of Dante</em> (Julian Schnabel film starring Oscar Isaac, Gal Gadot, Al Pacino, Gerard Butler, Martin Scorsese, Jason Momoa) hits today. Rare stacked cast for a prestige drama.
-    <ul><li><em>Avatar: The Last Airbender</em> Season 2 drops on Netflix tomorrow June 25 — if you have kids or nostalgic taste, this is the one to watch this week</li></ul>
-  </li>
-  <li><strong>Hugh Jackman on Prime Video today:</strong> <em>The Sheep Detectives</em> premieres June 24 on Amazon Prime Video. Reportedly a quirky dramatic comedy — Jackman in an unusual role.</li>
-  <li><strong>Eric Andre + John Cena in <em>Little Brother</em>:</strong> Netflix comedy premieres June 26. Cena plays a buttoned-up realtor whose life is upended by his unhinged little brother. The premise alone sells it.</li>
-  <li><strong>Prime Day is live:</strong> Amazon Prime Day deals are active. Ring products specifically on sale (as per the Ring marketing emails you got). If you need home tech, now is the window.</li>
-</ul>
-
-<div class="section-header"><span class="section-icon">🤖</span> AI / ANTHROPIC / TECH</div>
-<ul>
-  <li><strong>Anthropic's run-rate revenue has surpassed $30 billion</strong> — up from ~$9B at end of 2025, a 3x+ jump in roughly six months.
+  <li><strong>Anthropic launches Claude Corps fellowship</strong> — national early-career program to extend AI benefits to communities across America. Project Glasswing expanding to ~150 new organizations in 15+ countries.
     <ul>
-      <li>To support this growth, Anthropic expanded its partnership with Google and Broadcom for multiple gigawatts of next-generation compute — the largest compute commitment in the company's history</li>
-      <li><em>For Apella:</em> Anthropic's revenue trajectory illustrates how fast enterprise AI adoption is accelerating — this is worth a client narrative point around tech sector differentiation (hyperscale AI infrastructure vs. broad tech)</li>
+      <li>For Level: Anthropic is explicitly positioning Claude as a community and civic tool — directly aligned with what Level is building for local SMBs.</li>
     </ul>
   </li>
-  <li><strong>June 2026 is an unusually active month for model releases:</strong> Gemini 3.5 Pro (Google), Claude Mythos 1 (Anthropic), possible Claude Sonnet 4.8, and Grok 5 (xAI) — all landing within a four-week window.
-    <ul><li>Anthropic's new Opus-class upgrade features stronger coding, agentic tasks, and long-running work consistency</li></ul>
+  <li><strong>Anthropic Opus class upgrade</strong> — stronger performance in coding, agentic tasks, and professional work. Relevant to your Cowork/OpenClaw setup and any automation workflows you're building for Apella or Level clients.</li>
+  <li><strong>⚠️ U.S. Export Control (June 11):</strong> Government directive suspended foreign national access to Anthropic's Fable and Mythos models. Experts widely criticized the response as "disproportionate and poorly scoped." No impact on Claude Sonnet/Opus for domestic use.
+    <ul>
+      <li>For Apella and Level: No compliance action needed for U.S.-based deployments. Flag if any international client situations arise.</li>
+    </ul>
   </li>
-  <li><strong>Anthropic launched Claude Corps</strong> — a national fellowship program for early-career individuals focused on extending AI benefits to underserved communities. Relevant to Level, your AI consulting startup concept.
-    <ul><li>Claude Corps signals Anthropic's push into community-level AI deployment — this is the kind of initiative that validates the market for what Level is trying to do for small businesses</li></ul>
+  <li><strong>OpenAI pivoting hard to enterprise</strong> — shifting from consumer to compete with Claude Code via Codex. Both Anthropic and OpenAI are going after enterprise workflows.
+    <ul>
+      <li>For Level: The SMB market is the gap they're both leaving open. That's your lane.</li>
+    </ul>
   </li>
-  <li><strong>Salesforce launched "Agentic Advisor"</strong> — an AI notetaker tool built specifically for financial advisors. First mover in FA-specific AI workflow tools.
-    <ul><li><em>For Apella:</em> Worth evaluating for your practice — could automate meeting notes and CRM updates, freeing up client-facing time</li></ul>
-  </li>
-  <li><strong>Microsoft and Google competing head-to-head with Anthropic and OpenAI in AI coding models</strong> — the coding AI market is heating up fast across all major providers.</li>
+  <li><strong>Microsoft</strong> released new AI models at Build to reduce OpenAI reliance and cut developer costs. Google competing similarly. Model provider market is commoditizing — workflow and integration wins.</li>
+  <li><strong>Micron earnings as AI signal:</strong> $25.11 EPS vs. $20.78 est confirms AI data center infrastructure buildout is accelerating, not slowing. Direct tailwind for GEV (energy) and the broader AI infrastructure thesis.</li>
 </ul>
 
+<!-- OTHER NEWS -->
+<div class="section-header"><span class="section-icon">🎬</span> OTHER NEWS</div>
+<ul>
+  <li>Apple announced price increases on MacBook and iPad lines — stock fell 6%, first major consumer pushback signal heading into back-to-school season.</li>
+  <li>Caterpillar surged 6% on strong industrial demand — construction and infrastructure spending signal remains robust despite rate headwinds.</li>
+  <li>Reid Hoffman (LinkedIn co-founder, June 24): OpenAI and Anthropic both have long-term room in the market. Described xAI as "a complete train wreck." SpaceX "is not an AI company."</li>
+</ul>
+
+<!-- ARTICLES -->
 <div class="section-header"><span class="section-icon">📰</span> ARTICLES</div>
 
 <div class="article-card">
-  <div class="article-headline">The True Costs of Retirement Communities, and How Advisors Can Help</div>
-  <div class="article-meta">ThinkAdvisor &nbsp;·&nbsp; June 22, 2026</div>
-  <div class="article-summary">Retirement community costs are far more complex than the monthly fee — entrance fees, care escalation clauses, and inflation adjustments can dramatically change the real cost of aging. Advisors who can model these scenarios proactively are in a unique position to demonstrate value and deepen relationships with clients approaching this transition.</div>
-  <a class="article-link" href="https://www.thinkadvisor.com/">Read → ThinkAdvisor</a>
+  <div class="article-headline">Shifting Gears: New Drivers of Potential Market Expansion — Mid-Year Outlook 2026</div>
+  <div class="article-meta">Merrill Lynch / Bank of America Securities</div>
+  <div class="article-summary">Makes the case that market leadership is rotating from Mag7 dominance to broader industrial, healthcare, and international exposure. The key insight: the AI infrastructure buildout is creating secondary beneficiaries — energy, industrials, materials — that are now outperforming the primary AI names themselves. Direct ammunition when clients ask why the Dow is at all-time highs while their Nasdaq-heavy position is flat.</div>
+  <a class="article-link" href="https://www.ml.com/articles/2026-mid-year-outlook.html">ml.com — 2026 Mid-Year Outlook</a>
 </div>
 
 <div class="article-card">
-  <div class="article-headline">The Great Wealth Transfer Isn't Coming — It's Already Here</div>
-  <div class="article-meta">InvestmentNews &nbsp;·&nbsp; June 2026</div>
-  <div class="article-summary">Advisors who wait for formal estate events to build next-gen client relationships are already behind — beneficiaries are forming opinions and making financial decisions now. The article argues that proactive multi-generational relationship building is no longer optional; it's a retention and growth imperative for advisory practices.</div>
-  <a class="article-link" href="https://www.investmentnews.com/">Read → InvestmentNews</a>
+  <div class="article-headline">Fintech 2026: Five Trends Reshaping the Future of Wealth, Advice, and Digital Finance</div>
+  <div class="article-meta">InvestmentNews</div>
+  <div class="article-summary">95% of wealth management firms plan to increase AI investment in 2026 — but only 27% believe the wealth segment is actually leading financial services in AI adoption. That gap between intent and execution is the competitive risk for advisors who wait. For Apella, moving on AI now means outrunning peers who are still "planning." For Level, it confirms the SMB and RIA market is massively underserved by AI workflow tools.</div>
+  <a class="article-link" href="https://www.investmentnews.com/opinion/fintech-2026-five-trends-reshaping-the-future-of-wealth-advice-and-digital-finance/266211">investmentnews.com</a>
 </div>
 
 <div class="article-card">
-  <div class="article-headline">Three Phases of AI for Financial Advisors: A $25B RIA CEO's Framework</div>
-  <div class="article-meta">Wealth Management / WealthManagement.com &nbsp;·&nbsp; June 12, 2026</div>
-  <div class="article-summary">The CEO of a $25B RIA laid out a three-phase framework for how AI will reshape advisory practices — from operational efficiency (Phase 1) to client intelligence (Phase 2) to fully autonomous portfolio and planning workflows (Phase 3). The piece is a useful primer for understanding where the puck is going, both for your Apella practice and for Level's consulting pitch to small businesses.</div>
-  <a class="article-link" href="https://www.wealthmanagement.com/">Read → WealthManagement.com</a>
+  <div class="article-headline">CNBC Elite Advisors 2026: Top Ultra-High Net Worth Wealth Management Firms</div>
+  <div class="article-meta">CNBC — June 22, 2026</div>
+  <div class="article-summary">CNBC's annual UHNW list highlights what separates elite advisors: tax, estate, trust planning, business advisory, and family governance layered on top of portfolio management. The firms making this list are not competing on investment returns alone — they're competing on complexity management and intergenerational service. For Apella advisors, the path to UHNW relationships runs through expanded planning services, not just performance.</div>
+  <a class="article-link" href="https://www.cnbc.com/2026/06/22/uhnw-wealth-management-list-cnbc-elite-advisors.html">cnbc.com — Elite Advisors 2026</a>
 </div>
 
+<!-- BOTTOM LINE -->
 <div class="bottom-line">
-  <div class="bl-header">⬛ Bottom Line</div>
+  <div class="bl-header">⚡ Bottom Line</div>
   <ul>
-    <li>PCE Thursday (June 25) is the market's defining data print this week — a hot print cements an October Fed rate hike and extends the tech selloff; watch the 10Y yield at 4.65%.</li>
-    <li>Phillies are electric — 8-run 9th inning comeback last night (14-9 win). Series tied 1-1 vs. Nationals. Game 3 tonight at Nationals Park.</li>
-    <li>GEV is getting hit today (~-7%) — the June 23 close of $1,127 was the entry; $1,035 is the key floor. Dip could be an opportunity but wait for intraday stabilization before acting.</li>
-    <li>US-Iran 60-day peace roadmap is holding oil down ($73 WTI) and softening gold — but it's fragile. One Trump threat or breakdown in Switzerland talks brings energy inflation back fast.</li>
-    <li>Capital One payment due — handle before June 27 when you have golf. CFFP course access is live — schedule study blocks now while momentum is there.</li>
+    <li>The FOMC is split 9-8 toward a hike at July 28-29 — and rising oil from Middle East/Strait of Hormuz tension is the swing factor. This is the most important thing to track over the next 30 days.</li>
+    <li>Dow hit an all-time intraday high; rotation from tech into industrials/healthcare is working. Clients in diversified portfolios are seeing the benefit right now — use this on calls today.</li>
+    <li>BTC ($59,721) and ETH ($1,564) are testing critical support levels. A breakdown in crypto doesn't stay contained — it affects broader risk sentiment.</li>
+    <li>GEV is up +60% YTD driven by AI power demand. Best position you have. Consider a trailing stop to protect the gain.</li>
+    <li>Two items before work: change the Kaplan Community password (plaintext in email), and pay credit cards tomorrow June 27.</li>
   </ul>
 </div>
 
-<div class="brief-footer">Generated from live web data, Gmail, and Google Calendar · Daily at 5:00 AM ET via scheduled task · sam.marrella@gmail.com</div>
+<div class="brief-footer">
+  Generated ~4:37 AM ET · Friday, June 26, 2026 · Market data: June 25, 2026 close via market_data.json (generated 4:30 AM) · Sources: Gmail, Google Calendar, live web searches
+</div>
 
 </body>
 </html>
