@@ -45,17 +45,17 @@
   .market-recap-list li::before { content: "›"; position: absolute; left: 0; color: #5a8dee; font-weight: 900; }
   .market-recap-list li strong { color: #ccccee; }
   .market-tile-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
-  .market-tile { flex: 1 1 120px; min-width: 110px; border-radius: 7px; padding: 10px 12px; border: 1px solid transparent; }
+  .market-tile { flex: 1 1 105px; min-width: 95px; border-radius: 7px; padding: 10px 12px; border: 1px solid transparent; }
   .tile-up { background: #edf7f0; border-color: #b8dec9; }
   .tile-down { background: #fdf0ef; border-color: #f0c4c0; }
   .tile-neutral { background: #f5f6f8; border-color: #e0e2e6; }
   .market-tile-sym { font-size: 12px; font-weight: 800; color: #333; }
   .market-tile-name { font-size: 10px; color: #888; margin-bottom: 7px; }
   .market-tile-price { font-size: 16px; font-weight: 700; color: #111; margin-bottom: 5px; line-height: 1; white-space: nowrap; overflow: hidden; }
-  .market-tile-stats { display: flex; gap: 10px; }
-  .mts { text-align: left; }
-  .mts-lbl { font-size: 7.5px; text-transform: uppercase; letter-spacing: 0.3px; color: #aaa; display: block; margin-bottom: 1px; }
-  .mts-val { font-size: 10.5px; font-weight: 700; white-space: nowrap; }
+  .market-tile-stats { display: flex; flex-direction: column; gap: 3px; margin-top: 4px; }
+  .mts { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+  .mts-lbl { font-size: 8px; text-transform: uppercase; letter-spacing: 0.4px; color: #aaa; }
+  .mts-val { font-size: 10px; font-weight: 700; white-space: nowrap; }
   .mts-val.up { color: #1a7d3f; }
   .mts-val.down { color: #c0392b; }
   .mts-val.neutral { color: #777; }
@@ -72,10 +72,10 @@
   .ws-ticker-card { flex: 1 1 155px; min-width: 148px; max-width: 220px; background: #0f1117; border: 1px solid #1e2030; border-radius: 7px; padding: 11px 13px; overflow: hidden; }
   .ws-sym { font-size: 13px; font-weight: 800; color: #ffffff; }
   .ws-name { font-size: 10px; color: #505060; margin-bottom: 8px; }
-  .ws-price { font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 5px; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .ws-stats { display: flex; gap: 0; flex-wrap: nowrap; width: 100%; }
+  .ws-price { font-size: 17px; font-weight: 700; color: #ffffff; margin-bottom: 6px; line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ws-stats { display: flex; flex-direction: column; gap: 3px; width: 100%; margin-top: 2px; }
   .ws-stat-block .ws-lbl { font-size: 8px; color: #444; text-transform: uppercase; display: block; margin-bottom: 1px; }
-  .ws-stat-block .ws-val { font-size: 9.5px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  .ws-stat-block .ws-val { font-size: 10px; font-weight: 700; white-space: nowrap; }
   .ws-val-up { color: #4ade80; }
   .ws-val-down { color: #f87171; }
   .ws-val-neutral { color: #555; }
