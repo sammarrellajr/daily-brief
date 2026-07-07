@@ -103,10 +103,22 @@
   .callout-yellow { background: #fffbea; border-left: 4px solid #e8a800; padding: 13px 16px; border-radius: 6px; margin-bottom: 10px; }
   .callout-yellow .lead { font-weight: 700; display: block; margin-bottom: 6px; color: #7a5800; }
   .team-badge { display: inline-block; font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-right: 8px; }
+  .badge-eagles { background: #004C54; color: #A5ACAF; }
   .badge-phillies { background: #E81828; color: #fff; }
+  .badge-flyers { background: #F74902; color: #fff; }
+  .badge-sixers { background: #006BB6; color: #fff; }
   .badge-pga { background: #1a3a1a; color: #c8a84b; }
   .team-section { margin-bottom: 16px; }
   .team-header { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 8px; display: flex; align-items: center; }
+  .scorebug { display: flex; align-items: center; background: #16181f; border: 1px solid #2a2d3a; border-radius: 8px; padding: 9px 14px; margin-bottom: 8px; gap: 10px; }
+  .scorebug-team { display: flex; flex-direction: column; align-items: center; min-width: 52px; }
+  .scorebug-name { font-size: 8px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #555; margin-bottom: 2px; }
+  .scorebug-score { font-size: 22px; font-weight: 900; color: #888; line-height: 1; }
+  .scorebug-winner { color: #4ade80; }
+  .scorebug-divider { font-size: 13px; color: #2a2d3a; font-weight: 700; flex-shrink: 0; }
+  .scorebug-meta { display: flex; flex-direction: column; margin-left: auto; text-align: right; }
+  .scorebug-status { font-size: 9px; font-weight: 800; letter-spacing: 1px; color: #555; text-transform: uppercase; }
+  .scorebug-detail { font-size: 10px; color: #3a3d4a; margin-top: 2px; }
   .article-card { border: 1px solid #e4e6ea; border-radius: 7px; padding: 13px 16px; margin-bottom: 9px; background: #fff; }
   .article-headline { font-size: 13.5px; font-weight: 700; color: #111; margin-bottom: 3px; }
   .article-meta { font-size: 10.5px; color: #999; margin-bottom: 7px; }
@@ -117,194 +129,162 @@
   .bottom-line ul { padding-left: 16px; }
   .bottom-line ul li { color: #e0e0ee; font-size: 13px; margin-bottom: 6px; }
   .brief-footer { margin-top: 22px; font-size: 10px; color: #aaa; border-top: 1px solid #e0e0e0; padding-top: 10px; text-align: center; }
-  .holiday-banner { background: linear-gradient(135deg, #b22234 0%, #3c3b6e 100%); border-radius: 8px; padding: 10px 16px; margin-bottom: 14px; text-align: center; color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 1px; }
 </style>
 </head>
 <body>
 
 <div class="brief-header">
-  <div class="brief-title">Morning Brief &mdash; Sam</div>
+  <div class="brief-title">Morning Brief — Sam</div>
   <div class="brief-meta">
-    <span>Saturday, July 4, 2026</span><span>&middot;</span><span>~4:37 AM ET</span><span>&middot;</span><span>Prices = July 2, 2026 Close</span>
+    <span>Tuesday, July 7, 2026</span><span>·</span><span>~4:37 AM ET</span><span>·</span><span>Prices = July 6, 2026 Close</span>
   </div>
 </div>
 
-<div class="holiday-banner">Independence Day &mdash; America's 250th Birthday &nbsp;&middot;&nbsp; Markets Closed Today &amp; Yesterday (July 3 observed)</div>
-
 <div class="highlights-card">
-  <div class="highlights-label">HIGHLIGHTS &amp; RECAP</div>
-  <div class="highlight-item"><div class="highlight-num">1</div><div class="highlight-text"><strong>SpaceX (SPCX) joins Nasdaq-100 on Monday July 7</strong> &mdash; ~$4.3B in forced passive inflows expected as index funds rebalance; stock closed at $162 (+2.83% July 2), IPO'd at $135. Biggest single-stock event of the week.</div></div>
-  <div class="highlight-item"><div class="highlight-num">2</div><div class="highlight-text"><strong>Dow record high (52,900) while QQQ fell -1.73%</strong> &mdash; June jobs came in at just 57K (est. ~180K); the weak payrolls print triggered sector rotation out of tech into value and safe havens on the last trading day before the holiday.</div></div>
-  <div class="highlight-item"><div class="highlight-num">3</div><div class="highlight-text"><strong>Markets closed July 3 &amp; July 4</strong> &mdash; NYSE/Nasdaq reopen Monday July 6. All prices reflect July 2 close. Next live session in 2 days.</div></div>
-  <div class="highlight-item"><div class="highlight-num">4</div><div class="highlight-text"><strong>Heat dome covering eastern US through holiday weekend</strong> &mdash; Reading PA hitting 91F today; extreme heat advisory affecting 260M+ Americans. Natural gas demand spiking (+1.53% July 2).</div></div>
-  <div class="highlight-item"><div class="highlight-num">5</div><div class="highlight-text"><strong>Anthropic overtakes OpenAI in revenue, on track for $47B profitable by 2029</strong> &mdash; In talks with Samsung on custom AI chip; OpenAI responding with Broadcom "Jalapeño" inference processor. AI infrastructure race intensifying.</div></div>
-  <div class="highlight-item"><div class="highlight-num">6</div><div class="highlight-text"><strong>Taylor Swift &amp; Travis Kelce wedding reportedly at MSG this weekend</strong> &mdash; City permits filed for 500-999 guests; Bradley Cooper, Hugh Grant, Gigi Hadid among those spotted.</div></div>
+  <div class="highlights-label">⚡ Highlights &amp; Recap</div>
+  <div class="highlight-item"><div class="highlight-num">1</div><div class="highlight-text"><strong>DJIA New Record — 53,055</strong> — Dow crossed 53K for the first time Monday on revived AI optimism; S&amp;P 500 +9.9% YTD, Nasdaq +12.4% YTD heading into Tuesday.</div></div>
+  <div class="highlight-item"><div class="highlight-num">2</div><div class="highlight-text"><strong>GEV at $1,152 — Up 69.8% YTD</strong> — Your strongest position continues to run. Know your trailing stop; this is where discipline matters most.</div></div>
+  <div class="highlight-item"><div class="highlight-num">3</div><div class="highlight-text"><strong>Russia-Ukraine Tightrope</strong> — Trump called both Putin and Zelensky; Ukrainian drones hit St. Petersburg while Russia launched a second large-scale attack on Kyiv in a week. Diplomacy and escalation are running simultaneously — energy and defense stocks on watch.</div></div>
+  <div class="highlight-item"><div class="highlight-num">4</div><div class="highlight-text"><strong>Anthropic Leads OpenAI on Revenue</strong> — Claude Fable 5 restored July 1 (18-day US govt suspension lifted); Sonnet 5 is new default; Anthropic on track for $47B revenue, profitable a year ahead of OpenAI.</div></div>
+  <div class="highlight-item"><div class="highlight-num">5</div><div class="highlight-text"><strong>Fed Holds at 3.5–3.75%</strong> — June ADP job adds came in at 98K (below 113K forecast). Next FOMC July 28–29. September cut back in play if labor continues softening.</div></div>
+  <div class="highlight-item"><div class="highlight-num">6</div><div class="highlight-text"><strong>Phillies Obliterated 15–1</strong> — Royals tagged Cristopher Sanchez for a career-worst 9 earned runs. Phillies play @ Cincinnati today (July 7).</div></div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128065;</span> WATCH TODAY</div>
+<div class="section-header"><span class="section-icon">👁</span> WATCH TODAY</div>
 <div class="callout-red">
-  <span class="lead">SpaceX (SPCX) joins the Nasdaq-100 at Monday's open &mdash; the index inclusion trade is the most actionable setup this weekend.</span>
+  <span class="lead">Russia-Ukraine escalation and diplomacy are running in parallel — markets must price both outcomes simultaneously heading into Tuesday's open.</span>
   <ul>
-    <li><strong>Why it matters:</strong> QQQ and every Nasdaq-100 index fund must purchase ~$4.3B of SPCX shares on or before Monday's open &mdash; forced passive buying regardless of market sentiment.
-      <ul><li>SPCX at $162; IPO price $135; 52-week range $135&ndash;$225.64; avg analyst target $204. Front-runners may already be positioned.</li></ul>
-    </li>
-    <li><strong>If inclusion buying is aggressive</strong> &rarr; SPCX gaps up 5-10%+ at Monday open; QQQ holders gain automatic SPCX exposure via NAV rebalance.</li>
-    <li><strong>If tech weakness continues from July 2</strong> &rarr; Index funds are still required to buy; forced demand creates a price floor; any dip will be aggressively bid.</li>
-    <li><strong>Monitor:</strong> SPCX premarket Sunday evening; QQQ inflows Monday morning; Nasdaq-100 rebalance confirmation at ETF.com.</li>
+    <li><strong>Why it matters:</strong> Trump called Putin and Zelensky over the weekend while Ukrainian drones struck a St. Petersburg oil terminal and Russia attacked Kyiv twice in one week. This is the live geopolitical wildcard that can move energy (Brent $72), defense equities, and safe-haven assets (gold $4,155).<ul><li>NATO summit backdrop amplifies stakes — Europe's defense spending commitments are under pressure</li></ul></li>
+    <li><strong>If diplomacy gains traction</strong> → Brent retreats toward $65, gold pulls back, defense equities soften, risk-on continues</li>
+    <li><strong>If escalation accelerates</strong> → Oil spikes, gold holds $4,200+, defense names surge (RTX, LMT, NOC), broader market de-risks fast</li>
+    <li><strong>Monitor:</strong> Reuters/Bloomberg pre-market; Brent crude move at open; any White House joint statement</li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128236;</span> EMAILS &amp; CALENDAR</div>
+<div class="section-header"><span class="section-icon">📬</span> EMAILS &amp; CALENDAR</div>
 <div class="email-cal-grid">
   <div class="email-panel">
-    <div class="panel-title">EMAILS</div>
+    <div class="panel-title">📧 Emails</div>
     <div class="email-cat">Important / Needs Attention</div>
     <ul>
-      <li><strong>Penn State Health / St. Joseph Medical Center</strong> &mdash; Bill ready for payment (July 2).
-        <ul><li>Action: Log in to billing portal and pay or set up a payment plan.</li></ul>
+      <li><strong>In A Heartbeat Golf Tournament</strong> (mike@inaheartbeat.org) — Registration open for 2026 tournament. Play and sponsorship spots available. Decide if you want in.
+        <ul><li>Charity golf — good community/networking angle if dates work</li></ul>
       </li>
-      <li><strong>Fidelity &mdash; June statements available</strong> &mdash; New statements on both accounts (July 3, sam.marrella@me.com and sam.marrella@gmail.com).
-        <ul><li>Review alongside Dimensional Funds notice below.</li></ul>
-      </li>
-      <li><strong>Fidelity &mdash; Dimensional Funds Important Information</strong> &mdash; Strategy/performance notification on one or more holdings (July 2).
-        <ul><li>Action: Read when reviewing Fidelity statements this weekend.</li></ul>
-      </li>
+      <li><strong>St. Joseph Medical Center</strong> — $214.04 payment confirmed (PA-4764-6159-1365, paid Jul 6). No action needed — log it.</li>
     </ul>
     <div class="email-cat">Informational</div>
     <ul>
-      <li><strong>LedgeRock Member Statement</strong> &mdash; Monthly billing from Patty (July 3). No action unless balance differs.</li>
-      <li><strong>LedgeRock &mdash; Junior Club Championship &amp; Successor (July 18)</strong> &mdash; Tee times starting 12pm; registration open.</li>
-      <li><strong>LedgeRock &mdash; Fall Junior Team Golf</strong> &mdash; World Cup theme; registration now open; record goal is 34 participants.</li>
-      <li><strong>Monarch Money &mdash; 2 new updates</strong> &mdash; New deposit via Electronic Funds Transfer (July 3). Log in to confirm.</li>
-      <li><strong>Xfinity bill</strong> &mdash; $110.90 auto-payment scheduled July 24. No action needed.</li>
-      <li><strong>Venmo &mdash; Wolf Match (July 2)</strong> &mdash; Received: $16 (Gobright) + $21 (Drew Templin) + $11 (Jake Templin) + $25 (Connolly hat). Paid: $25 (Drew) + $35 (Jake) + $9 (Gobright). Net: +$4.</li>
-      <li><strong>Amazon</strong> &mdash; Dark Lightning USCG item delivered July 2.</li>
-      <li><strong>GAP Golf</strong> &mdash; Handicap index update: "heating up."</li>
+      <li><strong>PPL Electric</strong> — Automatic bill payment received. Auto-pay confirmed.</li>
+      <li><strong>Venmo</strong> — June 2026 transaction history available. Worth a quick review.</li>
+      <li><strong>Amazon</strong> — "Nature Made Prenatal" delivered July 6.</li>
+      <li><strong>Swing Evolutions LLC</strong> (4274 Perkiomen Ave, Reading) — "2026 Putts for Pups" charity golf event. Sent to both email addresses.
+        <ul><li>Local charity — potential Level/community presence opportunity</li></ul>
+      </li>
     </ul>
     <div class="email-cat">Possible Unsubscribe</div>
     <ul>
-      <li>Xfinity &mdash; iPhone 17 promo</li>
-      <li>Ring &mdash; July 4 lost dog safety alert</li>
-      <li>Instagram &mdash; iPad app upgrade promo</li>
-      <li>Univest Bank &mdash; America 250th birthday email</li>
-      <li>LinkedIn &mdash; Job alert (Mercer Advisors / Vanguard WM roles)</li>
-      <li>Social Security Administration &mdash; America 250th promo</li>
+      <li><strong>LinkedIn</strong> — "Wealth Management Advisor insights: $100K/yr+" salary marketing. Low signal.</li>
+      <li><strong>Ring</strong> — "See and Protect More With Ring" promotional upsell. Unsubscribe candidate.</li>
     </ul>
   </div>
   <div class="calendar-panel">
-    <div class="panel-title">CALENDAR</div>
+    <div class="panel-title">📅 Calendar</div>
     <div class="cal-item">
-      <span class="cal-date-label">Sat, July 4</span>
-      <span class="cal-event">Independence Day &mdash; America's 250th &mdash; Markets closed</span>
+      <span class="cal-date-label">Today, Tue Jul 7</span>
+      <span class="cal-event">No events — standard Apella workday</span>
     </div>
     <div class="cal-item">
-      <span class="cal-date-label">Mon, July 6</span>
-      <span class="cal-event">Markets reopen &middot; SPCX joins Nasdaq-100</span>
+      <span class="cal-date-label">Sat–Sun, Jul 11–12</span>
+      <span class="cal-event"><strong>Men's Club Championship 2026</strong> — LedgeRock Golf Club</span>
     </div>
     <div class="cal-item">
-      <span class="cal-date-label">Mon&ndash;Tue, July 6&ndash;7</span>
-      <span class="cal-event">Senior Member Guest 2026 &mdash; LedgeRock Golf Club</span>
+      <span class="cal-date-label">Thu–Fri, Jul 16–17</span>
+      <span class="cal-event"><strong>Seafood Member Guest 2026</strong> — LedgeRock Golf Club</span>
     </div>
     <div class="cal-item">
-      <span class="cal-date-label">Wed, July 8</span>
-      <span class="cal-event">FOMC June Meeting Minutes released</span>
+      <span class="cal-date-label">Sat, Jul 25</span>
+      <span class="cal-event"><strong>Senior/Junior 2026</strong> — LedgeRock Golf Club</span>
     </div>
     <div class="cal-item">
-      <span class="cal-date-label">Sat&ndash;Sun, July 11&ndash;12</span>
-      <span class="cal-event">Men's Club Championship 2026 &mdash; LedgeRock Golf Club</span>
-    </div>
-    <div class="cal-item">
-      <span class="cal-date-label">Sat, July 18</span>
-      <span class="cal-event">LedgeRock Junior Club Championship &mdash; Tee times from 12pm</span>
-    </div>
-    <div class="cal-item">
-      <span class="cal-date-label">Thu&ndash;Fri, July 16&ndash;17</span>
-      <span class="cal-event">Seafood Member Guest 2026 &mdash; LedgeRock Golf Club</span>
-    </div>
-    <div class="cal-item">
-      <span class="cal-date-label">Sat&ndash;Sun, July 25&ndash;26</span>
-      <span class="cal-event">Senior/Junior 2026 &mdash; LedgeRock Golf Club</span>
-    </div>
-    <div class="cal-item">
-      <span class="cal-date-label">Tue&ndash;Wed, July 28&ndash;29</span>
-      <span class="cal-event">FOMC Meeting &mdash; rate decision July 29 (89% hold)</span>
+      <span class="cal-date-label">Mon, Jul 27</span>
+      <span class="cal-event"><strong>Pay Credit Cards</strong> — Recurring reminder</span>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127780;</span> MORNING BRIEF</div>
+<div class="section-header"><span class="section-icon">🌤</span> MORNING BRIEF</div>
 <div class="weather-card">
-  <div class="weather-date">Saturday, July 4</div>
+  <div class="weather-date">Tuesday, July 7</div>
   <div class="weather-divider">|</div>
-  <div class="weather-detail">Reading, PA &nbsp;&middot;&nbsp; High 91&deg;F / Low 68&deg;F &nbsp;&middot;&nbsp; Mostly Sunny &nbsp;&middot;&nbsp; &#9888;&#65039; Extreme heat advisory &mdash; heat dome covering eastern US through holiday weekend</div>
+  <div class="weather-detail">Reading, PA &nbsp;·&nbsp; High 76°F / Low 65°F &nbsp;·&nbsp; Mostly cloudy, humid, passing shower &nbsp;·&nbsp; 55% precip · Rain likely through mid-morning</div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128202;</span> MARKETS SNAPSHOT</div>
+<div class="section-header"><span class="section-icon">📊</span> MARKETS SNAPSHOT</div>
 
 <div class="market-recap-card">
-  <div class="market-recap-date">July 2, 2026 Close &nbsp;&middot;&nbsp; DIVERGENT &mdash; Value Up, Tech Down</div>
-  <div class="market-recap-headline">Dow hits record 52,900 as QQQ plunges 1.73% &mdash; a shocking June jobs miss (57K vs. ~180K est.) sparked a value-vs-tech split on the last session before the Independence Day weekend.</div>
+  <div class="market-recap-date">Monday, July 6, 2026 Close &nbsp;·&nbsp; RISK-ON / AI REVIVAL</div>
+  <div class="market-recap-headline">Dow closes above 53,000 for the first time as AI trade roars back in first session post-July 4th weekend.</div>
   <ul class="market-recap-list">
-    <li><strong>Dow Record High</strong> &mdash; DJIA +1.14% to 52,900 driven by value/defensive rotation; financials, industrials, and energy carried the index to ATH.</li>
-    <li><strong>Tech Selloff</strong> &mdash; QQQ -1.73%, Nasdaq -0.80%; chip names fell on AI valuation concerns and the softer macro print.</li>
-    <li><strong>Jobs Miss</strong> &mdash; June NFP +57K (consensus ~180K); unemployment 4.2%. Weakest reading in over a year raises soft-landing questions.</li>
-    <li><strong>Safe Havens Surge</strong> &mdash; Gold +1.81% to $4,187; Silver +3.58%; BTC +2.47%; ETH +5.54% &mdash; classic risk-off rotation into hard assets.</li>
+    <li><strong>Foxconn AI Beat</strong> — Hon Hai reported stronger-than-expected Q2 sales, confirming sustained AI chip demand and re-rating the Nvidia supply chain higher.</li>
+    <li><strong>Big Tech Broad Rally</strong> — Alphabet, Apple, Meta, Tesla all gained; XLK ETF +2%; Western Digital +7%; Teradyne +2.8%.</li>
+    <li><strong>Dow Record Close</strong> — DJIA +0.29% (+155 pts) to 53,055.91 — new all-time high. SPX +0.72%, Nasdaq +1.12%.</li>
+    <li><strong>GEV Surge</strong> — GE Vernova +3.50% to $1,152 on AI energy infrastructure momentum; up 69.8% YTD.</li>
   </ul>
 </div>
 
 <div class="market-tile-grid">
   <div class="market-tile tile-up">
     <div class="market-tile-sym">SPX</div><div class="market-tile-name">S&amp;P 500</div>
-    <div class="market-tile-price">$7,483.24</div>
+    <div class="market-tile-price">7,537.43</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val neutral">0.00%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+9.11%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+19.17%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+0.72%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+9.90%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+20.99%</span></div>
     </div>
   </div>
   <div class="market-tile tile-up">
     <div class="market-tile-sym">DJIA</div><div class="market-tile-name">Dow Jones</div>
-    <div class="market-tile-price">$52,900.07</div>
+    <div class="market-tile-price">53,055.91</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+1.14%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+9.34%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+18.01%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+0.29%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+9.66%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+19.48%</span></div>
     </div>
   </div>
   <div class="market-tile tile-up">
     <div class="market-tile-sym">SPY</div><div class="market-tile-name">SPDR S&amp;P 500 ETF</div>
-    <div class="market-tile-price">$744.78</div>
+    <div class="market-tile-price">$751.28</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-0.13%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+9.60%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+20.42%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+0.87%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+10.55%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+22.38%</span></div>
     </div>
   </div>
   <div class="market-tile tile-up">
     <div class="market-tile-sym">QQQ</div><div class="market-tile-name">Invesco Nasdaq ETF</div>
-    <div class="market-tile-price">$712.60</div>
+    <div class="market-tile-price">$722.82</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-1.73%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+16.50%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+28.73%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+1.43%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+18.17%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+31.57%</span></div>
     </div>
   </div>
-  <div class="market-tile tile-down">
+  <div class="market-tile tile-up">
     <div class="market-tile-sym">GOLD</div><div class="market-tile-name">Gold Spot Price</div>
-    <div class="market-tile-price">$4,187.30</div>
+    <div class="market-tile-price">$4,155.10</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+1.81%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val down">-2.95%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+25.68%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+1.03%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val down">-3.69%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+24.70%</span></div>
     </div>
   </div>
   <div class="market-tile tile-neutral">
     <div class="market-tile-sym">10YR</div><div class="market-tile-name">10Y Treasury Yield</div>
-    <div class="market-tile-price">4.372%</div>
+    <div class="market-tile-price">4.485%</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-2 bps</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+4.42%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+0.55%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+0.22%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+7.12%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+2.05%</span></div>
     </div>
   </div>
   <div class="market-tile tile-neutral">
@@ -312,339 +292,336 @@
     <div class="market-tile-price">6.43%</div>
     <div class="market-tile-stats">
       <div class="mts"><span class="mts-lbl">Source</span><span class="mts-val neutral">Freddie Mac</span></div>
+      <div class="mts"><span class="mts-lbl">Wk of</span><span class="mts-val neutral">Jul 2, 2026</span></div>
       <div class="mts"><span class="mts-lbl">1Y Ago</span><span class="mts-val neutral">6.67%</span></div>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127960;</span> FED / MACRO &amp; ECONOMIC CALENDAR</div>
+<div class="section-header"><span class="section-icon">🏦</span> FED / MACRO &amp; ECONOMIC CALENDAR</div>
 <div class="card">
   <div class="fed-grid">
     <div class="fed-stat">
       <div class="fed-stat-label">Fed Funds Rate</div>
-      <div class="fed-stat-value" style="font-size:14px;">3.50&ndash;3.75%</div>
+      <div class="fed-stat-value">3.50–3.75%</div>
       <div class="fed-stat-sub">Held June 17, 2026</div>
     </div>
     <div class="fed-stat">
       <div class="fed-stat-label">Vote</div>
-      <div class="fed-stat-value">11&ndash;0</div>
-      <div class="fed-stat-sub">Unanimous</div>
+      <div class="fed-stat-value">Unanimous</div>
+      <div class="fed-stat-sub">Hold decision</div>
     </div>
     <div class="fed-stat">
       <div class="fed-stat-label">Next FOMC</div>
-      <div class="fed-stat-value" style="font-size:15px;">July 29</div>
-      <div class="fed-stat-sub">25 days away</div>
+      <div class="fed-stat-value" style="font-size:15px;">Jul 28–29</div>
+      <div class="fed-stat-sub">22 days away</div>
     </div>
   </div>
   <ul style="margin-top:6px;margin-bottom:10px;">
-    <li><strong>Tone:</strong> Fed remains "data dependent" with no urgency to cut. June's 57K payroll print is the weakest in over a year &mdash; if June PCE also softens, July meeting language could shift more dovish even with a hold.</li>
-    <li><strong>Rate outlook:</strong> CME FedWatch at 89% probability of hold July 29. Futures pricing 1&ndash;2 cuts in H2 2026. Weak jobs data has pulled the first cut timeline closer to September.</li>
+    <li><strong>Tone:</strong> Data-dependent and patient. Powell has signaled no urgency to cut — inflation sticky at 2.7%, labor cooling but not breaking. July meeting expected to be another hold with no SEP.</li>
+    <li><strong>Rate outlook:</strong> First cut priced for September 2026. June ADP 98K (below 113K forecast) keeps September in play. Two more jobs reports before September decision are the key inputs.</li>
   </ul>
   <div style="border-top:1px solid #f0f0f0;padding-top:10px;">
     <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#888;margin-bottom:8px;">Economic Calendar</div>
     <div class="econ-cal-item">
-      <div class="econ-date">Today (Sat 7/4)</div>
-      <div class="econ-event" style="color:#aaa;">No U.S. releases &mdash; Independence Day holiday. Markets closed.</div>
+      <div class="econ-date">Today, Jul 7</div>
+      <div class="econ-event">ADP NER Pulse — weekly high-frequency employment estimate (2-week lag) · No other major scheduled U.S. releases</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">Mon July 6</div>
-      <div class="econ-event">Markets reopen &middot; SPCX joins Nasdaq-100 index (passive inflows ~$4.3B)</div>
+      <div class="econ-date">~Jul 15</div>
+      <div class="econ-event">CPI June 2026 — key inflation read before July FOMC; prior month data</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">Wed July 8</div>
-      <div class="econ-event">FOMC June Meeting Minutes &mdash; markets parsing for rate cut timeline hints</div>
+      <div class="econ-date">~Jul 17</div>
+      <div class="econ-event">Retail Sales June — consumer spending signal for Q2 end</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">~Wed July 15</div>
-      <div class="econ-event">June CPI (est.) &mdash; key inflation print ahead of July 29 FOMC decision</div>
+      <div class="econ-date">Jul 28–29</div>
+      <div class="econ-event">FOMC Meeting — rate decision Wed Jul 29, 2:00 PM ET · Hold widely expected · No Summary of Economic Projections</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">~Thu July 30</div>
-      <div class="econ-event">June PCE (est.) &mdash; Fed's preferred inflation gauge</div>
-    </div>
-    <div class="econ-cal-item">
-      <div class="econ-date">Tue&ndash;Wed 7/28&ndash;29</div>
-      <div class="econ-event">FOMC Meeting &mdash; rate decision July 29 (89% probability of hold)</div>
+      <div class="econ-date">~Aug 7</div>
+      <div class="econ-event">NFP July 2026 — first Friday of August; critical for September cut case</div>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128200;</span> TICKERS</div>
+<div class="section-header"><span class="section-icon">📈</span> TICKERS</div>
 <div class="ws-ticker-grid">
   <div class="ws-ticker-card">
     <div class="ws-sym">10YR</div><div class="ws-name">10Y Treasury Yield</div>
-    <div class="ws-price">4.372%</div>
+    <div class="ws-price">4.485%</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-2 bps</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+4.42%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+0.55%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.22%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+7.12%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+2.05%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">AVXL</div><div class="ws-name">Anavex Life Sciences</div>
-    <div class="ws-price">$2.76</div>
+    <div class="ws-price">$2.66</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+6.98%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-25.00%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-74.42%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-3.62%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-27.72%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-73.37%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">BTC</div><div class="ws-name">Bitcoin</div>
-    <div class="ws-price">$61,485</div>
+    <div class="ws-price">$63,995</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+2.47%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-30.71%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-43.92%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.70%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-27.88%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-41.41%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">DJIA</div><div class="ws-name">Dow Jones Ind. Avg.</div>
-    <div class="ws-price">$52,900</div>
+    <div class="ws-price">53,055.91</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+1.14%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+9.34%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+18.01%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.29%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+9.66%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+19.48%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">ETH</div><div class="ws-name">Ethereum</div>
-    <div class="ws-price">$1,698.17</div>
+    <div class="ws-price">$1,797.57</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+5.54%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-43.40%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-34.46%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.82%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-40.09%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-30.09%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">GEV</div><div class="ws-name">GE Vernova</div>
-    <div class="ws-price">$1,113.11</div>
+    <div class="ws-price">$1,152.04</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-1.87%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+64.10%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+115.87%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+3.50%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+69.84%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+117.84%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
-    <div class="ws-sym">MMTIF</div><div class="ws-name">Mineworx Technologies</div>
-    <div class="ws-price" style="font-size:14px;color:#444;">N/A</div>
+    <div class="ws-sym">MMTIF</div><div class="ws-name">Micromem Technologies</div>
+    <div class="ws-price" style="font-size:15px;color:#444;">N/A</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Market</span><span class="ws-val ws-val-neutral">OTC Pink</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">Action</span><span class="ws-val ws-val-neutral">Check OTCMarkets</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Market</span><span class="ws-val ws-val-neutral">OTC / OTCQB</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-neutral">N/A</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-neutral">N/A</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">PCT</div><div class="ws-name">PureCycle Technologies</div>
-    <div class="ws-price">$7.61</div>
+    <div class="ws-price">$7.74</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-4.99%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-14.97%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-44.69%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+1.71%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-13.52%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-46.73%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">SETM</div><div class="ws-name">Sprott Critical Materials ETF</div>
-    <div class="ws-price">$31.26</div>
+    <div class="ws-price">$31.39</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.90%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+3.65%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+77.62%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.42%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+4.08%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+80.89%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
-    <div class="ws-sym">SPCX</div><div class="ws-name">SpaceX (Space Expl. Tech.)</div>
-    <div class="ws-price">$162.00</div>
+    <div class="ws-sym">SPCX</div><div class="ws-name">SpaceX Corporation</div>
+    <div class="ws-price">$160.42</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+2.83%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+0.65%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+0.65%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-0.98%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-0.33%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-0.33%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">SPX</div><div class="ws-name">S&amp;P 500</div>
-    <div class="ws-price">$7,483.24</div>
+    <div class="ws-price">7,537.43</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-neutral">0.00%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+9.11%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+19.17%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.72%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+9.90%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+20.99%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">TE</div><div class="ws-name">Tronox Holdings</div>
-    <div class="ws-price">$8.56</div>
+    <div class="ws-price">$8.65</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-6.75%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+9.18%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+494.44%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+1.05%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+10.33%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+517.86%</span></div>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128269;</span> WATCHLIST READ</div>
+<div class="section-header"><span class="section-icon">🔍</span> WATCHLIST READ</div>
 <div class="watchlist-grid">
-  <div class="watchlist-card"><div class="wl-sym">10YR</div><div class="wl-content">4.372%, down ~2bps July 2. Jobs miss is bullish for bonds short-term. Watch <strong>4.25%</strong> as next floor &mdash; a break there boosts bond prices and eases mortgage rates further. Fed on hold but data is shifting dovishly.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">AVXL</div><div class="wl-content">$2.76, +6.98% July 2 &mdash; notable pop on no obvious news catalyst. Still <strong>YTD -25%, 1Y -74%</strong>. Needs material clinical data or partnership announcement to rebuild. Watch <strong>$3.00</strong> as overhead resistance; speculative hold.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">BTC</div><div class="wl-content">$61,485, +2.47% July 2. Safe haven bid emerging from jobs miss. Still <strong>YTD -30.71%</strong>. Watch <strong>$65K</strong> as next resistance &mdash; failure to break there confirms the downtrend. Below $58K retests the lows.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">DJIA</div><div class="wl-content"><strong>All-time record at 52,900</strong>. Value rotation is driving this &mdash; not broad risk-on. Watch for rotation to fade if soft economic data starts pricing into cyclicals. Hold above 52,000 is healthy; below that watch the trend.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">ETH</div><div class="wl-content">$1,698, +5.54% July 2. Crypto catching a bounce. Still <strong>YTD -43.40%</strong>. Watch <strong>$2,000</strong> as key psychological resistance. Below $1,600 retests lows. High risk, speculative position.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">GEV</div><div class="wl-content">$1,113, -1.87% July 2. Still a monster performer: <strong>YTD +64%, 1Y +115%</strong>. Grid/energy infrastructure thesis fully intact (heat dome + AI data center power demand). Consider trailing stop at <strong>$1,050</strong> to protect gains.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">MMTIF</div><div class="wl-content">OTC Pink Sheet &mdash; no real-time data. Check <strong>otcmarkets.com</strong> directly for last trade. No news or filings flagged. Monitoring position only until volume returns or news emerges.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">PCT</div><div class="wl-content">$7.61, -4.99% July 2. <strong>YTD -14.97%, 1Y -44.69%</strong>. Plastic recycling thesis needs a revenue or production catalyst. Key support at <strong>$7.00</strong> &mdash; a close below invalidates the near-term thesis and warrants a reassessment.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">SETM</div><div class="wl-content">$31.26, +0.90% July 2. Sprott Critical Materials ETF. <strong>1Y +77.62%</strong>. Energy transition minerals thesis intact given AI infrastructure and EV demand. Hold. Watch <strong>$29</strong> as a potential add level on any pullback.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">SPCX</div><div class="wl-content">$162.00, +2.83% July 2. SpaceX. <strong>NASDAQ-100 INCLUSION MONDAY JULY 7 &mdash; ~$4.3B forced passive buying.</strong> IPO at $135; avg analyst target $204; 52-week high $225.64. Watch Sunday night premarket. Highest-conviction event of the week.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">SPX</div><div class="wl-content">$7,483, flat July 2. <strong>YTD +9.11%</strong>. Tech vs. value divergence is the key story. Watch <strong>7,400</strong> as near-term support &mdash; a break below suggests the jobs miss is starting to price into broader equity multiples.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">TE</div><div class="wl-content">$8.56, <strong>-6.75% July 2</strong> &mdash; large single-session drop after a <strong>1Y +494%</strong> run. Investigate before Monday: was this news-driven or profit-taking? Key support at <strong>$8.00</strong>. Don't let a parabolic winner become a loss.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">10YR</div><div class="wl-content">At <strong>4.485%</strong> and creeping higher. Watch <strong>4.60%</strong> as next resistance — breach there pressures rate-sensitive equities and pushes mortgage rates higher. Mortgage link: 30Y Freddie Mac at 6.43% stays sticky until 10Y meaningfully drops below 4.3%.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">AVXL</div><div class="wl-content">At <strong>$2.66</strong>, down 73.4% in one year. Near penny-stock territory. No near-term catalyst visible. <strong>Key question: is there a clinical trial or partnership trigger on the horizon?</strong> If not, this is dead money. Review your cost basis and decide if holding is justified or if capital is better deployed elsewhere.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">BTC</div><div class="wl-content">At <strong>$63,995</strong> — YTD -27.9%, deeply underperforming equities and gold. <strong>$60,000 is key support.</strong> A break there opens $55K. Modest +0.70% day = stabilization, not momentum. Risk-off shock could hit BTC harder than gold. Need volume confirmation above $67K to call this a recovery.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">DJIA</div><div class="wl-content"><strong>53,055 — new all-time high.</strong> New support at 53,000. A close back below 52,500 signals a failed breakout. Consolidation at or above 53K is constructive; next upside resistance at 54,000. This is a strong headline to use with clients today.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">ETH</div><div class="wl-content">At <strong>$1,797</strong> — right at the $1,800 psychological level. YTD -40.1%, 1Y -30.1%. Ethereum is not participating in the AI/tech rally. <strong>Hold above $1,800 is critical.</strong> Break below $1,700 = next support at $1,500. Needs ETF inflow or protocol upgrade news to reverse the trend.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">GEV</div><div class="wl-content">At <strong>$1,152 — +69.8% YTD, +117.8% 1Y.</strong> Best performing position. <strong>Consider a trailing stop at $980–$1,020 (~12–15% below current).</strong> AI energy infrastructure thesis remains intact. Protect the gain — this is where discipline separates good investors from great ones. Review position size vs. portfolio.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">MMTIF</div><div class="wl-content">Micromem Technologies (OTCQB) — <strong>no real-time quote.</strong> Last news: private placement ~C$327K (Jan 2026); gas sensor development update with Dept of National Defence (April 2026). Check OTC Markets for any filings. Very illiquid — speculative long-term hold, no near-term price action expected.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">PCT</div><div class="wl-content">PureCycle at <strong>$7.74</strong> — up +1.71% yesterday but YTD -13.5%, 1Y -46.7%. <strong>$7.00 is critical support.</strong> Close below $7 increases downside risk sharply. Needs commercial production milestone or strategic partner to restore the thesis. Size this as speculative.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">SETM</div><div class="wl-content">Sprott Critical Materials ETF at <strong>$31.39</strong> — YTD +4.1%, 1Y +80.9%. Critical metals (lithium, cobalt, rare earths) with AI data center + EV demand tailwinds. <strong>Watch for China rare-earth export restriction news as a potential catalyst spike.</strong> Hold above $30 is constructive.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">SPCX</div><div class="wl-content">SpaceX Corporation at <strong>$160.42</strong> — flat YTD (-0.33%) since going public. Not breaking out but holding. Watch Starship milestones, Starlink subscribers, or government contract awards for catalysts. <strong>$150 is near-term support; $175 is first meaningful resistance.</strong> This is a 5-year thesis — don't trade the noise.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">SPX</div><div class="wl-content">At <strong>7,537</strong> — YTD +9.9%. <strong>Key support at 7,400.</strong> Holding above 7,500 = bulls in control. Two near-term risks: Russia-Ukraine shock or a hot June CPI print (~Jul 15). Next resistance at 7,600. Stay invested — no action signal until something breaks.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">TE</div><div class="wl-content">Tronox at <strong>$8.65</strong> — YTD +10.3%, 1Y +517.9% (came from ~$1.40 a year ago). <strong>Know your cost basis. Set a stop-loss — protect 50–70% of the gain.</strong> Titanium dioxide is a cyclical industrial. This is a trade-the-cycle situation. Watch earnings/guidance and TiO2 demand signals for the next move.</div></div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#9889;</span> MACRO &amp; ENERGY</div>
+<div class="section-header"><span class="section-icon">⚡</span> MACRO &amp; ENERGY</div>
 <div class="macro-grid">
-  <div class="macro-tile"><div class="macro-label">10Y Treasury</div><div class="macro-value">4.372%</div><div class="macro-context">Down ~2bps July 2 &middot; Jobs miss is dovish signal &middot; Watch 4.25% as next floor; break there boosts bonds and mortgages</div></div>
-  <div class="macro-tile"><div class="macro-label">30Y Mortgage</div><div class="macro-value">6.43%</div><div class="macro-context">Freddie Mac avg (July 2) &middot; 7-week low &middot; 1Y ago: 6.67% &middot; Clients watching rates: window is open now</div></div>
-  <div class="macro-tile"><div class="macro-label">WTI Crude</div><div class="macro-value">$68.78</div><div class="macro-context">Up +0.13% &middot; Hormuz risk premium embedded &middot; OPEC+ steady &middot; Watch $70 as near-term resistance</div></div>
-  <div class="macro-tile"><div class="macro-label">Brent Crude</div><div class="macro-value">$72.13</div><div class="macro-context">Up +0.46% &middot; Geopolitical premium holding &middot; US-Iran talks progress could soften near-term</div></div>
-  <div class="macro-tile"><div class="macro-label">Natural Gas</div><div class="macro-value mv-up">$3.24</div><div class="macro-context">Up +1.53% &middot; Heat dome driving power-gen demand spike &middot; EIA storage report next week &middot; Watch $3.50 resistance</div></div>
-  <div class="macro-tile"><div class="macro-label">Gold</div><div class="macro-value">$4,187</div><div class="macro-context">Up +1.81% July 2 &middot; 1Y +25.68% &middot; Safe haven + de-dollarization bid &middot; YTD -2.95% from elevated 2025 base</div></div>
-  <div class="macro-tile"><div class="macro-label">Silver</div><div class="macro-value mv-up">$62.81</div><div class="macro-context">Up +3.58% &middot; 1Y +70.77% &middot; Industrial + precious metals double bid &middot; AI/data center demand adds structural support</div></div>
-  <div class="macro-tile"><div class="macro-label">DXY (Dollar)</div><div class="macro-value">100.86</div><div class="macro-context">Flat &middot; YTD +2.48% &middot; Mildly strong dollar dampening commodity gains &middot; Jobs miss could weaken DXY short-term</div></div>
+  <div class="macro-tile"><div class="macro-label">10Y Treasury</div><div class="macro-value">4.485%</div><div class="macro-context">↑ +0.22% day · Yield drifting higher on sticky inflation. Watch 4.60% — breach pressures equities and housing affordability.</div></div>
+  <div class="macro-tile"><div class="macro-label">30Y Mortgage</div><div class="macro-value">6.43%</div><div class="macro-context">Freddie Mac (wk of Jul 2) · Down from 6.49% prior week · 1Y ago: 6.67% · Buyers stuck in the 6s through summer.</div></div>
+  <div class="macro-tile"><div class="macro-label">WTI Crude</div><div class="macro-value mv-down">$68.55</div><div class="macro-context">↓ -0.20% day · YTD +19.6% · Hormuz tensions eased; Russia-Ukraine drone strike on St. Pete oil terminal is the upside risk today.</div></div>
+  <div class="macro-tile"><div class="macro-label">Brent Crude</div><div class="macro-value mv-up">$71.99</div><div class="macro-context">↑ +0.26% day · YTD +18.5% · Low $70s after Hormuz de-escalation. Watch for Ukraine drone follow-on strikes on Russian energy infrastructure.</div></div>
+  <div class="macro-tile"><div class="macro-label">Natural Gas</div><div class="macro-value mv-up">$3.24</div><div class="macro-context">↑ +1.53% day · YTD -10.3% · Summer heat demand picking up. EIA weekly storage report due Thu — watch for draw signal.</div></div>
+  <div class="macro-tile"><div class="macro-label">Gold</div><div class="macro-value mv-up">$4,155</div><div class="macro-context">↑ +1.03% day · 1Y +24.7% · Safe-haven bid elevated on Russia-Ukraine risk. Best major macro trade of the past year.</div></div>
+  <div class="macro-tile"><div class="macro-label">Silver</div><div class="macro-value mv-up">$61.92</div><div class="macro-context">↑ +2.11% day · 1Y +69.1% · Outperforming gold today. Industrial demand (solar, EVs) plus safe-haven bid. Watch for continuation.</div></div>
+  <div class="macro-tile"><div class="macro-label">DXY (Dollar)</div><div class="macro-value">$100.85</div><div class="macro-context">↓ -0.01% day · YTD +2.47% · Essentially flat. Risk-on environment keeping dollar subdued despite geopolitical uncertainty.</div></div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128188;</span> APELLA READ</div>
+<div class="section-header"><span class="section-icon">💼</span> APELLA READ</div>
 <div class="apella-grid">
   <div class="apella-panel">
     <div class="apella-label">Market Narrative</div>
-    <div class="apella-text">The Dow hit an all-time record on July 2 while tech sold off hard &mdash; QQQ fell 1.73% as a shockingly weak June jobs print (57K vs. ~180K expected) triggered rotation from growth into value and safe havens. Diversified portfolios outperformed tech-concentrated accounts.</div>
+    <div class="apella-text">Tech led a broad market rally Monday as AI optimism returned on Foxconn's beat — Dow hit a new record at 53K while Nasdaq gained 1.1%. Clients who stayed invested through the late-June chip-stock pullback saw portfolios recover and push to new highs in the first session back from the holiday weekend.</div>
   </div>
   <div class="apella-panel">
     <div class="apella-label">Client Concern</div>
-    <div class="apella-text">"The news says the market hit records but my account is down &mdash; what's going on?" The DJIA vs. QQQ divergence will confuse clients. Expect calls from tech-heavy investors who saw red on their statements while headlines screamed "record highs."</div>
+    <div class="apella-text">After seeing the Dow hit a new record, clients are likely wondering whether to take chips off the table — and Russia-Ukraine news may be triggering anxiety about geopolitical risk to portfolios. Both "is it too high to stay in?" and "should I be worried about the war?" are live questions today.</div>
   </div>
   <div class="apella-panel">
     <div class="apella-label">Talking Point</div>
-    <div class="apella-text">"The Dow hit an all-time high Thursday, but that's just 30 stocks &mdash; mostly non-tech. Technology pulled back on a soft jobs number, which actually has a silver lining: weaker job data gives the Fed more room to cut rates later this year, and that would be a direct tailwind for bonds and balanced portfolios."</div>
+    <div class="apella-text">"The Dow just hit 53,000 for the first time in history and the S&amp;P is up nearly 10% this year. Pulling out of a record-setting market because it feels high is one of the most common and costly mistakes investors make. Markets hit new records regularly — that's not a warning sign, that's what long-term investing looks like. Our job is to stay disciplined to the plan."</div>
   </div>
   <div class="apella-panel">
     <div class="apella-label">Rate Note</div>
-    <div class="apella-text">30-year mortgage at 6.43% &mdash; a 7-week low and down from 6.67% a year ago. If clients have been watching rates to buy or refinance, this is the lowest entry point in nearly two months. Continued weak economic data could push rates even lower before the next FOMC on July 29.</div>
+    <div class="apella-text">30-year fixed mortgage at 6.43% (Freddie Mac, week of July 2) — down slightly from 6.49% but still well above where buyers need it. Fed is unlikely to cut before September at the earliest, and only if labor data deteriorates further. Tell rate-sensitive clients: the market is pricing 1–2 cuts this year. Don't wait for 5% — it's not coming in 2026.</div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127758;</span> GEOPOLITICAL</div>
+<div class="section-header"><span class="section-icon">🌍</span> GEOPOLITICAL</div>
 <div class="card">
   <ul>
-    <li><strong>Strait of Hormuz / Middle East:</strong> Remains the #1 energy market chokepoint &mdash; ~20% of global oil flows and LNG trade pass through. US-Iran negotiations are progressing but fragile. Any escalation could push WTI toward $100 and re-ignite inflation.
-      <ul><li>Implication: Energy/grid infrastructure holdings (GEV) remain an effective geopolitical hedge. Current WTI at $68 has $30 of headroom before macro disruption threshold.</li></ul>
+    <li><strong>Russia-Ukraine — Simultaneous Diplomacy and Escalation:</strong> Trump held separate calls with Putin and Zelensky over the weekend; Ukrainian drones struck a St. Petersburg oil terminal; Russia launched its second large-scale Kyiv attack in under a week. Markets are being forced to price both outcomes at once.
+      <ul>
+        <li>If diplomatic progress → Brent slides toward $65, gold softens, European defense equities give back recent gains</li>
+        <li>If escalation expands to broader infrastructure strikes → Oil spikes above $80, gold to $4,300+, defense names (RTX, LMT, BAESY) surge, markets de-risk</li>
+        <li>NATO summit backdrop is forcing Europe to put real money behind defense spending pledges — structural multi-year tailwind for defense sector regardless of outcome</li>
+      </ul>
     </li>
-    <li><strong>Red Sea / Trade Routes:</strong> Partial reopening after prior disruptions; freight and energy risk premiums still elevated. Improving LNG supply and Norwegian gas flows are limiting upside energy prices for now.
-      <ul><li>Implication: Watch June CPI (est. July 15) for any re-emergence of supply chain inflation from freight costs. A hot print would push the Fed cut timeline back.</li></ul>
+    <li><strong>Iran / Strait of Hormuz:</strong> Structural stalemate continues. Shipping disruptions eased recently (Brent retreated to low $70s) but underlying tension is unresolved. Any tanker incident re-escalates oil fast.
+      <ul>
+        <li>Watch for US-Iran back-channel signals or tanker incident reports as early warning</li>
+      </ul>
     </li>
-    <li><strong>Global Risk Regime Shift:</strong> Markets repricing from growth/rates focus to energy security and trade-route stability. Supportive of energy, precious metals, defense, and commodity-linked sectors.
-      <ul><li>Implication: SETM (critical minerals), GEV (grid), Gold/Silver positions are aligned with this macro shift. The Broadcast District development in Reading is a micro-signal of the same capital-deployment trend.</li></ul>
+    <li><strong>China-US AI Export Controls:</strong> Anthropic is closing loopholes that let Chinese companies access Claude via Singapore subsidiaries and VPNs. GPT-5.6 launched behind a US government-managed access list. AI is now formally a national security asset.
+      <ul>
+        <li>Semiconductor and AI hardware companies with significant China exposure face continued regulatory headwinds</li>
+      </ul>
     </li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127942;</span> PHILLY SPORTS</div>
+<div class="section-header"><span class="section-icon">🏆</span> PHILLY SPORTS — LAST NIGHT</div>
 
 <div class="team-section">
-  <div class="team-header"><span class="team-badge badge-pga">PGA</span> John Deere Classic &mdash; Round 2 (July 3, TPC Deere Run, Silvis IL)</div>
-  <ul>
-    <li><strong>Lucas Glover leads at -14</strong> after back-to-back bogey-free rounds &mdash; carded a 65 in R2 to open a 2-shot lead heading into the weekend. No bogeys through 36 holes.</li>
-    <li>Lee Hodges -12 (in final pairing Saturday); Zac Blair fell to -11 after R2 68.</li>
-    <li>Eric Cole fired the day's low round (63, -8) to surge into contention. Max Homa -9, Chris Gotterup -8.</li>
-    <li>Rounds 3 &amp; 4 continue Saturday&ndash;Sunday July 4&ndash;5.</li>
-  </ul>
-</div>
-
-<div class="team-section">
-  <div class="team-header"><span class="team-badge badge-phillies">PHI</span> Phillies &mdash; Next Game</div>
-  <div class="card" style="background:#fafafa;padding:12px 16px;">
-    <strong style="font-size:13px;color:#333;">Today, Saturday July 4 &mdash; Away vs. Kansas City Royals</strong><br>
-    <span style="font-size:11.5px;color:#666;display:block;margin-top:4px;">Phillies 49-39 (2nd NL East) &middot; No game July 3 &middot; Series at KC continues July 4-5 &middot; Lost to Pittsburgh Pirates 6-1 on July 2</span>
+  <div class="team-header"><span class="team-badge badge-phillies">PHI</span> Phillies @ Kansas City Royals — July 6, 2026</div>
+  <div class="scorebug">
+    <div class="scorebug-team"><span class="scorebug-name">PHI</span><span class="scorebug-score">1</span></div>
+    <span class="scorebug-divider">–</span>
+    <div class="scorebug-team"><span class="scorebug-name">KC</span><span class="scorebug-score scorebug-winner">15</span></div>
+    <div class="scorebug-meta"><span class="scorebug-status">Final</span><span class="scorebug-detail">Jul 6 · Kauffman Stadium</span></div>
   </div>
-</div>
-
-<p style="color:#888;font-size:12px;padding:4px 0 10px 0;">Eagles, Sixers, Flyers &mdash; all offseason. No games.</p>
-
-<div class="section-header"><span class="section-icon">&#128205;</span> READING / BERKS COUNTY</div>
-<div class="callout-yellow"><span class="lead">$350M Broadcast District breaking ground in Wyomissing/Spring Township &mdash; one of the largest private investments in Berks County history.</span>Retail, dining, housing, and public space project signals sustained institutional confidence in Reading metro population and economic growth. Directly relevant context for Level clients in the area exploring business development or expansion.</div>
-<div class="card">
   <ul>
-    <li><strong>Affordability gap widening:</strong> Median home sale price ~$290,000; lowest new construction at $349,900 (~$2,200/mo payment). Entry-level buyers are priced out of new builds &mdash; a structural problem, not a temporary one.
-      <ul><li>For Apella: Clients watching rates to buy should be told that 6.43% and falling is the best window in months.</li></ul>
-    </li>
-    <li><strong>BerksIDA &mdash; $5M TIF-backed 338-unit housing project in Amity Township:</strong> Infrastructure improvements funded through tax increment financing to expand housing options and grow the tax base.</li>
-    <li><strong>D.S.W. Hosiery Mill conversion (1125 Moss St., Reading):</strong> $6M privately financed adaptive reuse into 55-unit workforce housing complex.</li>
-    <li><strong>Governor Shapiro Berks County visit:</strong> Pushing reform to protect manufactured housing community residents from out-of-state management company predatory practices.</li>
+    <li>Royals put up a 15-run shellacking — Salvador Perez, Luke Maile, Lane Thomas, and Tyler Tolbert all homered</li>
+    <li><strong>Cristopher Sanchez tagged for a career-worst 9 earned runs</strong> — an ugly outing from the Phillies ace</li>
+    <li>Tyler Tolbert went 5-for-5, the first Royals player with a 5-hit game since 2022</li>
+    <li><strong>Next:</strong> @ Cincinnati Reds tonight (July 7, NSPPH) and July 8 (ESPN) — need a bounce-back from the rotation</li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#129302;</span> AI / ANTHROPIC / TECH</div>
+<div class="section-header"><span class="section-icon">📍</span> READING / BERKS COUNTY</div>
+<div class="callout-yellow"><span class="lead">Local inflation at 2.7% (housing and services-driven) is squeezing small businesses and workforce retention — this is Level's opening.</span>Small businesses in Reading and Berks County are facing the same cost pressures as their employees: rent, utilities, and labor costs all rising. AI and automation tools that cut operating overhead are a direct, concrete value proposition — not abstract efficiency, but survival margin.</div>
+<div class="card"><ul>
+  <li><strong>Homelessness up 8%:</strong> Berks 2026 Point-in-Time Count — 734 people experiencing homelessness, up from 2025. Structural housing shortage. Reading rental range: $838 (studio) to $1,563 (4-bed), median asking $1,375.</li>
+  <li><strong>Corridor Development (Routes 422 &amp; 222):</strong> County moving into Step 2 of Federal Corridor ID Program. Development/redevelopment opportunity analysis underway — signals infrastructure investment and business opportunity along both corridors.</li>
+  <li><strong>Unemployment:</strong> 4.2% in Berks — up 0.1% seasonally. Labor market stable but softening, tracking the national trend.</li>
+  <li><strong>Agriculture Grants:</strong> Alvernia University ($7,500 — Seeds of Discovery raised bed project) and Brandywine Heights Area School District ($7,500 — Poultry Science Program) received PA Farm Bill Youth Agriculture grants.</li>
+  <li><strong>Local Charity Golf:</strong> Swing Evolutions LLC (4274 Perkiomen Ave) running "Putts for Pups" 2026 fundraiser. In A Heartbeat Golf Tournament also open for registration. Both are community presence/networking opportunities worth considering.</li>
+</ul></div>
+
+<div class="section-header"><span class="section-icon">🤖</span> AI / ANTHROPIC / TECH</div>
 <div class="card">
   <ul>
-    <li><strong>Anthropic overtakes OpenAI in self-reported revenue &mdash; on track for $47B, profitable by 2029 (a year ahead of OpenAI).</strong> In early talks with Samsung on co-developing a custom AI chip.
+    <li><strong>Claude Fable 5 Restored July 1</strong> — US Commerce Dept lifted export-control suspension after 18 days offline (suspended June 12). Full global access restored. Anthropic simultaneously launched <strong>Claude Sonnet 5</strong> as the new default for Free and Pro users (June 30).
       <ul>
-        <li><em>For Apella:</em> Validates AI-infrastructure thesis; picks/shovels exposure (chip makers, power/grid, data centers) continues to outperform.</li>
-        <li><em>For Level:</em> Your platform of choice is the market leader by revenue &mdash; double down on Anthropic API-based workflows and use this as a selling point with SMB clients.</li>
+        <li><em>For Apella:</em> A government suspension of an AI tool is a real business continuity risk — worth noting if any workflows depend on a single model provider</li>
+        <li><em>For Level:</em> The suspension disrupted businesses globally. "AI business continuity planning" is a real advisory gap Level could fill — especially for small businesses who don't know they have AI exposure</li>
       </ul>
     </li>
-    <li><strong>SpaceX (SPCX) joins Nasdaq-100 Monday July 7</strong> &mdash; ~$4.3B forced passive inflows. IPO at $135; now at $162; avg target $204. The public debut of SpaceX is one of the most significant market listings in the past decade.
+    <li><strong>Anthropic Now Ahead of OpenAI on Revenue Trajectory</strong> — On pace for $47B in revenue; projected profitable by 2029, a year ahead of OpenAI. ChatGPT monthly visits fell below a majority of the generative AI market for the first time (May, per Similarweb).
       <ul>
-        <li><em>For Apella:</em> Clients holding QQQ will automatically gain SPCX exposure starting Monday. Good talking point for tech-hesitant clients who now own SpaceX.</li>
+        <li><em>For Level:</em> AI is fragmenting. Small businesses no longer default to ChatGPT. This is the pitch moment: "let us identify which AI stack is right for your specific business" — not just "use AI."</li>
       </ul>
     </li>
-    <li><strong>OpenAI + Broadcom launch "Jalape&ntilde;o" custom inference chip</strong> &mdash; Better performance-per-watt than existing options. Sam Altman separately pitching a US government equity stake in OpenAI to Trump, Lutnick, and Bessent.
+    <li><strong>OpenAI Goes Quasi-Government:</strong> GPT-5.6 (Sol/Terra/Luna) launched exclusively through a government-managed access list — first frontier model gated by government coordination. OpenAI also offered the US government a 5% stake valued at ~$42.6B.
       <ul>
-        <li><em>For Level:</em> Inference cost reduction is a direct tailwind for affordable AI automation products.</li>
-        <li><em>For Apella:</em> Government entanglement adds political risk to OpenAI valuations &mdash; something to monitor.</li>
+        <li><em>For Apella:</em> AI and government are merging. Financial services AI regulation is accelerating — client questions about AI in portfolio management and compliance are coming sooner than expected</li>
       </ul>
     </li>
-    <li><strong>Google data centers: 37% jump in electricity use</strong> &mdash; AI infrastructure power demand is the dominant secular theme. GEV (+64% YTD) is the most direct beneficiary in your current portfolio.</li>
-    <li><strong>Global startups raised record $510B in H1 2026</strong> &mdash; AI dominated; OpenAI and Anthropic alone took a massive share of total VC capital.</li>
+    <li><strong>Foxconn Beat Confirms AI Infrastructure Build-Out Is Real:</strong> Stronger-than-expected Q2 sales drove Monday's tech rally. This is supply chain confirmation that AI capex is not slowing — it's accelerating. GEV is the direct portfolio beneficiary.</li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127916;</span> OTHER NEWS</div>
+<div class="section-header"><span class="section-icon">🎬</span> OTHER NEWS</div>
 <div class="card">
   <ul>
-    <li><strong>Taylor Swift and Travis Kelce wedding reportedly happening at Madison Square Garden this weekend</strong> &mdash; City permits filed for 500&ndash;999 guests; Bradley Cooper, Hugh Grant, Gigi Hadid, Haim sisters, Dakota Johnson, Julianne Moore among those spotted arriving. Wedding expected today or tomorrow.</li>
-    <li><strong>America's Semiquincentennial &mdash; 250 years old today</strong> &mdash; Major celebrations in Philadelphia (Constitution Center, Boathouse Row fireworks), DC, and NYC. Historic milestone.</li>
-    <li><strong>Silo Season 3 returns on Apple TV+</strong> &mdash; Rebecca Ferguson back as Juliette with a wiped memory. Strong reviews; one of the better sci-fi returns this summer.</li>
-    <li><strong>"Summer's Last Resort" premieres on Tubi</strong> (July 3) &mdash; Sophia Bush and Jerry O'Connell comedy series. Free streaming.</li>
+    <li><strong>Taylor Swift and Travis Kelce married July 3</strong> at Madison Square Garden in NYC — star-studded ceremony that dominated weekend media. Global pop-culture event.</li>
+    <li><strong>World Cup 2026:</strong> Storms delayed Mexico vs. England match in Mexico City. World Cup weather logistics are a running story through the tournament.</li>
+    <li><strong>Serena Williams</strong> returning to Wimbledon with a wildcard — the comeback story of the tennis summer.</li>
+    <li><strong>Britney Spears' sons</strong> walked Paris Fashion Week — family public reinvention continues.</li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128240;</span> ARTICLES</div>
+<div class="section-header"><span class="section-icon">📰</span> ARTICLES</div>
 <div class="article-card">
-  <div class="article-headline">Is SpaceX Stock a Buy Before July 7?</div>
-  <div class="article-meta">The Motley Fool &nbsp;&middot;&nbsp; July 1, 2026</div>
-  <div class="article-summary">SpaceX joins the Nasdaq-100 on July 7, triggering ~$4.3B in forced passive buying from QQQ and other index funds &mdash; creating a near-term mechanical floor regardless of macro conditions. The article weighs the inclusion tailwind against SPCX's current $1.77T valuation and asks whether the stock at $162 already prices in the catalyst.</div>
-  <a class="article-link" href="https://www.fool.com/investing/2026/07/01/is-spacex-stock-a-buy-before-july-7/">Read &rarr;</a>
+  <div class="article-headline">4 Parts of the Planning Process AI Can't Touch</div>
+  <div class="article-meta">Financial Planning &nbsp;·&nbsp; July 6, 2026</div>
+  <div class="article-summary">AI is cutting research and admin tasks to minutes, but advisors identify four planning functions where the human relationship is the product — building trust over years, grounding clients during volatility, navigating life transitions, and holding clients accountable. The piece argues that doubling down on relationship depth is the right competitive response to AI commoditization of analysis.</div>
+  <a class="article-link" href="https://www.financial-planning.com/news/4-parts-of-the-planning-process-ai-cant-touch">Read →</a>
 </div>
 <div class="article-card">
-  <div class="article-headline">JPMorgan Mid-Year Outlook 2026: Promise and Pressure</div>
-  <div class="article-meta">J.P. Morgan Wealth Management &nbsp;&middot;&nbsp; July 2026</div>
-  <div class="article-summary">JPMorgan's mid-year outlook flags a macro regime shift &mdash; markets repricing from growth/rate focus to energy security and geopolitical risk. They project 23% S&amp;P earnings growth in 2026 and flag that the "pressure" side of the equation comes from geopolitical instability, AI infrastructure uncertainty, and a Fed that is slower to cut than originally expected.</div>
-  <a class="article-link" href="https://www.jpmorgan.com/content/dam/jpmorgan/documents/wealth-management/mid-year-outlook-2026.pdf">Read &rarr;</a>
+  <div class="article-headline">Why RIAs, Bigger Than Ever, Aren't Necessarily Growing</div>
+  <div class="article-meta">Financial Planning / IAA &amp; COMPLY &nbsp;·&nbsp; July 2026</div>
+  <div class="article-summary">At 16,544 firms managing $176.8T for 73.7M clients, the RIA channel looks massive — but annualized growth is essentially tracking U.S. stock market returns, not genuine organic business growth. The industry is riding the market, not building actual new client relationships at scale.</div>
+  <a class="article-link" href="https://www.financial-planning.com/news/why-rias-bigger-than-ever-arent-necessarily-growing">Read →</a>
 </div>
 <div class="article-card">
-  <div class="article-headline">Anthropic is Discussing a New Custom Chip with Samsung</div>
-  <div class="article-meta">TechCrunch &nbsp;&middot;&nbsp; July 2, 2026</div>
-  <div class="article-summary">Anthropic is in early talks with Samsung to co-develop a custom AI chip &mdash; following OpenAI's Broadcom "Jalape&ntilde;o" announcement and signaling a broader industry push toward vertical AI hardware integration. Inference cost reduction is now the central competitive battleground, with major implications for cloud compute pricing, margins, and which AI companies can scale profitably.</div>
-  <a class="article-link" href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/">Read &rarr;</a>
+  <div class="article-headline">US Minted 1,200 Millionaires a Day in 2025</div>
+  <div class="article-meta">Financial Planning / UBS Global Wealth Report &nbsp;·&nbsp; July 2026</div>
+  <div class="article-summary">440,000 Americans joined the millionaire ranks in 2025 — nearly half of all new global millionaires — driven by equity gains and real estate appreciation. For wealth managers, this is the largest single-year expansion of the addressable client base in recent memory and a direct tailwind for AUM growth.</div>
+  <a class="article-link" href="https://www.financial-planning.com/news/us-minted-1-200-millionaires-a-day-in-2025-ubs">Read →</a>
 </div>
 
 <div class="bottom-line">
   <div class="bl-header">Bottom Line</div>
   <ul>
-    <li><strong>SPCX Nasdaq-100 inclusion Monday July 7</strong> &mdash; $4.3B passive buying expected; watch Sunday night premarket for front-running. Most actionable event of the week.</li>
-    <li><strong>Dow record (52,900) but QQQ -1.73%</strong> &mdash; the divergence is real; clients will call Monday. Have the talking point ready: weak jobs = room for Fed cuts = good for balanced portfolios.</li>
-    <li><strong>June NFP: 57K (est. ~180K)</strong> &mdash; softest print in over a year. First Fed cut now likely September if trend continues. Bullish for bonds and rate-sensitive positions.</li>
-    <li><strong>TE fell -6.75% July 2</strong> &mdash; after a 494% 1-year run, investigate before Monday open. News-driven or profit-taking? Key support at $8.00.</li>
-    <li><strong>30-year mortgage at 6.43% (7-week low)</strong> &mdash; best window in 2 months for clients watching rates to buy or refi.</li>
+    <li>Dow at a new all-time high of 53K, SPX up 9.9% YTD — AI trade is back and momentum is with the bulls. Russia-Ukraine is the only macro shock that flips this fast.</li>
+    <li>GEV at $1,152 (+69.8% YTD) is your strongest position — set a trailing stop now and protect the gain before the market does it for you.</li>
+    <li>Fed holds through July 29. September cut is in play only if labor keeps cooling. Tell clients: 30Y mortgage at 6.43% is not going to 5% in 2026 — plan accordingly.</li>
+    <li>Anthropic is winning the AI race on revenue and eating OpenAI's market share — Claude is the right long-term AI bet for your personal workflow and Level's consulting stack.</li>
+    <li>Phillies got demolished 15-1. Sanchez had a nightmare outing. They play in Cincinnati tonight — expect the rotation to bounce back.</li>
   </ul>
 </div>
 
-<div class="brief-footer">Generated ~4:37 AM ET &nbsp;&middot;&nbsp; Saturday, July 4, 2026 &nbsp;&middot;&nbsp; Prices: July 2, 2026 close (markets closed July 3&ndash;4, observed Independence Day) &nbsp;&middot;&nbsp; sam.marrella@gmail.com</div>
+<div class="brief-footer">Generated ~4:37 AM ET · Tuesday, July 7, 2026 · Prices: July 6, 2026 close · sam.marrella@gmail.com</div>
 
 </body>
 </html>
