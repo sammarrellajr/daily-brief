@@ -102,12 +102,23 @@
   ul li ul li { margin-bottom: 3px; font-size: 13px; color: #444; }
   .callout-yellow { background: #fffbea; border-left: 4px solid #e8a800; padding: 13px 16px; border-radius: 6px; margin-bottom: 10px; }
   .callout-yellow .lead { font-weight: 700; display: block; margin-bottom: 6px; color: #7a5800; }
-  .callout-orange { background: #fff8f0; border-left: 4px solid #e07b00; padding: 13px 16px; border-radius: 6px; margin-bottom: 10px; }
-  .callout-orange .lead { font-weight: 700; display: block; margin-bottom: 6px; color: #7a3800; }
   .team-badge { display: inline-block; font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-right: 8px; }
+  .badge-eagles { background: #004C54; color: #A5ACAF; }
   .badge-phillies { background: #E81828; color: #fff; }
+  .badge-flyers { background: #F74902; color: #fff; }
+  .badge-sixers { background: #006BB6; color: #fff; }
+  .badge-pga { background: #1a3a1a; color: #c8a84b; }
   .team-section { margin-bottom: 16px; }
   .team-header { font-size: 12px; font-weight: 700; color: #333; margin-bottom: 8px; display: flex; align-items: center; }
+  .scorebug { display: flex; align-items: center; background: #16181f; border: 1px solid #2a2d3a; border-radius: 8px; padding: 9px 14px; margin-bottom: 8px; gap: 10px; }
+  .scorebug-team { display: flex; flex-direction: column; align-items: center; min-width: 52px; }
+  .scorebug-name { font-size: 8px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; color: #555; margin-bottom: 2px; }
+  .scorebug-score { font-size: 22px; font-weight: 900; color: #888; line-height: 1; }
+  .scorebug-winner { color: #4ade80; }
+  .scorebug-divider { font-size: 13px; color: #2a2d3a; font-weight: 700; flex-shrink: 0; }
+  .scorebug-meta { display: flex; flex-direction: column; margin-left: auto; text-align: right; }
+  .scorebug-status { font-size: 9px; font-weight: 800; letter-spacing: 1px; color: #555; text-transform: uppercase; }
+  .scorebug-detail { font-size: 10px; color: #3a3d4a; margin-top: 2px; }
   .article-card { border: 1px solid #e4e6ea; border-radius: 7px; padding: 13px 16px; margin-bottom: 9px; background: #fff; }
   .article-headline { font-size: 13.5px; font-weight: 700; color: #111; margin-bottom: 3px; }
   .article-meta { font-size: 10.5px; color: #999; margin-bottom: 7px; }
@@ -123,487 +134,504 @@
 <body>
 
 <div class="brief-header">
-  <div class="brief-title">Morning Brief &mdash; Sam</div>
+  <div class="brief-title">Morning Brief — Sam</div>
   <div class="brief-meta">
-    <span>Thursday, July 16, 2026</span><span>&middot;</span><span>~4:37 AM ET</span><span>&middot;</span><span>Prices = July 15 Close</span>
+    <span>Friday, July 17, 2026</span><span>·</span><span>~4:37 AM ET</span><span>·</span><span>Prices = July 16 Close</span>
   </div>
 </div>
 
+<!-- HIGHLIGHTS — generated last, placed first -->
 <div class="highlights-card">
-  <div class="highlights-label">&#9889; Highlights &amp; Recap</div>
-  <div class="highlight-item"><div class="highlight-num">1</div><div class="highlight-text"><strong>Apple hit an all-time high at $327</strong> &mdash; China granted regulatory clearance for Apple Intelligence (Alibaba Qwen model); AAPL +4% on the day, market cap approaching $5 trillion. Biggest single-stock catalyst of the year.</div></div>
-  <div class="highlight-item"><div class="highlight-num">2</div><div class="highlight-text"><strong>June CPI: -0.4% monthly, 3.5% annual</strong> &mdash; Biggest monthly drop since April 2020; beat expectations of 3.8%. Core CPI 2.6%. Markets rallied. Energy collapse drove the number &mdash; but oil is already recovering.</div></div>
-  <div class="highlight-item"><div class="highlight-num">3</div><div class="highlight-text"><strong>US-Iran/Hormuz fighting resumed</strong> &mdash; WTI back above $80 (+39% YTD) as US strikes continued for the 3rd consecutive day. Hormuz shipping down 56% from pre-war levels. June CPI relief could reverse fast if oil holds here.</div></div>
-  <div class="highlight-item"><div class="highlight-num">4</div><div class="highlight-text"><strong>FOMC July 28&ndash;29 is 13 days away</strong> &mdash; 83.4% probability of hold. Soft CPI reduces pressure; Hormuz oil is the wildcard that controls the September rate outlook.</div></div>
-  <div class="highlight-item"><div class="highlight-num">5</div><div class="highlight-text"><strong>Code Red Air Quality + Heat Advisory in Berks County today</strong> &mdash; Wildfire smoke from Canada blankets PA. Unhealthy air through Thursday. Heat Advisory 10 AM&ndash;8 PM. You have the Seafood Member Guest at LedgeRock today &mdash; plan accordingly.</div></div>
-  <div class="highlight-item"><div class="highlight-num">6</div><div class="highlight-text"><strong>Anthropic surpasses $30B annualized revenue</strong> &mdash; 1,000+ enterprise customers spending $1M+/year, doubled in under 2 months. IPO reportedly targeting October 2026. Google + Broadcom compute deal announced.</div></div>
+  <div class="highlights-label">⚡ Highlights &amp; Recap</div>
+  <div class="highlight-item"><div class="highlight-num">1</div><div class="highlight-text"><strong>Alphabet -$200B market cap in one session</strong> — Gemini 3.5 Pro months behind schedule on coding benchmarks; GOOGL -4.4% dragged Nasdaq -1.47%; rivals Anthropic and OpenAI are actively gaining the ground Google is losing.</div></div>
+  <div class="highlight-item"><div class="highlight-num">2</div><div class="highlight-text"><strong>PCT -13.55% / TE -10.81% — two portfolio positions hit hard</strong> — PCT at $6.09 near multi-year lows; TE at $5.94 down 24% YTD. Both near critical support; know your exit levels before the open.</div></div>
+  <div class="highlight-item"><div class="highlight-num">3</div><div class="highlight-text"><strong>SpaceX (SPCX) slipped below its $135 IPO price to $131.11</strong> — Failed Starship V3 launch weighing on sentiment; first earnings report Aug 6 is the next binary event; watch $130 support.</div></div>
+  <div class="highlight-item"><div class="highlight-num">4</div><div class="highlight-text"><strong>30-year mortgage at 6.55%, highest in nearly a year</strong> — Freddie Mac; Fed on hold (3.5–3.75%), next FOMC July 28–29 in 12 days; 90% probability of no change at that meeting.</div></div>
+  <div class="highlight-item"><div class="highlight-num">5</div><div class="highlight-text"><strong>Anthropic $30B+ annualized run-rate, IPO as early as October 2026</strong> — 1,000+ enterprise clients at $1M+/year; Samsung custom chip talks underway. Level opportunity window is real and narrowing.</div></div>
+  <div class="highlight-item"><div class="highlight-num">6</div><div class="highlight-text"><strong>US-Iran Strait of Hormuz conflict keeping oil elevated</strong> — WTI $78.95 (+38% YTD); June CPI cooled to 3.5% on a prior ceasefire energy drop, but renewed tensions risk reversing that in July's read.</div></div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128065;</span> WATCH TODAY</div>
+<div class="section-header"><span class="section-icon">👁</span> WATCH TODAY</div>
 <div class="callout-red">
-  <span class="lead">Oil re-acceleration risk is the #1 macro threat &mdash; WTI above $80 after June CPI made everyone feel better about inflation.</span>
+  <span class="lead">Michigan Consumer Sentiment at 10 AM ET — first major consumer confidence read since June CPI dropped to 3.5%.</span>
   <ul>
-    <li><strong>Why it matters:</strong> The entire June CPI beat was driven by energy falling 5.7% that month. Oil is already back above $80 with Hormuz shipping down more than half. If oil holds above $80, July CPI (released ~Aug 14) could reverse the trend and push the Fed back toward a hawkish stance.
-      <ul><li>June energy index still up 15.7% annually &mdash; one good month doesn't erase the structural problem from Hormuz.</li></ul>
+    <li><strong>Why it matters:</strong> FOMC meets in 12 days (July 28–29); 90% probability of hold, but any meaningful surprise in consumer expectations shifts bond market tone and rate-cut timeline.
+      <ul><li>Housing Starts + Industrial Production at 8:30–9:15 AM set the morning tone ahead of the 10 AM headline.</li></ul>
     </li>
-    <li><strong>If Hormuz de-escalates</strong> &rarr; Oil pulls back, CPI relief extends, September rate cut odds rise, mortgage rates move toward 6.25%, equities continue rally.</li>
-    <li><strong>If US-Iran strikes escalate further</strong> &rarr; Oil spikes toward $90+, August CPI prints hot, Fed stays on hold or hints at hike, 10Y yield climbs back to 4.7%+, client calls about inflation spike.</li>
-    <li><strong>Monitor:</strong> WTI spot price; any CENTCOM or State Dept statements on Hormuz; EIA Weekly Petroleum Inventory Report out this morning (10:30 AM ET).</li>
+    <li><strong>If STRONG (above 70)</strong> → Risk-on brief rally; equities bid, but 10Y yields push toward 4.60% and mortgage rate pressure intensifies for clients.</li>
+    <li><strong>If WEAK (below 62)</strong> → "Soft landing" narrative cracks; bonds rally, yields drop below 4.50%, September rate-cut odds tick up — equities mixed on growth concern.</li>
+    <li><strong>Monitor:</strong> Bloomberg / CNBC at 10 AM ET — watch the 10Y yield tick and SPX futures response immediately after release.</li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128140;</span> EMAILS &amp; CALENDAR</div>
+<div class="section-header"><span class="section-icon">📬</span> EMAILS &amp; CALENDAR</div>
 <div class="email-cal-grid">
   <div class="email-panel">
-    <div class="panel-title">&#128231; Emails (Last 48 Hours)</div>
+    <div class="panel-title">📧 Emails</div>
     <div class="email-cat">Important / Needs Attention</div>
     <ul>
-      <li><strong>Glen Ridge Estates HOA e-Statement</strong> (TownSq) &mdash; July billing statement arrived at 6:33 AM. Review and pay as needed.
-        <ul><li>From: noreply@townsq.io &middot; Received this morning</li></ul>
+      <li><strong>LedgeRock — Membership Committee Meeting (from Joe M.)</strong>
+        <ul>
+          <li>Monday, July 20 at 5:30 PM · Learning Center Conference Room</li>
+          <li>Virtual dial-in link available if you can't attend in person</li>
+          <li>Reply to confirm attendance or grab the virtual link</li>
+        </ul>
       </li>
     </ul>
     <div class="email-cat">Informational</div>
     <ul>
-      <li><strong>Men's League Week 8 Results</strong> (GolfGenius) &mdash; Scores posted from last night's round. Recap in the email link.
-        <ul><li>Received 12:31 AM &middot; LedgeRock Golf Club &middot; No action needed</li></ul>
+      <li><strong>Monarch Money — 3 New Updates</strong>
+        <ul>
+          <li>New expense flagged from BMW Financial Services (car payment)</li>
+          <li>Open Monarch app to review and categorize if needed</li>
+        </ul>
       </li>
-      <li><strong>Etsy Order Shipped</strong> (Receipt #4117554401) &mdash; USPS tracking active per confirmation.
-        <ul><li>Two shipping emails received (12:31 AM + 7:44 PM yesterday)</li></ul>
+      <li><strong>Venmo — Received $60.00 from Bianca &amp; Zach Kreider</strong>
+        <ul>
+          <li>Golf-related payment (🏌️) — credited to Venmo balance</li>
+          <li>Transfer to bank if needed</li>
+        </ul>
       </li>
-      <li><strong>Coinbase Newsletter</strong> &mdash; BTC and ETH ETF inflows returning after 8 weeks of outflows; markets rallied on CPI data; countries going all-in on crypto.
-        <ul><li>Relevant: BTC is -27% YTD and -45% 1Y &mdash; watch for reversal signals</li></ul>
-      </li>
-      <li><strong>Wells Fargo</strong> &mdash; App update notification. No urgency, no action needed.</li>
-      <li><strong>Resend Subprocessor Update</strong> &mdash; Legal notice on updated subprocessors. Note if using Resend for Level or other projects.</li>
     </ul>
     <div class="email-cat">Possible Unsubscribe</div>
     <ul>
-      <li><strong>Two Talents Design</strong> &mdash; "RS Butterfly Divot Tools are Back!" Golf accessories marketing. Unsubscribe if not relevant.</li>
-      <li><strong>Quince</strong> &mdash; Promotional email alongside the Organic Cotton Terry Hoodie delivery confirmation.</li>
+      <li>Quince (x2) — Review purchase / back-to-school 2026 collection promos</li>
+      <li>JC Ehrlich — $50 off mosquito protection deal alert</li>
     </ul>
   </div>
   <div class="calendar-panel">
-    <div class="panel-title">&#128197; Calendar &mdash; Today + 3 Weeks</div>
+    <div class="panel-title">📅 Calendar</div>
     <div class="cal-item">
-      <span class="cal-date-label">TODAY &mdash; Thu, Jul 16</span>
-      <span class="cal-event"><strong>Seafood Member Guest 2026</strong> &mdash; LedgeRock Golf Club (All Day). Big event. Enjoy it.</span>
+      <span class="cal-date-label">Mon, Jul 20</span>
+      <span class="cal-event">LedgeRock Membership Committee — 5:30 PM · Learning Center (in-person or virtual) · <strong>RSVP needed</strong></span>
     </div>
     <div class="cal-item">
-      <span class="cal-date-label">Sat&ndash;Sun, Jul 25&ndash;26</span>
-      <span class="cal-event"><strong>Senior/Junior 2026</strong> &mdash; LedgeRock Golf Club</span>
+      <span class="cal-date-label">Sat, Jul 25</span>
+      <span class="cal-event">Senior/Junior 2026 — All Day · LedgeRock Golf Club</span>
     </div>
     <div class="cal-item">
       <span class="cal-date-label">Mon, Jul 27</span>
-      <span class="cal-event"><strong>Pay Credit Cards</strong> &mdash; Recurring reminder</span>
+      <span class="cal-event">Pay Credit Cards 💳 (recurring)</span>
     </div>
     <div class="cal-item">
-      <span class="cal-date-label">Thu&ndash;Fri, Aug 6&ndash;7</span>
-      <span class="cal-event"><strong>Steak &amp; Lobster Member Guest 2026</strong> &mdash; LedgeRock Golf Club</span>
+      <span class="cal-date-label">Thu–Fri, Aug 6–7</span>
+      <span class="cal-event">Steak &amp; Lobster Member Guest 2026 — LedgeRock Golf Club</span>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127780;</span> MORNING BRIEF</div>
+<div class="section-header"><span class="section-icon">🌤</span> MORNING BRIEF</div>
 <div class="weather-card">
-  <div class="weather-date">Thursday, July 16</div>
+  <div class="weather-date">Friday, July 17</div>
   <div class="weather-divider">|</div>
-  <div class="weather-detail">Reading, PA &nbsp;&middot;&nbsp; High 81&deg;F / Low 63&deg;F &nbsp;&middot;&nbsp; Partly Cloudy &nbsp;&middot;&nbsp; &#9888;&#65039; Code Red Air Quality (wildfire smoke) + Heat Advisory 10 AM&ndash;8 PM EDT &mdash; limit outdoor exertion</div>
+  <div class="weather-detail">Reading, PA &nbsp;·&nbsp; High 82°F / Low 64°F &nbsp;·&nbsp; Partly cloudy, afternoon T-storm risk (~50% chance) &nbsp;·&nbsp; Head out early if outdoor plans</div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128202;</span> MARKETS SNAPSHOT</div>
+<div class="section-header"><span class="section-icon">📊</span> MARKETS SNAPSHOT</div>
 
 <div class="market-recap-card">
-  <div class="market-recap-date">July 15, 2026 Close &nbsp;&middot;&nbsp; RISK-ON / TECH RALLY</div>
-  <div class="market-recap-headline">Apple hit $327 ATH on China AI clearance as soft June CPI confirmed disinflation &mdash; S&amp;P 500 closed at a new record 7,572 with broad tech gains masking chip weakness.</div>
+  <div class="market-recap-date">Thursday, July 16 Close &nbsp;·&nbsp; TECH SELLOFF</div>
+  <div class="market-recap-headline">Alphabet's Gemini delay and TSMC's capex raise rattled AI confidence, sending Nasdaq -1.47% as the market questioned the timeline — not the thesis — of the AI buildout.</div>
   <ul class="market-recap-list">
-    <li><strong>CPI Beat</strong> &mdash; June inflation -0.4% MoM, 3.5% annual (vs 3.8% expected); energy index -5.7% MoM was the key driver. Core 2.6% annually.</li>
-    <li><strong>Apple ATH</strong> &mdash; AAPL +4% to $327 on China regulatory approval for Apple Intelligence (Alibaba Qwen-powered); $5T market cap milestone in sight. Amazon +3%, Alphabet +3%, Microsoft +3%.</li>
-    <li><strong>Chip Weakness</strong> &mdash; Micron -8%, Lam Research -3%, AMD -3%. QQQ slightly negative (-0.27%) while Nasdaq Composite gained 0.62% &mdash; large-cap drag.</li>
-    <li><strong>ASML Bullish Guidance</strong> &mdash; Chip equipment maker's positive outlook added to broader semiconductor optimism and kept the tech narrative intact despite single-stock weakness.</li>
+    <li><strong>Alphabet (GOOGL) -4.4%, ~$200B market cap erased</strong> — Gemini 3.5 Pro months behind schedule on coding; overlapping internal teams across DeepMind, Cloud, and Android slowing execution vs. Anthropic and OpenAI.</li>
+    <li><strong>TSMC raised capex to $60–64B</strong> — Beat Q2 earnings (revenue +36% YoY, net income +77%), raised revenue growth guidance to 40%+, but $8B capex raise spooked investors worried about spending sustainability; also announced additional $100B in Arizona fabs ($265B total).</li>
+    <li><strong>US-Iran Hormuz tensions persisting</strong> — Trump declared US "Guardian of Hormuz Strait"; 20% levy on cargo shipped through; WTI held near $79/bbl. Energy inflation risk still live heading into July CPI.</li>
+    <li><strong>10Y Treasury yield rose to 4.569%</strong> — Up +5.3 bp on the day; bond pressure adds headwind for rate-sensitive housing and growth stocks ahead of FOMC July 28–29.</li>
   </ul>
 </div>
 
 <div class="market-tile-grid">
   <div class="market-tile tile-up">
     <div class="market-tile-sym">SPX</div><div class="market-tile-name">S&amp;P 500</div>
-    <div class="market-tile-price">7,572.40</div>
+    <div class="market-tile-price">7,533.77</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+0.38%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+10.41%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+21.28%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-0.51%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+9.85%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+20.28%</span></div>
     </div>
   </div>
   <div class="market-tile tile-up">
     <div class="market-tile-sym">DJIA</div><div class="market-tile-name">Dow Jones</div>
-    <div class="market-tile-price">52,658.64</div>
+    <div class="market-tile-price">52,552.97</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+0.29%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+8.84%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+19.62%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-0.20%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+8.62%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+18.75%</span></div>
     </div>
   </div>
   <div class="market-tile tile-up">
     <div class="market-tile-sym">SPY</div><div class="market-tile-name">SPDR S&amp;P 500 ETF</div>
-    <div class="market-tile-price">$754.81</div>
+    <div class="market-tile-price">$750.72</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val up">+0.40%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+11.07%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+22.67%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-0.54%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+10.47%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+21.60%</span></div>
     </div>
   </div>
   <div class="market-tile tile-up">
     <div class="market-tile-sym">QQQ</div><div class="market-tile-name">Invesco Nasdaq ETF</div>
-    <div class="market-tile-price">$717.74</div>
+    <div class="market-tile-price">$705.94</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-0.27%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+17.34%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+29.54%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-1.64%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+15.41%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+27.28%</span></div>
     </div>
   </div>
   <div class="market-tile tile-down">
     <div class="market-tile-sym">GOLD</div><div class="market-tile-name">Gold Spot Price</div>
-    <div class="market-tile-price">$4,044</div>
+    <div class="market-tile-price">$3,985.60</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-0.42%</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val down">-6.27%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+21.45%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">-1.44%</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val down">-7.62%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+18.88%</span></div>
     </div>
   </div>
   <div class="market-tile tile-neutral">
     <div class="market-tile-sym">10YR</div><div class="market-tile-name">10Y Treasury Yield</div>
-    <div class="market-tile-price">4.545%</div>
+    <div class="market-tile-price">4.569%</div>
     <div class="market-tile-stats">
-      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">&#8776; -4 bps</span></div>
-      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val up">+8.55%</span></div>
-      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+1.25%</span></div>
+      <div class="mts"><span class="mts-lbl">Day</span><span class="mts-val down">+5.3 bp</span></div>
+      <div class="mts"><span class="mts-lbl">YTD</span><span class="mts-val down">+9.12%</span></div>
+      <div class="mts"><span class="mts-lbl">1Y</span><span class="mts-val up">+2.56%</span></div>
     </div>
   </div>
   <div class="market-tile tile-neutral">
-    <div class="market-tile-sym">30YR</div><div class="market-tile-name">30Y Mortgage Rate</div>
-    <div class="market-tile-price">6.49%</div>
+    <div class="market-tile-sym">30YR MTG</div><div class="market-tile-name">30Y Mortgage Rate</div>
+    <div class="market-tile-price">6.55%</div>
     <div class="market-tile-stats">
       <div class="mts"><span class="mts-lbl">Source</span><span class="mts-val neutral">Freddie Mac</span></div>
-      <div class="mts"><span class="mts-lbl">Survey</span><span class="mts-val neutral">Week of Jul 9</span></div>
+      <div class="mts"><span class="mts-lbl">YTD Range</span><span class="mts-val neutral">6.43–6.55%</span></div>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127982;</span> FED / MACRO &amp; ECONOMIC CALENDAR</div>
+<div class="section-header"><span class="section-icon">🏦</span> FED / MACRO &amp; ECONOMIC CALENDAR</div>
 <div class="card">
   <div class="fed-grid">
     <div class="fed-stat">
       <div class="fed-stat-label">Fed Funds Rate</div>
-      <div class="fed-stat-value">3.50&ndash;3.75%</div>
-      <div class="fed-stat-sub">Held &middot; Jun 17, 2026</div>
+      <div class="fed-stat-value">3.5–3.75%</div>
+      <div class="fed-stat-sub">Held · June 17, 2026</div>
     </div>
     <div class="fed-stat">
-      <div class="fed-stat-label">Hold Probability</div>
-      <div class="fed-stat-value">83.4%</div>
-      <div class="fed-stat-sub">CME FedWatch &middot; Jul 29</div>
+      <div class="fed-stat-label">Vote</div>
+      <div class="fed-stat-value">Unanimous</div>
+      <div class="fed-stat-sub">No dissents</div>
     </div>
     <div class="fed-stat">
       <div class="fed-stat-label">Next FOMC</div>
-      <div class="fed-stat-value" style="font-size:15px;">Jul 28&ndash;29</div>
-      <div class="fed-stat-sub">13 days away</div>
+      <div class="fed-stat-value" style="font-size:15px;">Jul 28–29</div>
+      <div class="fed-stat-sub">12 days away</div>
     </div>
   </div>
   <ul style="margin-top:6px;margin-bottom:10px;">
-    <li><strong>Tone:</strong> Data-dependent and cautious. June CPI at 3.5% reduces urgency to hike but the Fed has explicitly noted inflation remains above their 2% target. Hormuz-driven energy is the key risk variable they're watching heading into July 29.</li>
-    <li><strong>Rate outlook:</strong> July hold is near-certain (83.4%). September is the real debate &mdash; soft CPI argues for a potential cut, but if oil holds above $80 into August, the Sep CPI print (Oct 15) could reintroduce hike talk. Markets currently split on September direction.</li>
+    <li><strong>Tone:</strong> Fed held unanimously in June; inflation "still elevated relative to 2% target." June CPI released July 14 showed -0.4% monthly / +3.5% YoY (down from +4.2% in May) — driven by energy price drop from brief Iran ceasefire. Core CPI: unchanged monthly, +2.6% YoY.</li>
+    <li><strong>Rate outlook:</strong> CME FedWatch: 90% hold probability at July 28–29. Markets pricing one 25bp cut in Q4 2026, contingent on CPI sustaining below 3.5% — which the renewed Iran conflict makes uncertain.</li>
   </ul>
   <div style="border-top:1px solid #f0f0f0;padding-top:10px;">
     <div style="font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#888;margin-bottom:8px;">Economic Calendar</div>
     <div class="econ-cal-item">
-      <div class="econ-date">Today, Jul 16</div>
-      <div class="econ-event">EIA Weekly Petroleum Inventory Report (10:30 AM ET) &mdash; Key crude draw/build data; will move WTI directly</div>
+      <div class="econ-date">Today 8:30 AM</div>
+      <div class="econ-event">Import &amp; Export Prices (June) — trade-driven inflation gauge</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">Jul 14 (Prior)</div>
-      <div class="econ-event">CPI June &mdash; Actual: -0.4% MoM / +3.5% YoY &middot; Core: +2.6% YoY (beat expectations; drove yesterday's rally)</div>
+      <div class="econ-date">Today 8:30 AM</div>
+      <div class="econ-event">Housing Starts &amp; Building Permits (June) — rate-sensitive sector read</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">Jul 27</div>
-      <div class="econ-event">Pay Credit Cards (personal reminder)</div>
+      <div class="econ-date">Today 9:15 AM</div>
+      <div class="econ-event">Industrial Production &amp; Capacity Utilization (June)</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">Jul 28&ndash;29</div>
-      <div class="econ-event">FOMC Meeting &mdash; Rate decision announced Jul 29, 2:00 PM ET &middot; Hold widely expected (83.4%)</div>
+      <div class="econ-date">Today 10:00 AM</div>
+      <div class="econ-event"><strong>Michigan Consumer Sentiment — Preliminary (July)</strong> · KEY WATCH: first sentiment read since CPI cooled to 3.5%</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">~Jul 30</div>
-      <div class="econ-event">PCE Price Index (June) &mdash; Fed's preferred inflation gauge; will contextualize the CPI beat</div>
+      <div class="econ-date">Jul 28–29</div>
+      <div class="econ-event">FOMC Meeting — Rate decision July 29, 2:00 PM ET (90% hold probability)</div>
     </div>
     <div class="econ-cal-item">
-      <div class="econ-date">~Aug 14</div>
-      <div class="econ-event">CPI July &mdash; Critical read: will the Hormuz oil spike show up? Controls the September rate decision narrative</div>
+      <div class="econ-date">Jul 30</div>
+      <div class="econ-event">PCE Deflator &amp; Personal Income (June) — Fed's preferred inflation gauge</div>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128200;</span> TICKERS</div>
+<div class="section-header"><span class="section-icon">📈</span> TICKERS</div>
 <div class="ws-ticker-grid">
   <div class="ws-ticker-card">
     <div class="ws-sym">10YR</div><div class="ws-name">10Y Treasury Yield</div>
-    <div class="ws-price">4.545%</div>
+    <div class="ws-price">4.569%</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">&#8776; -4 bps</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+8.55%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+1.25%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">+5.3 bp</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">+9.12%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+2.56%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">AVXL</div><div class="ws-name">Anavex Life Sciences</div>
-    <div class="ws-price">$2.50</div>
+    <div class="ws-price">$2.34</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+2.88%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-32.07%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-77.00%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-6.40%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-36.41%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-79.22%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">BTC</div><div class="ws-name">Bitcoin</div>
-    <div class="ws-price">$64,712</div>
+    <div class="ws-price">$63,789</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-0.38%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-27.07%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-45.06%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-1.43%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-28.11%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-46.28%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">DJIA</div><div class="ws-name">Dow Jones Ind. Avg.</div>
-    <div class="ws-price">52,658</div>
+    <div class="ws-price">52,552.97</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.29%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+8.84%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+19.62%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-0.20%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+8.62%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+18.75%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">ETH</div><div class="ws-name">Ethereum</div>
-    <div class="ws-price">$1,916.94</div>
+    <div class="ws-price">$1,863.19</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+1.45%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-36.11%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-38.95%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-2.80%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-37.90%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-44.74%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">GEV</div><div class="ws-name">GE Vernova</div>
-    <div class="ws-price">$1,055.28</div>
+    <div class="ws-price">$1,036.22</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-1.01%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+55.58%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+89.08%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-1.81%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+52.77%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+85.15%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">MMTIF</div><div class="ws-name">Mineworx Technologies</div>
-    <div class="ws-price" style="font-size:14px;color:#444;">N/A</div>
-    <div class="ws-stats"><div class="ws-stat-block"><span class="ws-lbl">Market</span><span class="ws-val ws-val-neutral">OTC Pink Sheet</span></div></div>
+    <div class="ws-price" style="font-size:15px;color:#555;">N/A</div>
+    <div class="ws-stats">
+      <div class="ws-stat-block"><span class="ws-lbl">Market</span><span class="ws-val ws-val-neutral">OTC Pink Sheet</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Check</span><span class="ws-val ws-val-neutral">OTCMarkets.com</span></div>
+    </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">PCT</div><div class="ws-name">PureCycle Technologies</div>
-    <div class="ws-price">$7.05</div>
+    <div class="ws-price">$6.09</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+4.29%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-21.23%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-53.25%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-13.55%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-31.90%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-61.76%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
-    <div class="ws-sym">SETM</div><div class="ws-name">Sprott Energy Trans. Materials</div>
-    <div class="ws-price">$29.94</div>
+    <div class="ws-sym">SETM</div><div class="ws-name">Sprott Critical Materials ETF</div>
+    <div class="ws-price">$28.60</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-0.93%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-0.73%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+58.27%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-4.48%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-5.17%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+50.71%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
-    <div class="ws-sym">SPCX</div><div class="ws-name">Procure Space ETF</div>
-    <div class="ws-price">$135.27</div>
+    <div class="ws-sym">SPCX</div><div class="ws-name">Space Exploration Tech. (SpaceX)</div>
+    <div class="ws-price">$131.11</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-0.60%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-15.96%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-15.96%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-3.08%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-18.54%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-down">-18.54%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">SPX</div><div class="ws-name">S&amp;P 500</div>
-    <div class="ws-price">7,572.40</div>
+    <div class="ws-price">7,533.77</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-up">+0.38%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+10.41%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+21.28%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-0.51%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-up">+9.85%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+20.28%</span></div>
     </div>
   </div>
   <div class="ws-ticker-card">
     <div class="ws-sym">TE</div><div class="ws-name">Tronox Holdings</div>
-    <div class="ws-price">$6.66</div>
+    <div class="ws-price">$5.94</div>
     <div class="ws-stats">
-      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-2.63%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-15.05%</span></div>
-      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+389.71%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">Day</span><span class="ws-val ws-val-down">-10.81%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">YTD</span><span class="ws-val ws-val-down">-24.23%</span></div>
+      <div class="ws-stat-block"><span class="ws-lbl">1Y</span><span class="ws-val ws-val-up">+327.34%</span></div>
     </div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128269;</span> WATCHLIST READ</div>
+<div class="section-header"><span class="section-icon">🔍</span> WATCHLIST READ</div>
 <div class="watchlist-grid">
-  <div class="watchlist-card"><div class="wl-sym">10YR</div><div class="wl-content">At <strong>4.545%</strong>, fell ~4 bps on CPI relief. Good for bonds and mortgage rates. If Hormuz fighting intensifies and oil spikes, watch <strong>4.7%</strong> as the resistance level where affordability pressure returns and mortgage clients feel it directly.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">AVXL</div><div class="wl-content">At <strong>$2.50</strong>, down 77% over 1 year. Today's +2.88% is a small bounce in a prolonged downtrend. Only actionable if you have a specific clinical catalyst or FDA timeline in your thesis. Without that, it's dead money. Key watch: any trial data or regulatory communication.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">BTC</div><div class="wl-content">At <strong>$64,712</strong>, down from ~$89K at Jan 1 and ~$118K a year ago. ETF inflows returning after an 8-week outflow streak per Coinbase newsletter. <strong>$60K</strong> is key psychological support &mdash; a break below confirms continued bear trend. CPI relief is modestly bullish for risk assets but Hormuz oil limits the upside.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">DJIA</div><div class="wl-content">At <strong>52,658</strong>, up 8.84% YTD and trend intact. <strong>52,000</strong> is near-term support. Industrial components (Boeing, Caterpillar) are vulnerable if geopolitical risk spikes. For now, blue chips are holding well and the rally has breadth.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">ETH</div><div class="wl-content">At <strong>$1,916</strong>, approaching psychological <strong>$2,000</strong> resistance. Down 39% over 1 year. ETH ETF inflows resuming alongside BTC is the key bullish catalyst. Break above $2K on volume &rarr; next target $2,200. Below $1,800 is bearish signal.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">GEV</div><div class="wl-content">At <strong>$1,055</strong>, up 89% over 1 year and 55% YTD. This is the AI data center power infrastructure trade &mdash; GEV supplies power equipment for the electricity demand boom. After this run, consider a trailing stop around <strong>$950&ndash;975</strong> to protect gains. Thesis remains intact as long as data center buildout continues.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">MMTIF</div><div class="wl-content">OTC Pink Sheet &mdash; no live quote available. Check <strong>OTCMarkets.com</strong> directly for MMTIF for last trade and any recent filings or press releases. Illiquid; hard to exit at scale if needed quickly.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">PCT</div><div class="wl-content">At <strong>$7.05</strong>, down 53% over 1 year. Today's +4.29% bounce is notable but in the context of a long downtrend. PureCycle needs a specific operational catalyst &mdash; plant capacity milestone or major offtake agreement &mdash; to justify holding here. Watch <strong>$7.50</strong> as resistance; failure there keeps the downtrend intact.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">SETM</div><div class="wl-content">At <strong>$29.94</strong>, nearly flat YTD (-0.73%) but up 58% over 1 year &mdash; the most stable position in the watchlist. Sprott Energy Transition Materials ETF (copper, lithium, nickel). Holding well relative to peers. Watch for EV demand signals and infrastructure spending catalysts.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">SPCX</div><div class="wl-content">At <strong>$135.27</strong>, down 15.96% YTD. Procure Space ETF is lagging with no clear near-term sector catalyst. Hold with a multi-year thesis only. A SpaceX IPO or major government space contract would reshape this ETF's trajectory significantly &mdash; watch for any SpaceX news.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">SPX</div><div class="wl-content">At <strong>7,572</strong>, fresh ATH after CPI-driven rally. <strong>7,500</strong> is key near-term support &mdash; hold above keeps bulls in control through the FOMC. Oil above $85 WTI is the macro trigger that could end this rally. No catalyst to derail until July 29 absent a geopolitical shock.</div></div>
-  <div class="watchlist-card"><div class="wl-sym">TE</div><div class="wl-content">At <strong>$6.66</strong>, down 15% YTD but up an extraordinary 390% over 1 year. Tronox Holdings (titanium dioxide) has massive volatility. The recent pullback from prior highs is significant. <strong>$6.50</strong> is key support; break below signals deeper retracement. Watch raw material costs and specialty chemicals sector trends.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">10YR</div><div class="wl-content"><strong>4.569%</strong> — Rising (+5.3 bp yesterday). Watch 4.60% as near-term resistance before FOMC. Michigan Sentiment at 10 AM is the next directional trigger. Every 25 bp move translates to ~$45/month on a $400K mortgage — clients are feeling this in real time.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">AVXL</div><div class="wl-content"><strong>$2.34 (-6.40% day, -79% 1Y)</strong> — Deep distress. Watch $2.00 as critical support; below that it's effectively untradeable for most investors. No near-term catalyst confirmed. Speculative hold only if you still believe in the clinical pipeline. No new money here.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">BTC</div><div class="wl-content"><strong>$63,789 (-28% YTD, -46% 1Y)</strong> — Risk-off environment and Iran tensions weighing on crypto. $60K is next major support; a break could see $55K. No near-term positive catalyst. Monitor volume on any breakdown below $62K for capitulation signal.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">DJIA</div><div class="wl-content"><strong>52,552 (+8.62% YTD)</strong> — Held well vs. Nasdaq (-0.20% vs -1.47%). Defensive/value tilt provides relative insulation. Watch 52,000 as near-term support; break opens 51,200. Bias: hold, let tech volatility play out.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">ETH</div><div class="wl-content"><strong>$1,863 (-38% YTD, -45% 1Y)</strong> — Underperforming BTC across all timeframes. Watch $1,800 as key support; a break risks $1,600. No near-term ETH-specific catalyst. Speculative; size accordingly and don't average down blindly.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">GEV</div><div class="wl-content"><strong>$1,036.22 (+53% YTD, +85% 1Y)</strong> — Best performer in the portfolio by a wide margin. Yesterday's -1.81% is noise given the run. Consider protecting gains: a trailing stop around $950–970 (~8% below current) locks in significant upside while leaving room to run. Energy transition demand + US domestic manufacturing buildout = continued tailwind. Hold.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">MMTIF</div><div class="wl-content"><strong>OTC Pink Sheet — real-time quote unavailable.</strong> Check OTCMarkets.com for last traded price and volume before any decision. No news flagged. If position is still held, verify active quoting status. Do not rely on stale data.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">PCT</div><div class="wl-content"><strong>$6.09 (-13.55% day, -32% YTD, -62% 1Y)</strong> — Large drop yesterday. June equity offering at $8.21–8.71 overhang still weighing. TTM net loss ~$225M with steep cash burn. Watch $5.75–$6.00 support. If breaks $5.75 on volume, risk of continued slide with no near-term operational catalyst. Reassess position size — this is a turnaround story that is taking longer than expected.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">SETM</div><div class="wl-content"><strong>$28.60 (-4.48% day, -5% YTD, +51% 1Y)</strong> — Risk-off pullback. Strong 1Y return intact. US-Iran tensions could be a long-term tailwind for critical materials (supply chain diversification urgency). Watch $27.00 as support. Hold if thesis is energy transition / materials supply chain diversification from China.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">SPCX</div><div class="wl-content"><strong>$131.11 (-3.08% day, -19% YTD)</strong> — SpaceX below its $135 IPO price after Starship V3 launch failure. First earnings report August 6 is the next catalyst — AI infrastructure contracts and Starlink subscriber growth are strong fundamentally. Watch $130 support; break could accelerate to $120. Hold for earnings before deciding.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">SPX</div><div class="wl-content"><strong>7,533.77 (+9.85% YTD)</strong> — Held above 7,500 support yesterday despite tech drag. Watch that level closely; a break opens 7,350. Michigan Sentiment at 10 AM is today's key driver. Trend still intact — don't react to AI sentiment noise if macro fundamentals hold.</div></div>
+  <div class="watchlist-card"><div class="wl-sym">TE</div><div class="wl-content"><strong>$5.94 (-10.81% day, -24% YTD)</strong> — Large unexplained single-day drop (no Q2 earnings until Aug 5). TiO₂ pricing environment remains weak; Q1 badly missed. Watch $5.50 as next support. If Aug 5 earnings disappoint again, could test $4.00. Turnaround not materializing on schedule — assess size.</div></div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#9889;</span> MACRO &amp; ENERGY</div>
+<div class="section-header"><span class="section-icon">⚡</span> MACRO &amp; ENERGY</div>
 <div class="macro-grid">
-  <div class="macro-tile"><div class="macro-label">10Y Treasury</div><div class="macro-value">4.545%</div><div class="macro-context">&#8595; ~4 bps &middot; CPI relief pulled yields lower &middot; Watch 4.7% if Hormuz escalates and oil spikes above $85</div></div>
-  <div class="macro-tile"><div class="macro-label">30Y Mortgage</div><div class="macro-value">6.49%</div><div class="macro-context">Freddie Mac avg (Jul 9) &middot; Range 6.43&ndash;6.49% &middot; Down from 6.72% a year ago; still limiting housing transaction volume</div></div>
-  <div class="macro-tile"><div class="macro-label">WTI Crude</div><div class="macro-value mv-up">$79.60</div><div class="macro-context">&#8593; +0.33% &middot; YTD +38.87% &middot; Hormuz shipping blockade primary driver &middot; 4th consecutive day of gains</div></div>
-  <div class="macro-tile"><div class="macro-label">Brent Crude</div><div class="macro-value mv-up">$84.95</div><div class="macro-context">&#8593; +0.26% &middot; YTD +39.84% &middot; US-Iran fighting driving war premium &middot; Watch $90 as next resistance</div></div>
-  <div class="macro-tile"><div class="macro-label">Natural Gas</div><div class="macro-value mv-up">$2.92</div><div class="macro-context">&#8593; +0.69% &middot; YTD -19.18% &middot; Summer heat demand uptick &middot; EIA storage report out this morning</div></div>
-  <div class="macro-tile"><div class="macro-label">Gold</div><div class="macro-value">$4,044</div><div class="macro-context">&#8595; -0.42% &middot; 1Y +21.45% &middot; Safe haven demand already priced in from Iran war &middot; CPI relief reduces urgency</div></div>
-  <div class="macro-tile"><div class="macro-label">Silver</div><div class="macro-value mv-down">$57.11</div><div class="macro-context">&#8595; -2.83% &middot; 1Y +50.95% &middot; Industrial demand concerns on growth slowdown &middot; Underperforming gold on ratio basis</div></div>
-  <div class="macro-tile"><div class="macro-label">DXY (Dollar)</div><div class="macro-value">100.50</div><div class="macro-context">&#8595; -0.44% &middot; YTD +2.11% &middot; Dollar weakening on lower yields and soft CPI &middot; Risk-on signal for EM and commodities</div></div>
+  <div class="macro-tile"><div class="macro-label">10Y Treasury</div><div class="macro-value">4.569%</div><div class="macro-context">↑ +5.3 bp · Bonds selling off on resilient economy signals. Watch 4.60% as near-term ceiling; Michigan Sentiment at 10 AM is today's directional trigger ahead of FOMC July 28.</div></div>
+  <div class="macro-tile"><div class="macro-label">30Y Mortgage</div><div class="macro-value">6.55%</div><div class="macro-context">Freddie Mac · Highest in nearly a year (up from 6.49%) · Treasury yield + Iran energy pressure driving. Rate relief not expected until Q4 at earliest. Housing affordability stretched.</div></div>
+  <div class="macro-tile"><div class="macro-label">WTI Crude</div><div class="macro-value mv-up">$78.95</div><div class="macro-context">↓ -0.82% day · YTD +37.74% · Hormuz tensions keeping annual gain elevated. Watch $80 resistance; hold above $77 keeps energy inflation risk live into July CPI (~Aug 12).</div></div>
+  <div class="macro-tile"><div class="macro-label">Brent Crude</div><div class="macro-value mv-up">$84.23</div><div class="macro-context">↓ -0.85% day · YTD +38.65% · Hormuz premium baked in. Key: $85 resistance. If US-Iran de-escalates, $70–75 is realistic; that would sharply reduce July CPI re-acceleration risk.</div></div>
+  <div class="macro-tile"><div class="macro-label">Natural Gas</div><div class="macro-value mv-down">$2.86</div><div class="macro-context">↓ -2.26% day · YTD -21.01% · Demand-side softness even in summer. Watch $2.75 support. EIA storage report next Thursday — seasonal heat wave could provide a floor near-term.</div></div>
+  <div class="macro-tile"><div class="macro-label">Gold</div><div class="macro-value">$3,985.60</div><div class="macro-context">↓ -1.44% day · YTD -7.62% · Pulling back from highs as dollar firms (DXY +0.23%). Watch $4,000 as key psychological support. Safe-haven demand partially offset by rising real yields at 4.569% 10Y.</div></div>
+  <div class="macro-tile"><div class="macro-label">Silver</div><div class="macro-value mv-up">$55.90</div><div class="macro-context">↓ -2.12% day · YTD -20.77% · Industrial metal demand soft. 1Y still +47.67% — energy transition thesis intact long-term. Watch $54 support. Risk-off environment near-term headwind.</div></div>
+  <div class="macro-tile"><div class="macro-label">DXY (Dollar)</div><div class="macro-value">100.73</div><div class="macro-context">↑ +0.23% · YTD +2.35% · Dollar firming on hold expectations + Iran safe-haven bid. Moderate strength weighs on gold, oil, and commodities. Watch 101 as near-term resistance.</div></div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128188;</span> APELLA READ</div>
+<div class="section-header"><span class="section-icon">💼</span> APELLA READ</div>
 <div class="apella-grid">
   <div class="apella-panel">
     <div class="apella-label">Market Narrative</div>
-    <div class="apella-text">June CPI came in at 3.5% &mdash; well below the expected 3.8% &mdash; driven by a 5.7% monthly drop in energy prices. Simultaneously, Apple's China AI clearance triggered a 4% single-day gain and a fresh S&amp;P 500 record at 7,572. Clients' portfolios had a strong day and the inflation story improved meaningfully &mdash; but oil is already recovering from June's dip due to renewed Hormuz fighting, so this is a cautious win, not a clear signal.</div>
+    <div class="apella-text">Tech led the decline as Alphabet's AI model delay exposed execution risk in the AI buildout — but TSMC beat earnings by 77% on net income and raised guidance to 40%+ growth, which tells a different story. The S&amp;P held better than Nasdaq (-0.51% vs -1.47%), reinforcing the value of diversification away from a single-sector concentration.</div>
   </div>
   <div class="apella-panel">
     <div class="apella-label">Client Concern</div>
-    <div class="apella-text">Clients are still feeling elevated gas prices at the pump despite the headline CPI relief &mdash; the disconnect between the headline number and lived experience will generate calls. Expect questions like "Is inflation actually going away?" and "When is the Fed finally going to cut?" Some may also ask about Apple at all-time highs and whether they should be buying tech given the concentration risk.</div>
+    <div class="apella-text">Clients are likely asking two things: "Is AI overhyped and should I sell tech?" and "My mortgage rate is 6.55% — is it going lower soon?" Both will hit your inbox today.</div>
   </div>
   <div class="apella-panel">
     <div class="apella-label">Talking Point</div>
-    <div class="apella-text">"The June inflation number was genuinely encouraging &mdash; core inflation is at 2.6%, which is very close to the Fed's 2% target. The monthly energy dip won't last given what's happening in the Middle East, but it confirms that the underlying price pressures, excluding the oil disruption from the Iran conflict, are moving in the right direction. The Fed holds next week, but we're getting meaningfully closer to a rate cut environment, and that's good for your fixed income and real estate exposure."</div>
+    <div class="apella-text">"One company's delayed product doesn't change the direction of AI — TSMC just beat earnings by 77% on net income and raised their revenue outlook to 40% growth, which tells you the underlying demand is very real. Yesterday was a reminder that execution matters and that owning the whole AI ecosystem through diversified exposure is smarter than betting on one winner."</div>
   </div>
   <div class="apella-panel">
     <div class="apella-label">Rate Note</div>
-    <div class="apella-text">30-year mortgage rate at 6.49% (Freddie Mac, Jul 9 survey) &mdash; down from 6.72% a year ago but still suppressing transaction volume. If the Fed cuts in September, you could see 30-year rates approach 6.0&ndash;6.25% by year-end. Worth flagging for any clients who've been on the sideline waiting for better rates &mdash; now is the time to start the conversation, not after the cut.</div>
+    <div class="apella-text">30-year fixed at 6.55% — highest in nearly a year. For clients waiting for rates to drop before buying or refinancing: the Fed is on hold at July 28–29 (90% probability), and meaningful rate cuts aren't expected until Q4 at earliest. In most markets, the math of waiting — rising home prices offsetting any eventual rate savings — isn't working in buyers' favor. That's an honest conversation worth having.</div>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127758;</span> GEOPOLITICAL</div>
+<div class="section-header"><span class="section-icon">🌍</span> GEOPOLITICAL</div>
 <div class="card">
   <ul>
-    <li><strong>US-Iran War / Strait of Hormuz Crisis (Primary Market Driver):</strong> The US and Israel launched air strikes on Iran on February 28, 2026. Iran retaliated by blocking the Strait of Hormuz &mdash; through which 25% of the world's seaborne oil and 20% of LNG passes. Shipping transits dropped more than 56% from pre-war levels (~130/day to ~57 over a 3-day window). As of July 14, US strikes resumed for a 3rd consecutive day, sending oil surging.
+    <li><strong>US-Iran / Strait of Hormuz:</strong> US and Iran actively trading strikes over control of the Strait; Trump declared the US will be "Guardian of the Hormuz Strait" with a 20% levy on all cargo passing through. ~20% of global oil transits this route.
       <ul>
-        <li>WTI YTD +38.87% is the direct output of this conflict &mdash; the dominant macro driver of 2026.</li>
-        <li>If Hormuz reopens: Oil drops sharply, CPI relief extends, Fed cuts September, equities rally.</li>
-        <li>If conflict escalates (proxies attack US assets): Oil toward $95&ndash;100, inflation reignites, hike scenario returns.</li>
-        <li>US is a net beneficiary (~$50B incremental revenue from higher oil exports); Russia also gaining. Persian Gulf producers are net losers.</li>
+        <li>Oil elevated: WTI ~$79, Brent ~$84, both up ~38% YTD. Full blockade scenario could spike oil to $100+, reigniting inflation hard.</li>
+        <li>De-escalation/ceasefire scenario would pull oil toward $65–70, potentially driving July CPI below 3% and accelerating Fed rate-cut timeline significantly.</li>
       </ul>
     </li>
-    <li><strong>Global Supply Chain:</strong> Multi-front maritime disruption between Asia and Europe is keeping inflationary expectations elevated globally, forcing central banks to hold restrictive policies longer than projected at the start of 2026.
-      <ul>
-        <li>Supply chain bottlenecks in energy and goods markets are compounding the direct oil price effect.</li>
-      </ul>
+    <li><strong>Inflation dynamic — watch the Iran-CPI link:</strong> June CPI fell -0.4% monthly (3.5% YoY) primarily because of an earlier ceasefire that reduced energy prices. Renewed Hormuz tensions risk reversing that gain in the July read (~Aug 12 release).
+    </li>
+    <li><strong>TSMC / Taiwan — domestic chip buildout:</strong> TSMC's $100B additional Arizona investment ($265B total) signals long-term US supply-chain de-risking from a Taiwan conflict scenario. Positive for domestic manufacturing and GEV's energy infrastructure thesis.
+    </li>
+    <li><strong>Global ripple:</strong> Asian markets fell sharply on Iran news — Japan Nikkei -2%, South Korea Kospi -9%. European energy stocks elevated on Brent pricing. US relatively insulated but geopolitical premium is in every energy-sensitive price.
     </li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127942;</span> PHILLY SPORTS &mdash; LAST NIGHT</div>
-<p style="color:#888;font-size:13px;padding:4px 0 10px 0;">No Philly teams played last night (Jul 15). Eagles, Sixers, and Flyers are in their off-seasons.</p>
+<div class="section-header"><span class="section-icon">🏆</span> PHILLY SPORTS — LAST NIGHT</div>
 
 <div class="team-section">
-  <div class="team-header"><span class="team-badge badge-phillies">PHI</span> Phillies &mdash; Next Game</div>
-  <div class="card" style="background:#fff5f5;border-color:#f0c0c0;padding:12px 16px;">
-    <span style="font-size:13.5px;color:#333;"><strong>Tonight &mdash; Thu, Jul 16</strong> &nbsp;&middot;&nbsp; Home vs New York Mets &nbsp;&middot;&nbsp; <strong>7:00 PM ET</strong> &nbsp;&middot;&nbsp; Citizens Bank Park &nbsp;&middot;&nbsp; ESPN &nbsp;&middot;&nbsp; 2026 Second Half Opener</span>
+  <div class="team-header"><span class="team-badge badge-phillies">PHI</span> Phillies vs. Mets — July 16 (Post All-Star Return · ESPN)</div>
+  <div class="scorebug">
+    <div class="scorebug-team"><span class="scorebug-name">NYM</span><span class="scorebug-score scorebug-winner">4</span></div>
+    <span class="scorebug-divider">–</span>
+    <div class="scorebug-team"><span class="scorebug-name">PHI</span><span class="scorebug-score">1</span></div>
+    <div class="scorebug-meta"><span class="scorebug-status">Final</span><span class="scorebug-detail">Jul 16 · Citizens Bank Park · ESPN</span></div>
+  </div>
+  <ul>
+    <li>Phillies came out flat in the season's first game back from the All-Star break — featured as the sole MLB game nationally on ESPN.</li>
+    <li>Mets controlled the game from early innings; Phillies' bats went cold at the worst possible moment on a national stage.</li>
+  </ul>
+</div>
+
+<div class="team-section">
+  <div class="team-header"><span class="team-badge badge-phillies">PHI</span> Phillies — Next Game</div>
+  <div class="card" style="background:#fafafa;padding:12px 16px;">
+    <span style="font-size:13px;color:#333;"><strong>Saturday, July 18</strong> &nbsp;·&nbsp; Home vs. New York Mets &nbsp;·&nbsp; 4:05 PM ET &nbsp;·&nbsp; Citizens Bank Park, Philadelphia</span>
   </div>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128205;</span> READING / BERKS COUNTY</div>
-<div class="callout-orange">
-  <span class="lead">&#9888;&#65039; Code Red Air Quality Alert TODAY &mdash; Wildfire smoke from Canada is blanketing Pennsylvania, creating unhealthy fine particulate (PM2.5) levels across Berks County through Thursday.</span>
-  Limit outdoor activity, especially strenuous exertion. Sensitive groups (asthma, elderly, kids) should stay indoors. Note: you have the Seafood Member Guest outdoor golf event today &mdash; be aware of the air quality conditions.
-</div>
-<div class="card">
-  <ul>
-    <li><strong>Heat Advisory in effect 10 AM &ndash; 8 PM EDT today</strong> &mdash; Berks, Lehigh, Northampton, Eastern Chester, Upper/Western Bucks, and Western Montgomery Counties. Hydrate and limit outdoor exertion during peak heat hours.</li>
-    <li><strong>Blue Marsh Lake Harmful Algal Bloom Advisory</strong> &mdash; U.S. Army Corps upgraded status from Watch to Advisory on July 1. Avoid swimming near blue-green algae concentrations; use caution around affected shoreline areas.</li>
-    <li><strong>Reading Housing Market</strong> &mdash; Mortgage rates at 6.49% continue to suppress local transaction volume. Buyers who've been waiting may want to position for a potential rate drop in Q4 if the Fed cuts in September.</li>
-    <li><strong>BCIU Appointment</strong> &mdash; Berks County Intermediate Unit named Robert C. Farina as Director of Professional Learning effective July 1. Routine administrative appointment.</li>
-  </ul>
-</div>
+<p style="color:#888;font-size:12px;margin-top:8px;padding-left:2px;">Eagles, 76ers, Flyers: Off-season — no games last night.</p>
 
-<div class="section-header"><span class="section-icon">&#129302;</span> AI / ANTHROPIC / TECH</div>
+<div class="section-header"><span class="section-icon">📍</span> READING / BERKS COUNTY</div>
+<div class="callout-yellow"><span class="lead">Berks LaunchBox (Penn State) awarded IMAGINE Your Business grants to 5 local entrepreneurs</span>Early-stage accelerator funding active in Berks County — these are potential Level clients and local network contacts worth identifying. Check Berks LaunchBox for the five recipient businesses.</div>
+<div class="card"><ul>
+  <li><strong>Greater Reading Chamber Alliance</strong> held its 113th Annual Dinner at Santander Arena — active business community with strong networking infrastructure relevant to Level's go-to-market in the region.</li>
+  <li><strong>Housing market pressure:</strong> 30-year mortgage at 6.55% (highest in nearly a year) will be felt in Berks County affordability conversations; local real estate clients are in a holding pattern waiting for rate relief that isn't coming soon.</li>
+  <li><strong>Summer heat:</strong> Code Red issued July 1–5 for heat index above 95°F; today's 82°F high is manageable. Monitor weekend if outdoor client or personal events are planned.</li>
+</ul></div>
+
+<div class="section-header"><span class="section-icon">🤖</span> AI / ANTHROPIC / TECH</div>
 <div class="card">
   <ul>
-    <li><strong>Anthropic surpasses $30B annualized revenue</strong> &mdash; up from ~$9B at end of 2025. Enterprise customers spending $1M+/year doubled in under 2 months to 1,000+ accounts. Google + Broadcom partnership announced for multiple gigawatts of next-gen compute. IPO reportedly targeting October 2026.
+    <li><strong>Anthropic $30B+ annualized run-rate revenue</strong> — Up from ~$9B at end of 2025; 1,000+ enterprise clients each spending $1M+/year (doubled from 500+ in February 2026). In talks with Samsung to build a custom AI chip tuned to Claude. IPO filing preparation underway, potentially as early as October 2026.
       <ul>
-        <li><em>For Apella:</em> Anthropic IPO will be a major client conversation &mdash; watch for investor interest in AI infrastructure and compute plays. Claude Corps fellowship program also announced for nonprofits.</li>
-        <li><em>For Level:</em> The top of the market is saturating fast at the enterprise level. Your play is the underserved middle &mdash; local businesses who need accessible, guided AI implementation. The gap between enterprise spend and SMB adoption is widening and that's exactly where Level fits.</li>
+        <li><em>For Apella:</em> Enterprise AI is no longer early-adopter territory — clients will ask about AI in financial services increasingly through 2026.</li>
+        <li><em>For Level:</em> Anthropic's growth validates the AI consulting market. The SMB segment remains significantly underserved — Level's window is real, but the big firms are coming. Move with urgency.</li>
       </ul>
     </li>
-    <li><strong>Apple Intelligence cleared in China (Alibaba Qwen model)</strong> &mdash; Apple hit $327 ATH (+4% yesterday) on regulatory registration for on-device generative AI across iPhone, iPad, Mac, and Vision Pro in China. Alibaba's Qwen model powers the Chinese version.
+    <li><strong>Alphabet GOOGL -4.4% — Gemini 3.5 Pro months behind schedule</strong> — Organizational complexity across DeepMind, Cloud, Android, and Search creating overlapping priorities. Rivals Anthropic and OpenAI outperforming on coding benchmarks.
       <ul>
-        <li>Tech stocks now <strong>37.5% of US market cap</strong> &mdash; exceeding the dot-com peak. Worth naming with clients as a concentration risk discussion point.</li>
-        <li><em>For Apella:</em> Clients will ask about Apple and whether to buy here. Acknowledge the fundamental catalyst while noting concentration risk in tech-heavy portfolios.</li>
+        <li><em>Implication:</em> Google's stumble is Anthropic's gain — and a signal that execution, not just scale, determines AI leadership.</li>
       </ul>
     </li>
-    <li><strong>OpenAI</strong> &mdash; $25&ndash;33B annualized revenue; IPO targeting September 2026. Offered Washington a $42.6B stake as part of voluntary frontier model standards engagement.
+    <li><strong>OpenAI GPT-5.6 deployed in Microsoft 365 Copilot</strong> (July 9) — Deep enterprise integration accelerating. OpenAI targeting September 2026 IPO. Sam Altman seeking "new world order" as competitive pressure from Anthropic and Google intensifies.
       <ul>
-        <li>OpenAI is slowly losing ground to Google and Anthropic per Fortune analysis, despite still being the largest AI player by brand recognition.</li>
+        <li><em>For Level:</em> M365 Copilot is the most accessible AI entry point for SMBs — Copilot implementation consulting is a near-term revenue stream worth packaging now.</li>
       </ul>
+    </li>
+    <li><strong>TSMC +$100B in Arizona fabs</strong> ($265B total) — Alongside Q2 earnings beat (+77% net income), raised capex to $60–64B and revenue guidance to 40%+ growth. AI chip demand remains far ahead of supply capacity.
     </li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#127916;</span> OTHER NEWS</div>
+<div class="section-header"><span class="section-icon">🎬</span> OTHER NEWS</div>
 <div class="card">
   <ul>
-    <li><strong>Taylor Swift and Travis Kelce married</strong> &mdash; Star-studded ceremony with MSG celebration. Biggest celebrity news of the summer without question.</li>
-    <li><strong>Emmy nominations released:</strong> "The Pitt" leads all shows with 25 nominations; "Hacks" earned 24 nominations &mdash; a record for any comedy series in a single year.</li>
-    <li><strong>Netflix: "The Hawk" debuts today (Jul 16)</strong> &mdash; Will Ferrell stars as a disgraced former champion golfer. Sports comedy. Given your Seafood Member Guest today, the timing is perfect.</li>
-    <li><strong>Anthony Hopkins (88) released his first musical single</strong> &mdash; Launched a composing career. Not a joke.</li>
+    <li><strong>The Odyssey opens in theaters today (July 17)</strong> — Christopher Nolan directing Matt Damon as Odysseus; one of the most anticipated releases of the summer with strong early buzz.</li>
+    <li><strong>Sam Neill has died</strong> — Actor best known for Jurassic Park, The Piano, and Peaky Blinders. Family confirmed the news; tributes across entertainment media today.</li>
+    <li><strong>BTS dropped "Normal" music video today</strong> — First full-group release post-military service; trending globally and generating significant social media volume.</li>
   </ul>
 </div>
 
-<div class="section-header"><span class="section-icon">&#128240;</span> ARTICLES</div>
+<div class="section-header"><span class="section-icon">📰</span> ARTICLES</div>
 <div class="article-card">
-  <div class="article-headline">June 2026 CPI Report: Consumer Prices Drop 0.4% as Energy Index Plunges 5.7%</div>
-  <div class="article-meta">IndexBox &nbsp;&middot;&nbsp; July 14, 2026</div>
-  <div class="article-summary">June CPI fell 0.4% MoM &mdash; the biggest monthly drop since April 2020 &mdash; bringing annual inflation to 3.5%, down from May's 4.2%. Core inflation held at 2.6% annually with services costs essentially flat, signaling that non-energy price pressures have largely cooled. Critical context: oil prices have already reversed course in July as Hormuz tensions resumed, making this a moment of relief rather than a trend to declare victory on.</div>
-  <a class="article-link" href="https://www.indexbox.io/blog/cpi-falls-04-in-june-2026-largest-monthly-drop-since-april-2020/">Read &rarr;</a>
+  <div class="article-headline">Average 30-Year US Mortgage Rate Climbs to 6.55%, Highest Level in Nearly a Year</div>
+  <div class="article-meta">U.S. News &amp; World Report &nbsp;·&nbsp; July 16, 2026</div>
+  <div class="article-summary">The 30-year fixed mortgage hit 6.55% this week — its highest point in nearly a year — driven by elevated Treasury yields and energy-price pressure from ongoing US-Iran tensions. Purchase application demand has softened, but rising housing inventory is providing a modestly improved backdrop for buyers who don't wait for rate relief that may not come until Q4.</div>
+  <a class="article-link" href="https://www.usnews.com/news/business/articles/2026-07-16/average-30-year-us-mortgage-rate-climbs-to-6-55-highest-level-in-nearly-a-year">Read →</a>
 </div>
 <div class="article-card">
-  <div class="article-headline">Why Apple Stock Climbed to a New All-Time High Today</div>
-  <div class="article-meta">The Motley Fool &nbsp;&middot;&nbsp; July 15, 2026</div>
-  <div class="article-summary">Apple gained regulatory approval in China to launch Apple Intelligence powered by Alibaba's Qwen model &mdash; unlocking hundreds of millions of new AI users in a market Apple had been shut out of for AI features. The stock gained 4% to $327, pushing market cap toward $5 trillion and extending Apple's 2026 gain to 20%. Potentially the single largest regulatory catalyst for any individual stock this year, with implications for all China-exposed tech names.</div>
-  <a class="article-link" href="https://www.fool.com/investing/2026/07/15/why-apple-stock-climbed-to-new-all-time-high-today/">Read &rarr;</a>
+  <div class="article-headline">Regional Banks, Wealth Management Lead Financial Services M&amp;A in 2026</div>
+  <div class="article-meta">Bloomberg &nbsp;·&nbsp; July 15, 2026</div>
+  <div class="article-summary">Smaller capability-building acquisitions involving regional banks and wealth managers are driving 2026 financial services M&amp;A, replacing the mega-deal era as firms scale toward the RIA channel. The trend reflects accelerating AUM and advisor movement from wirehouses into independent fee-only structures — a dynamic that plays directly into Apella's positioning as an RIA.</div>
+  <a class="article-link" href="https://www.bloomberg.com/news/articles/2026-07-15/regional-banks-wealth-management-lead-financial-services-m-a">Read →</a>
 </div>
 <div class="article-card">
-  <div class="article-headline">Private Markets Face Volatility as AI Boom Questions Mount</div>
-  <div class="article-meta">WealthManagement.com &nbsp;&middot;&nbsp; Week of July 14, 2026</div>
-  <div class="article-summary">Institutional investors are pulling back on private market AI-focused funds as valuation multiples face scrutiny in a higher-for-longer rate environment, even as public AI names continue to rally. Global alternatives AUM is projected to reach $32 trillion in five years, but HNW clients are increasingly asking whether private credit and AI venture allocations are earning their illiquidity premium. A direct read-ahead for client conversations around alternatives exposure and portfolio construction.</div>
-  <a class="article-link" href="https://www.wealthmanagement.com/alternative-investments/private-markets-face-volatility-as-ai-boom-questions-mount">Read &rarr;</a>
+  <div class="article-headline">TSMC Raises Capex and Revenue Forecast, Highlighting AI Chip Demand</div>
+  <div class="article-meta">Yahoo Finance &nbsp;·&nbsp; July 16, 2026</div>
+  <div class="article-summary">TSMC beat Q2 earnings (revenue +36% YoY, net income +77%), raised its 2026 capex budget to $60–64B and revenue growth guidance to 40%+, and committed an additional $100B to Arizona fabs ($265B total). Despite the beat-and-raise, markets reacted negatively to the capex surprise — but the report is unambiguous that AI infrastructure demand remains the defining investment cycle of the decade.</div>
+  <a class="article-link" href="https://finance.yahoo.com/markets/article/tsmc-raises-capex-and-revenue-forecast-highlighting-growing-ai-chip-demand-113101950.html">Read →</a>
 </div>
 
 <div class="bottom-line">
   <div class="bl-header">Bottom Line</div>
   <ul>
-    <li>June CPI was a legitimate beat &mdash; 3.5% annual, core 2.6% &mdash; but don't declare victory. Oil is already recovering on Hormuz, and July CPI (Aug 14) is the real test of whether this disinflation holds.</li>
-    <li>Apple at $327 is the market's top story. China AI clearance is a structural unlock &mdash; but tech at 37.5% of S&amp;P weight is a concentration risk worth naming with clients, especially those overweight large-cap growth.</li>
-    <li>FOMC July 29 is a hold (83.4% certainty). September is where the real debate is, and oil controls that outcome more than the Fed does right now.</li>
-    <li>GEV up 89% over 1 year &mdash; consider a trailing stop to protect gains. AVXL down 77% &mdash; needs a specific catalyst or it's dead money. TE up 390% 1Y but down 15% YTD &mdash; watch $6.50 support closely.</li>
-    <li>Today: Seafood Member Guest at LedgeRock. Code Red Air Quality + Heat Advisory in effect. Phillies host the Mets tonight at 7 PM on ESPN &mdash; second half opener.</li>
+    <li>Tech is volatile but AI demand is real — Alphabet stumbled on execution, not market fundamentals. TSMC's 77% net income growth confirms the chips are still selling at historic rates.</li>
+    <li>PCT (-13.55%) and TE (-10.81%) hit hard yesterday — both near critical support levels with no near-term catalyst. Know your exit levels before the open today.</li>
+    <li>Michigan Consumer Sentiment at 10 AM ET is the only significant market mover today — watch the 10Y yield reaction for the week's directional tone ahead of FOMC July 28–29.</li>
+    <li>Mortgage at 6.55% and Fed on hold: no rate relief before Q4 at earliest. Client conversations on buying and refinancing should be framed around inventory trends and long-term cost-of-waiting math, not hoping for lower rates soon.</li>
+    <li>Reply to the LedgeRock Membership Committee email — confirm in-person attendance or grab the virtual link for Monday July 20 at 5:30 PM.</li>
   </ul>
 </div>
 
-<div class="brief-footer">Generated ~4:37 AM ET &middot; Thursday, July 16, 2026 &middot; Prices: July 15 close &middot; sam.marrella@gmail.com</div>
+<div class="brief-footer">Generated ~4:37 AM ET &nbsp;·&nbsp; Friday, July 17, 2026 &nbsp;·&nbsp; Prices: July 16, 2026 close &nbsp;·&nbsp; sam.marrella@gmail.com</div>
 
 </body>
 </html>
